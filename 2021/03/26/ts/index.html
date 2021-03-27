@@ -5,16 +5,16 @@
   
   <title>ts | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="初步认识1.ts文件直接写js代码，在html代码中可以直接使用（我自己实验不行，必须进行编译）2.ts函数形参使用类型修饰符，在编译后不会出现3.ts使用 let 进行修饰，编译后变成 var">
+  <meta name="description" content="初步认识引用：https://24kcs.github.io/vue3_study/00_%E8%AF%BE%E7%A8%8B%E4%BB%8B%E7%BB%8D.html一、初始1.ts文件直接写js代码，在html代码中可以直接使用（我自己实验不行，必须进行编译）2.ts函数形参使用类型修饰符，在编译后不会出现3.ts使用 let 进行修饰，编译后变成 var二、自动编译12345671).">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ts">
 <meta property="og:url" content="http://yoursite.com/2021/03/26/ts/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="初步认识1.ts文件直接写js代码，在html代码中可以直接使用（我自己实验不行，必须进行编译）2.ts函数形参使用类型修饰符，在编译后不会出现3.ts使用 let 进行修饰，编译后变成 var">
-<meta property="og:updated_time" content="2021-03-26T06:27:35.123Z">
+<meta property="og:description" content="初步认识引用：https://24kcs.github.io/vue3_study/00_%E8%AF%BE%E7%A8%8B%E4%BB%8B%E7%BB%8D.html一、初始1.ts文件直接写js代码，在html代码中可以直接使用（我自己实验不行，必须进行编译）2.ts函数形参使用类型修饰符，在编译后不会出现3.ts使用 let 进行修饰，编译后变成 var二、自动编译12345671).">
+<meta property="og:updated_time" content="2021-03-26T08:30:03.924Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ts">
-<meta name="twitter:description" content="初步认识1.ts文件直接写js代码，在html代码中可以直接使用（我自己实验不行，必须进行编译）2.ts函数形参使用类型修饰符，在编译后不会出现3.ts使用 let 进行修饰，编译后变成 var">
+<meta name="twitter:description" content="初步认识引用：https://24kcs.github.io/vue3_study/00_%E8%AF%BE%E7%A8%8B%E4%BB%8B%E7%BB%8D.html一、初始1.ts文件直接写js代码，在html代码中可以直接使用（我自己实验不行，必须进行编译）2.ts函数形参使用类型修饰符，在编译后不会出现3.ts使用 let 进行修饰，编译后变成 var二、自动编译12345671).">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -85,11 +85,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="初步认识"><a href="#初步认识" class="headerlink" title="初步认识"></a>初步认识</h1><h3 id="1-ts文件直接写js代码，在html代码中可以直接使用（我自己实验不行，必须进行编译）"><a href="#1-ts文件直接写js代码，在html代码中可以直接使用（我自己实验不行，必须进行编译）" class="headerlink" title="1.ts文件直接写js代码，在html代码中可以直接使用（我自己实验不行，必须进行编译）"></a>1.ts文件直接写js代码，在html代码中可以直接使用（我自己实验不行，必须进行编译）</h3><h3 id="2-ts函数形参使用类型修饰符，在编译后不会出现"><a href="#2-ts函数形参使用类型修饰符，在编译后不会出现" class="headerlink" title="2.ts函数形参使用类型修饰符，在编译后不会出现"></a>2.ts函数形参使用类型修饰符，在编译后不会出现</h3><h3 id="3-ts使用-let-进行修饰，编译后变成-var"><a href="#3-ts使用-let-进行修饰，编译后变成-var" class="headerlink" title="3.ts使用 let 进行修饰，编译后变成 var"></a>3.ts使用 let 进行修饰，编译后变成 var</h3>
+        <h1 id="初步认识"><a href="#初步认识" class="headerlink" title="初步认识"></a>初步认识</h1><h2 id="引用：https-24kcs-github-io-vue3-study-00-E8-AF-BE-E7-A8-8B-E4-BB-8B-E7-BB-8D-html"><a href="#引用：https-24kcs-github-io-vue3-study-00-E8-AF-BE-E7-A8-8B-E4-BB-8B-E7-BB-8D-html" class="headerlink" title="引用：https://24kcs.github.io/vue3_study/00_%E8%AF%BE%E7%A8%8B%E4%BB%8B%E7%BB%8D.html"></a>引用：<a href="https://24kcs.github.io/vue3_study/00_%E8%AF%BE%E7%A8%8B%E4%BB%8B%E7%BB%8D.html" target="_blank" rel="external">https://24kcs.github.io/vue3_study/00_%E8%AF%BE%E7%A8%8B%E4%BB%8B%E7%BB%8D.html</a></h2><h2 id="一、初始"><a href="#一、初始" class="headerlink" title="一、初始"></a>一、初始</h2><h3 id="1-ts文件直接写js代码，在html代码中可以直接使用（我自己实验不行，必须进行编译）"><a href="#1-ts文件直接写js代码，在html代码中可以直接使用（我自己实验不行，必须进行编译）" class="headerlink" title="1.ts文件直接写js代码，在html代码中可以直接使用（我自己实验不行，必须进行编译）"></a>1.ts文件直接写js代码，在html代码中可以直接使用（我自己实验不行，必须进行编译）</h3><h3 id="2-ts函数形参使用类型修饰符，在编译后不会出现"><a href="#2-ts函数形参使用类型修饰符，在编译后不会出现" class="headerlink" title="2.ts函数形参使用类型修饰符，在编译后不会出现"></a>2.ts函数形参使用类型修饰符，在编译后不会出现</h3><h3 id="3-ts使用-let-进行修饰，编译后变成-var"><a href="#3-ts使用-let-进行修饰，编译后变成-var" class="headerlink" title="3.ts使用 let 进行修饰，编译后变成 var"></a>3.ts使用 let 进行修饰，编译后变成 var</h3><h2 id="二、自动编译"><a href="#二、自动编译" class="headerlink" title="二、自动编译"></a>二、自动编译</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="number">1</span>). 生成配置文件tsconfig.json</div><div class="line">    tsc --init</div><div class="line"><span class="number">2</span>). 修改tsconfig.json配置</div><div class="line">    <span class="string">"outDir"</span>: <span class="string">"./js"</span>, <span class="comment">//生成在js目录下</span></div><div class="line">    <span class="string">"strict"</span>: <span class="literal">false</span>,    </div><div class="line"><span class="number">3</span>). 启动监视任务: </div><div class="line">    终端 -&gt; 运行任务 -&gt; 监视tsconfig.json</div></pre></td></tr></table></figure>
+<h2 id="三、类型注解"><a href="#三、类型注解" class="headerlink" title="三、类型注解"></a>三、类型注解</h2><h3 id="TypeScript-里的类型注解是一种轻量级的为函数或变量添加约束的方式，TypeScript提供了静态的代码分析，它可以分析代码结构和提供的类型注解。可以编译但是会警告你代码可能不会按预期执行。"><a href="#TypeScript-里的类型注解是一种轻量级的为函数或变量添加约束的方式，TypeScript提供了静态的代码分析，它可以分析代码结构和提供的类型注解。可以编译但是会警告你代码可能不会按预期执行。" class="headerlink" title="TypeScript 里的类型注解是一种轻量级的为函数或变量添加约束的方式，TypeScript提供了静态的代码分析，它可以分析代码结构和提供的类型注解。可以编译但是会警告你代码可能不会按预期执行。"></a>TypeScript 里的类型注解是一种轻量级的为函数或变量添加约束的方式，TypeScript提供了静态的代码分析，它可以分析代码结构和提供的类型注解。可以编译但是会警告你代码可能不会按预期执行。</h3><h3 id="四、webpack打包ts"><a href="#四、webpack打包ts" class="headerlink" title="四、webpack打包ts"></a>四、webpack打包ts</h3><h4 id="1、入口JS-src-main-ts"><a href="#1、入口JS-src-main-ts" class="headerlink" title="1、入口JS: src/main.ts"></a>1、入口JS: src/main.ts</h4><h4 id="2、index页面-public-index-html"><a href="#2、index页面-public-index-html" class="headerlink" title="2、index页面: public/index.html"></a>2、index页面: public/index.html</h4><h4 id="3、webpack配置文件build-webpack-config-js"><a href="#3、webpack配置文件build-webpack-config-js" class="headerlink" title="3、webpack配置文件build/webpack.config.js"></a>3、webpack配置文件build/webpack.config.js</h4><h4 id="4、下载依赖"><a href="#4、下载依赖" class="headerlink" title="4、下载依赖"></a>4、下载依赖</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">npm install -D typescript</div><div class="line">npm install -D webpack@4.41.5 webpack-cli@3.3.10 webpack-dev-server@3.10.2</div><div class="line">npm install -D html-webpack-plugin clean-webpack-plugin</div><div class="line">npm install -D ts-loader</div><div class="line">npm install -D cross-env</div></pre></td></tr></table></figure>
+<h4 id="5、配置打包命令"><a href="#5、配置打包命令" class="headerlink" title="5、配置打包命令"></a>5、配置打包命令</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//"dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.config.js",</span></div><div class="line"><span class="comment">//"build": "cross-env NODE_ENV=production webpack --config build/webpack.config.js"</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//package.json 下</span></div><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">    <span class="string">"dev"</span>: <span class="string">"cross-env NODE_ENV=development webpack-dev-server --config build/webpack.config.js"</span>,</div><div class="line">    <span class="string">"build"</span>: <span class="string">"cross-env NODE_ENV=production webpack --config build/webpack.config.js"</span>,</div><div class="line">    <span class="string">"test"</span>: <span class="string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span></div><div class="line">  &#125;,</div></pre></td></tr></table></figure>
+<h4 id="6、运行与打包"><a href="#6、运行与打包" class="headerlink" title="6、运行与打包"></a>6、运行与打包</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm run dev</div><div class="line">npm run build</div></pre></td></tr></table></figure>
+<h2 id="报错解决"><a href="#报错解决" class="headerlink" title="报错解决"></a>报错解决</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Cannot read property <span class="string">'tap'</span> <span class="keyword">of</span> <span class="literal">undefined</span></div><div class="line">    at webpack (F:\vue-ts\<span class="number">01</span>_TypeScript\<span class="number">03</span>_webpack_ts\node_modules\webpack\lib\webpack.js:<span class="number">51</span>:<span class="number">13</span>)</div><div class="line">    at startDevServer (F:\vue-ts\<span class="number">01</span>_TypeScript\<span class="number">03</span>_webpack_ts\node_modules\webpack-dev-server\bin\webpack-dev-server.js:<span class="number">94</span>:<span class="number">16</span>)</div><div class="line">    at F:\vue-ts\<span class="number">01</span>_TypeScript\<span class="number">03</span>_webpack_ts\node_modules\webpack-dev-server\bin\webpack-dev-server.js:<span class="number">166</span>:<span class="number">3</span></div><div class="line">    at F:\vue-ts\<span class="number">01</span>_TypeScript\<span class="number">03</span>_webpack_ts\node_modules\webpack-dev-server\lib\utils\processOptions.js:<span class="number">33</span>:<span class="number">9</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//原因：webpack版本  html-webpack-plugin版本不匹配</span></div><div class="line"><span class="comment">//解决：先降级html-webpack-plugin 至4.0.0</span></div><div class="line">npm uninstall html-webpack-plugin -D</div><div class="line">npm install html-webpack-plugin@<span class="number">4.0</span><span class="number">.0</span> -D</div><div class="line"></div><div class="line"><span class="comment">//仍不解决，可能是webpack全局版本覆盖了局部版本</span></div><div class="line"><span class="comment">//重新安装webpack 和webpack-cli</span></div><div class="line">npm uninstall webpack webpack-cli -g</div><div class="line">npm install webpack@<span class="number">4.41</span><span class="number">.5</span> webpack-cli@<span class="number">3.3</span><span class="number">.10</span> -g</div><div class="line"><span class="comment">//在局部安装</span></div><div class="line">npm install webpack@<span class="number">4.41</span><span class="number">.5</span> webpack-cli@<span class="number">3.3</span><span class="number">.10</span> -D</div></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2021/03/26/ts/" data-id="ckmpxapqd0000j8tpmok67ts7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2021/03/26/ts/" data-id="ckmrekhn30000zwtpkexw1ela" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ts开始/">ts开始</a></li></ul>
@@ -100,11 +106,15 @@
     
 <nav id="article-nav">
   
-  
-    <a href="/2021/03/24/helloBlog/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">helloBlog</div>
+    <a href="/2021/03/26/ts使用/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          ts使用
+        
+      </div>
     </a>
+  
   
 </nav>
 
@@ -122,7 +132,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hello/">hello</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/helloBlog/">helloBlog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ts开始/">ts开始</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ts使用/">ts使用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ts开始/">ts开始</a></li></ul>
     </div>
   </div>
 
@@ -132,7 +142,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/hello/" style="font-size: 10px;">hello</a> <a href="/tags/helloBlog/" style="font-size: 10px;">helloBlog</a> <a href="/tags/ts开始/" style="font-size: 10px;">ts开始</a>
+      <a href="/tags/ts使用/" style="font-size: 10px;">ts使用</a> <a href="/tags/ts开始/" style="font-size: 10px;">ts开始</a>
     </div>
   </div>
 
@@ -154,19 +164,11 @@
       <ul>
         
           <li>
+            <a href="/2021/03/26/ts使用/">ts使用</a>
+          </li>
+        
+          <li>
             <a href="/2021/03/26/ts/">ts</a>
-          </li>
-        
-          <li>
-            <a href="/2021/03/24/helloBlog/">helloBlog</a>
-          </li>
-        
-          <li>
-            <a href="/2021/03/24/hello/">hello</a>
-          </li>
-        
-          <li>
-            <a href="/2021/03/24/hello-world/">Hello World</a>
           </li>
         
       </ul>
