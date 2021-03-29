@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>页面传参 | 记录 | 千里之行，始于足下</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="theme-color" content="#3F51B5">
+  
+  
+  <meta name="keywords" content="html">
+  <meta name="description" content="HTML vue 页面跳传参
+一、html  ——– 通过url， js
+参考：https://blog.csdn.net/qq_27628085/article/details/90763963
+123456789101112131415161718192021222324252627282930313233343536373839404142//改变当前页面， url 可以拼接参数window">
+<meta property="og:type" content="article">
+<meta property="og:title" content="页面传参">
+<meta property="og:url" content="http://yoursite.com/2021/03/29/页面传参/index.html">
+<meta property="og:site_name" content="记录">
+<meta property="og:description" content="HTML vue 页面跳传参
+一、html  ——– 通过url， js
+参考：https://blog.csdn.net/qq_27628085/article/details/90763963
+123456789101112131415161718192021222324252627282930313233343536373839404142//改变当前页面， url 可以拼接参数window">
+<meta property="og:updated_time" content="2021-03-29T01:54:29.097Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="页面传参">
+<meta name="twitter:description" content="HTML vue 页面跳传参
+一、html  ——– 通过url， js
+参考：https://blog.csdn.net/qq_27628085/article/details/90763963
+123456789101112131415161718192021222324252627282930313233343536373839404142//改变当前页面， url 可以拼接参数window">
+  
+    <link rel="alternative" href="/atom.xml" title="记录" type="application/atom+xml">
+  
+  <meta name="summary" content="null">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="loading" class="active"></div>
+
+  <nav id="menu" class="hide" >
+   <div class="inner flex-row-vertical">
+  <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+      <i class="icon icon-lg icon-close"></i>
+  </a>
+  <div class="brand-wrap">
+    <div class="brand">
+      <a href="/" class="avatar"><img src="/img/logo.png"></a>
+      <hgroup class="introduce">
+        <h5 class="nickname">Z-Q-K</h5>
+        <a href="mailto:2280962638@qq.com" title="2280962638@qq.com" class="mail">2280962638@qq.com</a>
+      </hgroup>
+    </div>
+  </div>
+  <div class="scroll-wrap flex-col">
+    <ul class="nav">
+      
+          <li class="waves-block waves-effect">
+            <a href="/"  >
+              <i class="icon icon-lg icon-home"></i>
+              主页
+            </a>
+          </li>
+      
+          <li class="waves-block waves-effect">
+            <a href="/archives"  >
+              <i class="icon icon-lg icon-archives"></i>
+              时间线
+            </a>
+          </li>
+      
+          <li class="waves-block waves-effect">
+            <a href="/tags"  >
+              <i class="icon icon-lg icon-tags"></i>
+              标签
+            </a>
+          </li>
+      
+          <li class="waves-block waves-effect">
+            <a href="https://github.com/yitianxian" target="_blank" >
+              <i class="icon icon-lg icon-github"></i>
+              Github
+            </a>
+          </li>
+      
+    </ul>
+
+    <footer class="footer">
+  <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
+  <p>记录 &copy; 2021</p>
+  <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+</footer>
+
+  </div>
+</div>
+
+  </nav>
+  <main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">页面传参</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input " autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header">
+  <div class="container">
+    <h1 class="author">页面传参</h1>
+    <h5 class="subtitle">
+        
+            <time datetime="2021-03-29T01:37:30.000Z" itemprop="datePublished" class="page-time">
+  2021-03-29
+</time>
+
+
+        
+    </h5>
+  </div>
+</header>
+
+    <div class="container body-wrap">
+      <article id="post-页面传参" 
+  class="article article-type-post" itemprop="blogPost">
+    <div class="post-meta flex-row">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
+
+    </div>
+    <div class="post-body">
+        <aside class="post-widget" id="post-widget">
+
+            
+            <div class="post-share" id="post-share">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+            
+
+            
+            <nav class="post-toc-wrap" id="post-toc">
+            
+            </nav>
+            
+        </aside>
+
+        <div class="post-main">
+
+            <div class="post-content" id="post-content" itemprop="postContent">
+            <p>HTML vue 页面跳传参</p>
+<p>一、html  ——– 通过url， js</p>
+<p>参考：<a href="https://blog.csdn.net/qq_27628085/article/details/90763963" target="_blank" rel="external">https://blog.csdn.net/qq_27628085/article/details/90763963</a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//改变当前页面， url 可以拼接参数</span></div><div class="line"><span class="built_in">window</span>.location.href=<span class="string">'hello.html'</span></div><div class="line"><span class="comment">//接收页面传值方法</span></div><div class="line"><span class="comment">//window.location.search 为 ？及以后的部分</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getParams</span>(<span class="params">key</span>) </span>&#123;</div><div class="line">            <span class="keyword">var</span> reg = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"(^|&amp;)"</span> + key + <span class="string">"=([^&amp;]*)(&amp;|$)"</span>);</div><div class="line">            <span class="keyword">var</span> r = <span class="built_in">window</span>.location.search.substr(<span class="number">1</span>).match(reg);</div><div class="line">            <span class="keyword">if</span> (r != <span class="literal">null</span>) &#123;</div><div class="line">                <span class="keyword">return</span> <span class="built_in">unescape</span>(r[<span class="number">2</span>]);</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">return</span> <span class="literal">null</span>;</div><div class="line">        &#125;;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//第一个参数是要打开的页面的url,第二个参数是窗口目标，第三个参数是一个特定字符串以及一个表示新页面是否取代浏览器历史集中当前加载页面的布尔值，通常只需要传递第一个参数。第二个参数还可以是”_blank”,”_self”,”_parent”,”_top”这样的特殊窗口名称，”_blank”打开新窗口,”_self”实现的效果同window.location.href.</span></div><div class="line"><span class="built_in">window</span>.open(url, string，boolean)</div><div class="line"></div><div class="line"><span class="comment">//弹窗可能被屏蔽，有两种情况</span></div><div class="line"><span class="comment">//1.浏览器内置的屏蔽程序阻止弹出窗口，那么 window.open()很可能返回Null，此时，只要监测这个返回的值就可以确定弹出窗口是否被屏蔽</span></div><div class="line"><span class="keyword">var</span> newWin = <span class="built_in">window</span>.open(url);</div><div class="line"><span class="keyword">if</span>(newWin == <span class="literal">null</span>)&#123;</div><div class="line">    alert(<span class="string">"弹窗被阻止"</span>);</div><div class="line">&#125;</div><div class="line"><span class="comment">//2.浏览器扩展或其他程序阻止的弹出窗口，那么window.open()通常会抛出一个错误，因此，要像准确的检测弹出窗口是否被屏蔽，必须在检测返回值的同时，将window.open()封装在try-catch块中</span></div><div class="line">&lt;script&gt;</div><div class="line">    <span class="keyword">var</span> blocked = <span class="literal">false</span>;</div><div class="line">    <span class="keyword">try</span>&#123;</div><div class="line">        <span class="keyword">var</span> index = <span class="string">"lemon"</span>;</div><div class="line">        <span class="keyword">var</span> url = <span class="string">"receive.html?index="</span>+index;</div><div class="line">        $(<span class="string">"#more"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">           <span class="keyword">var</span> newWin = <span class="built_in">window</span>.open(url);</div><div class="line">           <span class="keyword">if</span>(newWin == <span class="literal">null</span>)&#123;</div><div class="line">               blocked = <span class="literal">true</span>;</div><div class="line">           &#125;</div><div class="line">        &#125;);</div><div class="line">    &#125; <span class="keyword">catch</span>(ex)&#123;</div><div class="line">        block = <span class="literal">true</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span>(blocked)&#123;</div><div class="line">        alert(<span class="string">"弹出窗口被阻止"</span>);</div><div class="line">    &#125;    </div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
+<p>二、通过localStorage 和 sessionStorage 先存本地再取出数据</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//localStorage是持久化的本地保存，只要你找不到其所在地没有主动删掉，就会一直存在。</span></div><div class="line"></div><div class="line"><span class="comment">//sessionStorage是会话级别的本地保存，比如一个页面关闭的时候该页面设置的sessionStorage数据会自动消失，在不同浏览器窗口不会共享的，即使是同一个浏览器的同一个页面。当会话结束，sessionstroage保存值也会清空。</span></div><div class="line"></div><div class="line"><span class="comment">//用setItem来存数据，第一个参数是 名字，第二个参数是存数的数据</span></div><div class="line"><span class="comment">//存数据</span></div><div class="line"><span class="built_in">window</span>.localStorage.setItem(“data”, “kevin”);</div><div class="line"><span class="built_in">window</span>.sessionStorage.setItem(“data”, “kevin”);</div><div class="line"></div><div class="line"><span class="comment">//用getItem来取数据，参入要取数据的 名字就好</span></div><div class="line"><span class="comment">//取数据</span></div><div class="line"></div><div class="line"><span class="built_in">window</span>.localStorage.getItem(“data”);</div><div class="line"><span class="built_in">window</span>.sessionStorage.getItem(“data”);</div><div class="line"></div><div class="line"><span class="comment">//当然如果要存储的数据是一个对象的话，就需要将对象转换为字符串，在取数据的在将字符串转为对象就可以了</span></div><div class="line"></div><div class="line"><span class="comment">//对象转字符串 JSON.stringify( ” 对象 ” )</span></div><div class="line"><span class="comment">//字符串转对象 JSON.parse( ” 字符串 ” )</span></div></pre></td></tr></table></figure>
+<p>三、通过cookie, 具体可参考参考链接</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//cookie前端与后台都可以创建保存在客户端,有默认有效时间,当然也可以清除浏览器cookie;</span></div><div class="line"></div><div class="line"><span class="comment">//创建方式,cookie键值对以等号方式连接cookie之间用分号分开;</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> name=<span class="string">"liuliu"</span>;</div><div class="line"><span class="keyword">var</span> age=<span class="number">28</span>;</div><div class="line"><span class="built_in">document</span>.cookie=<span class="string">"name="</span>+name;</div><div class="line"><span class="built_in">document</span>.cookie=<span class="string">"age="</span>+age;</div><div class="line"></div><div class="line"><span class="comment">//获取全部cookie字符串:</span></div><div class="line"><span class="built_in">document</span>.cookie;</div></pre></td></tr></table></figure>
+<p>四、vue </p>
+<p>1、params 相当于post请求，页面跳转时参数不会在地址栏中显示</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//使用params传参时 刷新页面参数消失</span></div><div class="line"><span class="keyword">this</span>.$router.push(&#123;<span class="attr">path</span>: <span class="string">`/describe/<span class="subst">$&#123;id&#125;</span>`</span>&#125;)</div><div class="line"><span class="comment">//路由配置</span></div><div class="line">&#123;</div><div class="line">    <span class="attr">path</span>: <span class="string">'/describe/:id'</span>,</div><div class="line">    <span class="attr">name</span>: <span class="string">'Describe'</span>,</div><div class="line">    <span class="attr">component</span>: Describe</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//通过路由属性中的name来确定匹配的路由，通过params来传递参数</span></div><div class="line"><span class="comment">// 路由正常配置即可</span></div><div class="line"><span class="comment">// 配置时：添加:/id 也可以不添加，不添加数据会在url后面显示，不添加数据就不会显示</span></div><div class="line"><span class="keyword">this</span>.$router.push(&#123;</div><div class="line">    	  <span class="comment">//params传参 需要使用 name 否则取不到；对应路由配置的 name</span></div><div class="line">           name: <span class="string">'Describe'</span>,</div><div class="line">           <span class="attr">params</span>: &#123;</div><div class="line">             <span class="attr">id</span>: id</div><div class="line">           &#125;</div><div class="line">       &#125;)</div><div class="line"><span class="comment">//接收参数</span></div><div class="line"><span class="keyword">this</span>.$route.params.id</div></pre></td></tr></table></figure>
+<p> 2、query 相当于get请求，页面跳转时参数会在地址栏中显示</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//使用path来匹配路由，然后通过query来传递参数；这种情况下 query传递的参数会显示在url后面?id=？</span></div><div class="line"><span class="keyword">this</span>.$router.push(&#123;</div><div class="line">               <span class="attr">path</span>: <span class="string">'/describe'</span>,</div><div class="line">               <span class="attr">query</span>: &#123;</div><div class="line">                 <span class="attr">id</span>: id</div><div class="line">               &#125;</div><div class="line">           &#125;)</div><div class="line"><span class="comment">//子组件接收参数：  </span></div><div class="line"><span class="keyword">this</span>.$route.query.id</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">/*</span></div><div class="line">	参数获取，params和query区别，query参数在地址栏显示，params的参数不在地址栏显示</div><div class="line">*/</div><div class="line"></div><div class="line"><span class="comment">//和push的区别，push有记录一个history，replace没有</span></div><div class="line"><span class="keyword">this</span>.$router.replace(&#123;<span class="attr">name</span>: <span class="string">'/detail'</span>, <span class="attr">params</span>: &#123;<span class="attr">id</span>: e&#125;&#125;)</div><div class="line"></div><div class="line"><span class="comment">//resolve页面跳转可用新页面打开</span></div><div class="line"><span class="comment">//2.1.0版本后，使用路由对象的resolve方法解析路由，可以得到location、router、href等目标路由的信息。得到href就可以使用window.open开新窗口了（这边应用：https://segmentfault.com/q/1010000009557100下的一个回答）</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">new</span> = <span class="keyword">this</span>.$router.resolve(&#123;<span class="attr">name</span>: <span class="string">'/detail'</span>, <span class="attr">params</span>: &#123;<span class="attr">id</span>: e&#125;&#125;)</div><div class="line"><span class="built_in">window</span>.open(<span class="keyword">new</span>.href,<span class="string">'_blank'</span>)</div><div class="line"></div><div class="line"><span class="built_in">window</span>.opener() <span class="comment">//获取父窗口对象，没有则为null</span></div></pre></td></tr></table></figure>
+<p>3.、修改路由的query参数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//安装 webpack-merge</span></div><div class="line">npm i webpack-merge</div><div class="line"><span class="comment">//导入 webpack-merge</span></div><div class="line"><span class="keyword">import</span> merge <span class="keyword">from</span> <span class="string">'webpack-merge'</span>;</div><div class="line"><span class="comment">//修改原有参数</span></div><div class="line"><span class="keyword">this</span>.$router.push(&#123;</div><div class="line">    <span class="attr">query</span>:merge(<span class="keyword">this</span>.$route.query,&#123;<span class="string">'auditedDeptId'</span>:<span class="keyword">this</span>.ruleForm.auditedDeptId&#125;)</div><div class="line">&#125;)</div><div class="line"><span class="comment">//新增一个参数</span></div><div class="line"><span class="keyword">this</span>.$router.push(&#123;</div><div class="line">    <span class="attr">query</span>:merge(<span class="keyword">this</span>.$route.query,&#123;<span class="string">'newParams'</span>:<span class="string">'new'</span>&#125;)</div><div class="line">&#125;)</div><div class="line"><span class="comment">//替换所有参数</span></div><div class="line"> <span class="keyword">this</span>.$router.push(&#123;</div><div class="line">    <span class="attr">query</span>:merge(&#123;&#125;,&#123;<span class="string">'maxPrice'</span>:<span class="string">'630'</span>&#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+
+
+            
+            
+            <blockquote>
+                <p>
+                本文地址：
+                <a href="http://yoursite.com/2021/03/29/页面传参/" target="_blank" rel="external">http://yoursite.com/2021/03/29/页面传参/</a>
+                </p>
+                <footer><cite><a href="http://yoursite.com">@记录</a></cite></footer>
+            </blockquote>
+            </div>
+            
+<nav class="post-nav">
+  
+    <div class="waves-block waves-effect prev fl">
+      <a href="/2021/03/29/js遍历数组/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">js遍历数组</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next fr">
+      <a href="/2021/03/26/ts使用/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">ts使用</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+            
+            
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="页面传参" data-title="页面传参" data-url="http://yoursite.com/2021/03/29/页面传参/index.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"ysblog"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+        </div>
+    </div>
+</article>
+
+    </div>
+  </main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+<script>
+var BLOG_SHARE = {
+    title: "页面传参",
+    pic: "/img/logo.png",
+    summary: document.getElementsByName('summary')[0].content,
+    url: "http://yoursite.com/2021/03/29/页面传参/index.html"
+};
+</script>
+<div class="global-share" id="global-share">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<script type="text/template" id="search-tpl">
+<li class="item">
+    <a href="/{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</script>
+
+<script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
