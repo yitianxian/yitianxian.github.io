@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>ts泛型 | 记录 | 千里之行，始于足下</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="theme-color" content="#3F51B5">
+  
+  
+  <meta name="keywords" content="TypeScript">
+  <meta name="description" content="ts泛型指在定义函数、接口或类的时候，不预先指定具体的类型，而在使用的时候再指定具体类型的一种特性。
+1234567891011121314151617181920//主要是定义方法时参数类型不确定，使用时参数类型确定，并可以进行参数检查与提示(() =&amp;gt; &amp;#123;    // 根据指定的数量 count 和数据 value , 创建一个包含 count 个 value 的数组    f">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ts泛型">
+<meta property="og:url" content="http://yoursite.com/2021/03/29/ts泛型/index.html">
+<meta property="og:site_name" content="记录">
+<meta property="og:description" content="ts泛型指在定义函数、接口或类的时候，不预先指定具体的类型，而在使用的时候再指定具体类型的一种特性。
+1234567891011121314151617181920//主要是定义方法时参数类型不确定，使用时参数类型确定，并可以进行参数检查与提示(() =&amp;gt; &amp;#123;    // 根据指定的数量 count 和数据 value , 创建一个包含 count 个 value 的数组    f">
+<meta property="og:updated_time" content="2021-03-30T01:53:15.073Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ts泛型">
+<meta name="twitter:description" content="ts泛型指在定义函数、接口或类的时候，不预先指定具体的类型，而在使用的时候再指定具体类型的一种特性。
+1234567891011121314151617181920//主要是定义方法时参数类型不确定，使用时参数类型确定，并可以进行参数检查与提示(() =&amp;gt; &amp;#123;    // 根据指定的数量 count 和数据 value , 创建一个包含 count 个 value 的数组    f">
+  
+    <link rel="alternative" href="/atom.xml" title="记录" type="application/atom+xml">
+  
+  <meta name="summary" content="null">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="loading" class="active"></div>
+
+  <nav id="menu" class="hide" >
+   <div class="inner flex-row-vertical">
+  <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+      <i class="icon icon-lg icon-close"></i>
+  </a>
+  <div class="brand-wrap">
+    <div class="brand">
+      <a href="/" class="avatar"><img src="/img/logo.png"></a>
+      <hgroup class="introduce">
+        <h5 class="nickname">Z-Q-K</h5>
+        <a href="mailto:2280962638@qq.com" title="2280962638@qq.com" class="mail">2280962638@qq.com</a>
+      </hgroup>
+    </div>
+  </div>
+  <div class="scroll-wrap flex-col">
+    <ul class="nav">
+      
+          <li class="waves-block waves-effect">
+            <a href="/"  >
+              <i class="icon icon-lg icon-home"></i>
+              主页
+            </a>
+          </li>
+      
+          <li class="waves-block waves-effect">
+            <a href="/archives"  >
+              <i class="icon icon-lg icon-archives"></i>
+              时间线
+            </a>
+          </li>
+      
+          <li class="waves-block waves-effect">
+            <a href="/tags"  >
+              <i class="icon icon-lg icon-tags"></i>
+              标签
+            </a>
+          </li>
+      
+          <li class="waves-block waves-effect">
+            <a href="https://github.com/yitianxian" target="_blank" >
+              <i class="icon icon-lg icon-github"></i>
+              Github
+            </a>
+          </li>
+      
+    </ul>
+
+    <footer class="footer">
+  <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
+  <p>记录 &copy; 2021</p>
+  <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+</footer>
+
+  </div>
+</div>
+
+  </nav>
+  <main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">ts泛型</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input " autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header">
+  <div class="container">
+    <h1 class="author">ts泛型</h1>
+    <h5 class="subtitle">
+        
+            <time datetime="2021-03-29T14:25:11.000Z" itemprop="datePublished" class="page-time">
+  2021-03-29
+</time>
+
+
+        
+    </h5>
+  </div>
+</header>
+
+    <div class="container body-wrap">
+      <article id="post-ts泛型" 
+  class="article article-type-post" itemprop="blogPost">
+    <div class="post-meta flex-row">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TypeScript/">TypeScript</a></li></ul>
+
+    </div>
+    <div class="post-body">
+        <aside class="post-widget" id="post-widget">
+
+            
+            <div class="post-share" id="post-share">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+            
+
+            
+            <nav class="post-toc-wrap" id="post-toc">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ts泛型"><span class="post-toc-number">1.</span> <span class="post-toc-text">ts泛型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#泛型接口"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">泛型接口</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#泛型类"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">泛型类</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#泛型约束"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">泛型约束</span></a></li></ol></li></ol>
+            </nav>
+            
+        </aside>
+
+        <div class="post-main">
+
+            <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="ts泛型"><a href="#ts泛型" class="headerlink" title="ts泛型"></a>ts泛型</h2><p>指在定义函数、接口或类的时候，不预先指定具体的类型，而在使用的时候再指定具体类型的一种特性。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//主要是定义方法时参数类型不确定，使用时参数类型确定，并可以进行参数检查与提示</span></div><div class="line">(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">    <span class="comment">// 根据指定的数量 count 和数据 value , 创建一个包含 count 个 value 的数组</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getArr</span>&lt;<span class="title">T</span>&gt;(<span class="params">value: T, count: <span class="built_in">number</span></span>): <span class="title">T</span>[] </span>&#123;</div><div class="line">        <span class="keyword">const</span> arr: <span class="built_in">Array</span>&lt;T&gt; = []</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; count; i++) &#123;</div><div class="line">            arr.push(value)</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> arr</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">const</span> arr1 =getArr&lt;<span class="built_in">string</span>&gt;(<span class="string">"str"</span>, <span class="number">3</span>)</div><div class="line">    <span class="built_in">console</span>.log(arr1) <span class="comment">//["str", "str", "str"]</span></div><div class="line">    </div><div class="line">    <span class="comment">//多个泛型</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getMsg</span>&lt;<span class="title">K</span>, <span class="title">T</span>&gt;(<span class="params">value1: K, value2: T</span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> [value1, value2]</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">const</span> arr2 = getMsg&lt;<span class="built_in">number</span> , <span class="built_in">string</span>&gt;(<span class="number">1</span>, <span class="string">"zs"</span>)</div><div class="line">    <span class="built_in">console</span>.log(arr2) <span class="comment">//[1, "zs"]</span></div><div class="line">&#125;)()</div></pre></td></tr></table></figure>
+<h3 id="泛型接口"><a href="#泛型接口" class="headerlink" title="泛型接口"></a>泛型接口</h3><p>在定义接口时, 为接口中的属性或方法定义泛型类型<br>在使用接口时, 再指定具体的泛型类型</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">    <span class="keyword">interface</span> IbaseCRUD &lt;T&gt; &#123;</div><div class="line">        data: T[]</div><div class="line">        add: <span class="function">(<span class="params">t: T</span>) =&gt;</span> <span class="built_in">void</span></div><div class="line">        getById: <span class="function">(<span class="params">id: <span class="built_in">number</span></span>) =&gt;</span> T</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">class</span> User &#123;</div><div class="line">        id?: <span class="built_in">number</span>; <span class="comment">//id主键自增</span></div><div class="line">        name: <span class="built_in">string</span>; <span class="comment">//姓名</span></div><div class="line">        age: <span class="built_in">number</span>; <span class="comment">//年龄</span></div><div class="line"></div><div class="line">        <span class="keyword">constructor</span> (<span class="params">name, age</span>) &#123;</div><div class="line">            <span class="keyword">this</span>.name = name</div><div class="line">            <span class="keyword">this</span>.age = age</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">class</span> UserCRUD <span class="keyword">implements</span> IbaseCRUD &lt;User&gt; &#123;</div><div class="line">        data: User[] = []</div><div class="line"></div><div class="line">        add(user: User): <span class="built_in">void</span> &#123;</div><div class="line">            <span class="comment">//解构赋值</span></div><div class="line">            user = &#123;...user, id: <span class="built_in">Date</span>.now()&#125;</div><div class="line">            <span class="keyword">this</span>.data.push(user)</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">'保存user'</span>, user.id)</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        getById(id: <span class="built_in">number</span>): User &#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.data.find(<span class="function"><span class="params">item</span> =&gt;</span> item.id===id)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    <span class="keyword">const</span> userCRUD = <span class="keyword">new</span> UserCRUD()</div><div class="line">    userCRUD.add(<span class="keyword">new</span> User(<span class="string">'tom'</span>, <span class="number">12</span>)) <span class="comment">//保存user 1617067853995</span></div><div class="line">    userCRUD.add(<span class="keyword">new</span> User(<span class="string">'tom2'</span>, <span class="number">13</span>)) <span class="comment">//保存user 1617067894390</span></div><div class="line">    <span class="built_in">console</span>.log(userCRUD.data) <span class="comment">//&#123;name: "tom", age: 12, id: 1617067901231&#125; &#123;name: "tom2", age: 13, id: 1617067901233&#125;</span></div><div class="line">&#125;)()</div></pre></td></tr></table></figure>
+<h3 id="泛型类"><a href="#泛型类" class="headerlink" title="泛型类"></a>泛型类</h3><p>在定义类时, 为类中的属性或方法定义泛型类型 在创建类的实例时, 再指定特定的泛型类型</p>
+<h3 id="泛型约束"><a href="#泛型约束" class="headerlink" title="泛型约束"></a>泛型约束</h3><p>如果我们直接对一个泛型参数取 <code>length</code> 属性, 会报错, 因为这个泛型根本就不知道它有这个属性</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 没有泛型约束</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span> &lt;<span class="title">T</span>&gt;(<span class="params">x: T</span>): <span class="title">void</span> </span>&#123;</div><div class="line">  <span class="comment">// console.log(x.length)  // error</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">interface</span> Lengthwise &#123;</div><div class="line">  length: <span class="built_in">number</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 指定泛型约束</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn2</span> &lt;<span class="title">T</span> <span class="title">extends</span> <span class="title">Lengthwise</span>&gt;(<span class="params">x: T</span>): <span class="title">void</span> </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(x.length)</div><div class="line">&#125;</div><div class="line"></div><div class="line">fn2(<span class="string">'abc'</span>)<span class="comment">// fn2(123) // error  number没有length属性</span></div></pre></td></tr></table></figure>
+
+
+            
+            
+            <blockquote>
+                <p>
+                本文地址：
+                <a href="http://yoursite.com/2021/03/29/ts泛型/" target="_blank" rel="external">http://yoursite.com/2021/03/29/ts泛型/</a>
+                </p>
+                <footer><cite><a href="http://yoursite.com">@记录</a></cite></footer>
+            </blockquote>
+            </div>
+            
+<nav class="post-nav">
+  
+    <div class="waves-block waves-effect prev fl">
+      <a href="/2021/03/30/ts声明文件和内置对象/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">ts声明文件和内置对象</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next fr">
+      <a href="/2021/03/29/ts函数/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">ts函数</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+            
+            
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="ts泛型" data-title="ts泛型" data-url="http://yoursite.com/2021/03/29/ts泛型/index.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"ysblog"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+        </div>
+    </div>
+</article>
+
+    </div>
+  </main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+<script>
+var BLOG_SHARE = {
+    title: "ts泛型",
+    pic: "/img/logo.png",
+    summary: document.getElementsByName('summary')[0].content,
+    url: "http://yoursite.com/2021/03/29/ts泛型/index.html"
+};
+</script>
+<div class="global-share" id="global-share">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<script type="text/template" id="search-tpl">
+<li class="item">
+    <a href="/{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</script>
+
+<script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
