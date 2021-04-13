@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-04-07T08:07:54.509Z</updated>
+  <updated>2021-04-13T06:29:53.212Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,51 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue-el限制输入</title>
+    <link href="http://yoursite.com/2021/04/13/vue-el%E9%99%90%E5%88%B6%E8%BE%93%E5%85%A5/"/>
+    <id>http://yoursite.com/2021/04/13/vue-el%E9%99%90%E5%88%B6%E8%BE%93%E5%85%A5/</id>
+    <published>2021-04-13T06:26:35.000Z</published>
+    <updated>2021-04-13T06:29:53.212Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="oninput限制输入"><a href="#oninput限制输入" class="headerlink" title="oninput限制输入"></a>oninput限制输入</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;el-input v-model='num'</div><div class="line">oninput="if(/^[0-9]*$/.test(value) == false) &#123; value = null &#125;</div><div class="line">                   if(value &lt; 0)&#123;value=0&#125;</div><div class="line">                   if(value &gt; 100)&#123;value=100&#125;</div><div class="line">                   if(value&gt; 0 &amp;&amp; value &lt; 100) &#123;value=value.replace(/[^\d]/g,'')&#125;" &gt;&lt;/el-input&gt;</div></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;oninput限制输入&quot;&gt;&lt;a href=&quot;#oninput限制输入&quot; class=&quot;headerlink&quot; title=&quot;oninput限制输入&quot;&gt;&lt;/a&gt;oninput限制输入&lt;/h3&gt;&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="vue-el踩坑" scheme="http://yoursite.com/tags/vue-el踩坑/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue路由模式</title>
+    <link href="http://yoursite.com/2021/04/08/vue%E8%B7%AF%E7%94%B1%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://yoursite.com/2021/04/08/vue%E8%B7%AF%E7%94%B1%E6%A8%A1%E5%BC%8F/</id>
+    <published>2021-04-08T09:39:47.000Z</published>
+    <updated>2021-04-08T10:12:39.977Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="路由模式"><a href="#路由模式" class="headerlink" title="路由模式"></a>路由模式</h3><p>今天使用路由跳转时始终访问不到指定页面</p><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">const href = `/informationAudit/intoInfoAudit?id=` + id;</div><div class="line">window.open(href, "_blank");</div><div class="line"></div><div class="line">//点击后路由跳转</div><div class="line">/informationAudit/intoInfoAudit?id=undefined#/dashboard</div></pre></td></tr></table></figure><p>后来发现路由模式不对</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> createRouter = <span class="function"><span class="params">()</span> =&gt;</span></div><div class="line">  <span class="keyword">new</span> Router(&#123;</div><div class="line">    <span class="comment">//不应该注释</span></div><div class="line">    <span class="comment">//mode: 'history', // 路由模式</span></div><div class="line">    scrollBehavior: <span class="function"><span class="params">()</span> =&gt;</span> (&#123; <span class="attr">y</span>: <span class="number">0</span> &#125;),</div><div class="line">    <span class="attr">isAdd</span>: <span class="literal">false</span>, <span class="comment">//是否已经添加动态(菜单)路由</span></div><div class="line">    routes: constantRoutes,</div><div class="line">    <span class="attr">base</span>: <span class="string">'/icostviews/'</span></div><div class="line">  &#125;);</div></pre></td></tr></table></figure><p>vue-router有两种模式：</p><p>hash（默认）：</p><p>1、使用 URL 的 hash 来模拟一个完整的 URL，于是当 URL 改变时，页面不会重新加载</p><p>2、url带有<em>#</em></p><p>3、前端路由修改的是#中的信息</p><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//如果直接输入页面会跳转</div><div class="line">/informationAudit/intoInfoAudit?id=undefined#/supplierManagement/informationAudit</div></pre></td></tr></table></figure><p>history：</p><p>1、这种模式充分利用 <code>history.pushState</code> API 来完成 URL 跳转而无须重新加载页面。</p><p>2、使用history 模式时，URL 就像正常的 url</p><p>3、需要后台配置支持，刷新会请求服务器</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;路由模式&quot;&gt;&lt;a href=&quot;#路由模式&quot; class=&quot;headerlink&quot; title=&quot;路由模式&quot;&gt;&lt;/a&gt;路由模式&lt;/h3&gt;&lt;p&gt;今天使用路由跳转时始终访问不到指定页面&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;</summary>
+      
+    
+    
+    
+    
+    <category term="vue-Router" scheme="http://yoursite.com/tags/vue-Router/"/>
+    
+  </entry>
   
   <entry>
     <title>js正则</title>
