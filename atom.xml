@@ -18,8 +18,8 @@
   
   <entry>
     <title>scss中deep</title>
-    <link href="http://yoursite.com/2021/04/20/scss%E4%B8%ADdeep/"/>
-    <id>http://yoursite.com/2021/04/20/scss%E4%B8%ADdeep/</id>
+    <link href="http://yoursite.com/2021/04/20/css/scss%E4%B8%ADdeep/"/>
+    <id>http://yoursite.com/2021/04/20/css/scss%E4%B8%ADdeep/</id>
     <published>2021-04-20T02:29:18.000Z</published>
     <updated>2021-04-20T02:44:20.362Z</updated>
     
@@ -42,12 +42,12 @@
   
   <entry>
     <title>vue3踩坑记录</title>
-    <link href="http://yoursite.com/2021/04/19/vue3%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/"/>
-    <id>http://yoursite.com/2021/04/19/vue3%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</id>
+    <link href="http://yoursite.com/2021/04/19/vue3/vue3%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/"/>
+    <id>http://yoursite.com/2021/04/19/vue3/vue3%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</id>
     <published>2021-04-19T11:03:16.000Z</published>
-    <updated>2021-04-19T11:47:01.030Z</updated>
+    <updated>2021-04-20T03:51:02.436Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="报错：Error-vue-composition-api-must-call-Vue-use-VueCompositionAPI-before-using-any-function"><a href="#报错：Error-vue-composition-api-must-call-Vue-use-VueCompositionAPI-before-using-any-function" class="headerlink" title="报错：Error: [vue-composition-api] must call Vue.use(VueCompositionAPI) before using any function."></a>报错：Error: [vue-composition-api] must call Vue.use(VueCompositionAPI) before using any function.</h2><h3 id="原因：composition-api-需要安装并引入使用"><a href="#原因：composition-api-需要安装并引入使用" class="headerlink" title="原因：composition-api 需要安装并引入使用"></a>原因：composition-api 需要安装并引入使用</h3><h3 id="解决："><a href="#解决：" class="headerlink" title="解决："></a>解决：</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm install @vue/composition-api --save</div><div class="line"><span class="keyword">import</span> VueCompositionApi <span class="keyword">from</span> <span class="string">'@vue/composition-api'</span></div><div class="line">Vue.use(VueCompositionApi)</div></pre></td></tr></table></figure><h2 id="报错：TypeError-Cannot-read-property-‘util’-of-undefined"><a href="#报错：TypeError-Cannot-read-property-‘util’-of-undefined" class="headerlink" title="报错：TypeError: Cannot read property ‘util’ of undefined"></a>报错：TypeError: Cannot read property ‘util’ of undefined</h2><h3 id="原因：import-defineComponent-from-‘-vue-composition-api’，-这是2-0-3-0的过度版本的脚手架创建的"><a href="#原因：import-defineComponent-from-‘-vue-composition-api’，-这是2-0-3-0的过度版本的脚手架创建的" class="headerlink" title="原因：import { defineComponent } from ‘@vue/composition-api’， 这是2.0-3.0的过度版本的脚手架创建的"></a>原因：import { defineComponent } from ‘@vue/composition-api’， 这是2.0-3.0的过度版本的脚手架创建的</h3><h3 id="解决：升级vue-cli至最新版本"><a href="#解决：升级vue-cli至最新版本" class="headerlink" title="解决：升级vue-cli至最新版本"></a>解决：升级vue-cli至最新版本</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm uninstall vue-cli -g</div><div class="line">npm i @vue/cli -g</div><div class="line">vue --version</div></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h2 id="报错：Error-vue-composition-api-must-call-Vue-use-VueCompositionAPI-before-using-any-function"><a href="#报错：Error-vue-composition-api-must-call-Vue-use-VueCompositionAPI-before-using-any-function" class="headerlink" title="报错：Error: [vue-composition-api] must call Vue.use(VueCompositionAPI) before using any function."></a>报错：Error: [vue-composition-api] must call Vue.use(VueCompositionAPI) before using any function.</h2><h3 id="原因：composition-api-需要安装并引入使用"><a href="#原因：composition-api-需要安装并引入使用" class="headerlink" title="原因：composition-api 需要安装并引入使用"></a>原因：composition-api 需要安装并引入使用</h3><h3 id="解决："><a href="#解决：" class="headerlink" title="解决："></a>解决：</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm install @vue/composition-api --save</div><div class="line"><span class="keyword">import</span> VueCompositionApi <span class="keyword">from</span> <span class="string">'@vue/composition-api'</span></div><div class="line">Vue.use(VueCompositionApi)</div></pre></td></tr></table></figure><h2 id="报错：TypeError-Cannot-read-property-‘util’-of-undefined"><a href="#报错：TypeError-Cannot-read-property-‘util’-of-undefined" class="headerlink" title="报错：TypeError: Cannot read property ‘util’ of undefined"></a>报错：TypeError: Cannot read property ‘util’ of undefined</h2><h3 id="原因：import-defineComponent-from-‘-vue-composition-api’，-这是2-0-3-0的过度版本的脚手架创建的"><a href="#原因：import-defineComponent-from-‘-vue-composition-api’，-这是2-0-3-0的过度版本的脚手架创建的" class="headerlink" title="原因：import { defineComponent } from ‘@vue/composition-api’， 这是2.0-3.0的过度版本的脚手架创建的"></a>原因：import { defineComponent } from ‘@vue/composition-api’， 这是2.0-3.0的过度版本的脚手架创建的</h3><h3 id="解决：升级vue-cli至最新版本"><a href="#解决：升级vue-cli至最新版本" class="headerlink" title="解决：升级vue-cli至最新版本"></a>解决：升级vue-cli至最新版本</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm uninstall vue-cli -g</div><div class="line">npm i @vue/cli -g</div><div class="line">vue --version</div></pre></td></tr></table></figure><h2 id="获取-ctx-（vue2中的this对象-）"><a href="#获取-ctx-（vue2中的this对象-）" class="headerlink" title="获取 ctx （vue2中的this对象 ）"></a>获取 ctx （vue2中的this对象 ）</h2><figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; getCurrentInstance&#125; <span class="keyword">from</span> <span class="string">'vue'</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> &#123; ctx &#125;:<span class="built_in">any</span> = getCurrentInstance()</div></pre></td></tr></table></figure><h4 id="此时会报错-Property-‘ctx’-does-not-exist-on-type-‘ComponentInternalInstance’"><a href="#此时会报错-Property-‘ctx’-does-not-exist-on-type-‘ComponentInternalInstance’" class="headerlink" title="此时会报错   Property ‘ctx’ does not exist on type ‘ComponentInternalInstance’."></a>此时会报错   Property ‘ctx’ does not exist on type ‘ComponentInternalInstance’.</h4><p>此时使用：</p><figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// @ts-ignore</span></div><div class="line"><span class="keyword">const</span> &#123; ctx &#125;:<span class="built_in">any</span> = getCurrentInstance()</div><div class="line"></div><div class="line"><span class="comment">//并关闭ts严格模式</span></div><div class="line"><span class="string">"strict"</span>: <span class="literal">false</span>,</div></pre></td></tr></table></figure><h4 id="会报错：Do-not-use-“-ts-ignore”-because-it-alters-compilation-errors-typescript-eslint-ban-ts-comment"><a href="#会报错：Do-not-use-“-ts-ignore”-because-it-alters-compilation-errors-typescript-eslint-ban-ts-comment" class="headerlink" title="会报错：Do not use “@ts-ignore” because it alters compilation errors  @typescript-eslint/ban-ts-comment"></a>会报错：Do not use “@ts-ignore” because it alters compilation errors  @typescript-eslint/ban-ts-comment</h4><figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//这是eslint语法检查报错</span></div><div class="line"><span class="comment">//可以将 vue.config.js 中的  lintOnSave: false 注释掉</span></div><div class="line"><span class="comment">//lintOnSave: false,</span></div></pre></td></tr></table></figure><h4 id="终极方案-anyScript"><a href="#终极方案-anyScript" class="headerlink" title="终极方案:anyScript"></a>终极方案:anyScript</h4><figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> &#123; ctx &#125;:<span class="built_in">any</span> = getCurrentInstance()</div><div class="line"></div><div class="line"><span class="comment">//注意 以下是不行的,因为eslint语法会覆盖ts语法,以下为eslint重命名语法</span></div><div class="line"><span class="keyword">const</span> &#123; ctx:<span class="built_in">any</span>  &#125;= getCurrentInstance()</div></pre></td></tr></table></figure>]]></content>
     
     
       
@@ -64,8 +64,8 @@
   
   <entry>
     <title>vue3路由</title>
-    <link href="http://yoursite.com/2021/04/17/vue3%E8%B7%AF%E7%94%B1/"/>
-    <id>http://yoursite.com/2021/04/17/vue3%E8%B7%AF%E7%94%B1/</id>
+    <link href="http://yoursite.com/2021/04/17/vue3/vue3%E8%B7%AF%E7%94%B1/"/>
+    <id>http://yoursite.com/2021/04/17/vue3/vue3%E8%B7%AF%E7%94%B1/</id>
     <published>2021-04-17T09:45:39.000Z</published>
     <updated>2021-04-17T12:40:14.058Z</updated>
     
@@ -87,8 +87,8 @@
   
   <entry>
     <title>vue-el限制输入</title>
-    <link href="http://yoursite.com/2021/04/13/vue-el%E9%99%90%E5%88%B6%E8%BE%93%E5%85%A5/"/>
-    <id>http://yoursite.com/2021/04/13/vue-el%E9%99%90%E5%88%B6%E8%BE%93%E5%85%A5/</id>
+    <link href="http://yoursite.com/2021/04/13/elementUI/vue-el%E9%99%90%E5%88%B6%E8%BE%93%E5%85%A5/"/>
+    <id>http://yoursite.com/2021/04/13/elementUI/vue-el%E9%99%90%E5%88%B6%E8%BE%93%E5%85%A5/</id>
     <published>2021-04-13T06:26:35.000Z</published>
     <updated>2021-04-13T06:29:53.212Z</updated>
     
@@ -109,8 +109,8 @@
   
   <entry>
     <title>vue路由模式</title>
-    <link href="http://yoursite.com/2021/04/08/vue%E8%B7%AF%E7%94%B1%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://yoursite.com/2021/04/08/vue%E8%B7%AF%E7%94%B1%E6%A8%A1%E5%BC%8F/</id>
+    <link href="http://yoursite.com/2021/04/08/elementUI/vue%E8%B7%AF%E7%94%B1%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://yoursite.com/2021/04/08/elementUI/vue%E8%B7%AF%E7%94%B1%E6%A8%A1%E5%BC%8F/</id>
     <published>2021-04-08T09:39:47.000Z</published>
     <updated>2021-04-08T10:12:39.977Z</updated>
     
@@ -132,8 +132,8 @@
   
   <entry>
     <title>js正则</title>
-    <link href="http://yoursite.com/2021/04/07/js%E6%AD%A3%E5%88%99/"/>
-    <id>http://yoursite.com/2021/04/07/js%E6%AD%A3%E5%88%99/</id>
+    <link href="http://yoursite.com/2021/04/07/js/js%E6%AD%A3%E5%88%99/"/>
+    <id>http://yoursite.com/2021/04/07/js/js%E6%AD%A3%E5%88%99/</id>
     <published>2021-04-07T08:00:57.000Z</published>
     <updated>2021-04-07T08:07:54.509Z</updated>
     
@@ -154,8 +154,8 @@
   
   <entry>
     <title>js对象方法</title>
-    <link href="http://yoursite.com/2021/04/07/js%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95/"/>
-    <id>http://yoursite.com/2021/04/07/js%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95/</id>
+    <link href="http://yoursite.com/2021/04/07/js/js%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95/"/>
+    <id>http://yoursite.com/2021/04/07/js/js%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95/</id>
     <published>2021-04-07T07:41:27.000Z</published>
     <updated>2021-04-07T07:42:00.717Z</updated>
     
@@ -176,8 +176,8 @@
   
   <entry>
     <title>el-table自定义排序</title>
-    <link href="http://yoursite.com/2021/04/06/el-table%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%92%E5%BA%8F/"/>
-    <id>http://yoursite.com/2021/04/06/el-table%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%92%E5%BA%8F/</id>
+    <link href="http://yoursite.com/2021/04/06/elementUI/el-table%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%92%E5%BA%8F/"/>
+    <id>http://yoursite.com/2021/04/06/elementUI/el-table%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%92%E5%BA%8F/</id>
     <published>2021-04-06T02:38:57.000Z</published>
     <updated>2021-04-06T03:12:24.493Z</updated>
     
@@ -198,8 +198,8 @@
   
   <entry>
     <title>vue3新特性-使用</title>
-    <link href="http://yoursite.com/2021/03/31/vue3%E6%96%B0%E7%89%B9%E6%80%A7-%E4%BD%BF%E7%94%A8/"/>
-    <id>http://yoursite.com/2021/03/31/vue3%E6%96%B0%E7%89%B9%E6%80%A7-%E4%BD%BF%E7%94%A8/</id>
+    <link href="http://yoursite.com/2021/03/31/vue3/vue3%E6%96%B0%E7%89%B9%E6%80%A7-%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2021/03/31/vue3/vue3%E6%96%B0%E7%89%B9%E6%80%A7-%E4%BD%BF%E7%94%A8/</id>
     <published>2021-03-31T09:32:34.000Z</published>
     <updated>2021-04-01T14:25:12.871Z</updated>
     
@@ -222,8 +222,8 @@
   
   <entry>
     <title>vue3项目创建</title>
-    <link href="http://yoursite.com/2021/03/30/vue3%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/"/>
-    <id>http://yoursite.com/2021/03/30/vue3%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/</id>
+    <link href="http://yoursite.com/2021/03/30/vue3/vue3%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/"/>
+    <id>http://yoursite.com/2021/03/30/vue3/vue3%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/</id>
     <published>2021-03-30T06:00:49.000Z</published>
     <updated>2021-03-30T06:06:45.652Z</updated>
     
@@ -244,8 +244,8 @@
   
   <entry>
     <title>ts声明文件和内置对象</title>
-    <link href="http://yoursite.com/2021/03/30/ts%E5%A3%B0%E6%98%8E%E6%96%87%E4%BB%B6%E5%92%8C%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/"/>
-    <id>http://yoursite.com/2021/03/30/ts%E5%A3%B0%E6%98%8E%E6%96%87%E4%BB%B6%E5%92%8C%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/</id>
+    <link href="http://yoursite.com/2021/03/30/TypeScript/ts%E5%A3%B0%E6%98%8E%E6%96%87%E4%BB%B6%E5%92%8C%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://yoursite.com/2021/03/30/TypeScript/ts%E5%A3%B0%E6%98%8E%E6%96%87%E4%BB%B6%E5%92%8C%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/</id>
     <published>2021-03-30T01:51:51.000Z</published>
     <updated>2021-03-30T06:00:04.960Z</updated>
     
@@ -267,8 +267,8 @@
   
   <entry>
     <title>ts泛型</title>
-    <link href="http://yoursite.com/2021/03/29/ts%E6%B3%9B%E5%9E%8B/"/>
-    <id>http://yoursite.com/2021/03/29/ts%E6%B3%9B%E5%9E%8B/</id>
+    <link href="http://yoursite.com/2021/03/29/TypeScript/ts%E6%B3%9B%E5%9E%8B/"/>
+    <id>http://yoursite.com/2021/03/29/TypeScript/ts%E6%B3%9B%E5%9E%8B/</id>
     <published>2021-03-29T14:25:11.000Z</published>
     <updated>2021-03-30T01:53:15.073Z</updated>
     
@@ -290,8 +290,8 @@
   
   <entry>
     <title>ts函数</title>
-    <link href="http://yoursite.com/2021/03/29/ts%E5%87%BD%E6%95%B0/"/>
-    <id>http://yoursite.com/2021/03/29/ts%E5%87%BD%E6%95%B0/</id>
+    <link href="http://yoursite.com/2021/03/29/TypeScript/ts%E5%87%BD%E6%95%B0/"/>
+    <id>http://yoursite.com/2021/03/29/TypeScript/ts%E5%87%BD%E6%95%B0/</id>
     <published>2021-03-29T13:56:06.000Z</published>
     <updated>2021-03-29T14:24:56.887Z</updated>
     
@@ -313,8 +313,8 @@
   
   <entry>
     <title>ts类</title>
-    <link href="http://yoursite.com/2021/03/29/ts%E7%B1%BB/"/>
-    <id>http://yoursite.com/2021/03/29/ts%E7%B1%BB/</id>
+    <link href="http://yoursite.com/2021/03/29/TypeScript/ts%E7%B1%BB/"/>
+    <id>http://yoursite.com/2021/03/29/TypeScript/ts%E7%B1%BB/</id>
     <published>2021-03-29T08:42:04.000Z</published>
     <updated>2021-03-29T13:55:37.533Z</updated>
     
@@ -335,8 +335,8 @@
   
   <entry>
     <title>ts接口</title>
-    <link href="http://yoursite.com/2021/03/29/ts%E6%8E%A5%E5%8F%A3/"/>
-    <id>http://yoursite.com/2021/03/29/ts%E6%8E%A5%E5%8F%A3/</id>
+    <link href="http://yoursite.com/2021/03/29/TypeScript/ts%E6%8E%A5%E5%8F%A3/"/>
+    <id>http://yoursite.com/2021/03/29/TypeScript/ts%E6%8E%A5%E5%8F%A3/</id>
     <published>2021-03-29T07:37:26.000Z</published>
     <updated>2021-03-29T09:31:48.188Z</updated>
     
@@ -357,8 +357,8 @@
   
   <entry>
     <title>js数组操作</title>
-    <link href="http://yoursite.com/2021/03/29/js%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/"/>
-    <id>http://yoursite.com/2021/03/29/js%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/</id>
+    <link href="http://yoursite.com/2021/03/29/js/js%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/"/>
+    <id>http://yoursite.com/2021/03/29/js/js%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/</id>
     <published>2021-03-29T02:37:26.000Z</published>
     <updated>2021-03-29T06:53:06.247Z</updated>
     
@@ -379,8 +379,8 @@
   
   <entry>
     <title>js遍历数组</title>
-    <link href="http://yoursite.com/2021/03/29/js%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84/"/>
-    <id>http://yoursite.com/2021/03/29/js%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84/</id>
+    <link href="http://yoursite.com/2021/03/29/js/js%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84/"/>
+    <id>http://yoursite.com/2021/03/29/js/js%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84/</id>
     <published>2021-03-29T02:20:04.000Z</published>
     <updated>2021-03-30T01:44:10.070Z</updated>
     
@@ -401,8 +401,8 @@
   
   <entry>
     <title>页面传参</title>
-    <link href="http://yoursite.com/2021/03/29/%E9%A1%B5%E9%9D%A2%E4%BC%A0%E5%8F%82/"/>
-    <id>http://yoursite.com/2021/03/29/%E9%A1%B5%E9%9D%A2%E4%BC%A0%E5%8F%82/</id>
+    <link href="http://yoursite.com/2021/03/29/html/%E9%A1%B5%E9%9D%A2%E4%BC%A0%E5%8F%82/"/>
+    <id>http://yoursite.com/2021/03/29/html/%E9%A1%B5%E9%9D%A2%E4%BC%A0%E5%8F%82/</id>
     <published>2021-03-29T01:37:30.000Z</published>
     <updated>2021-04-19T09:47:49.459Z</updated>
     
@@ -425,8 +425,8 @@
   
   <entry>
     <title>ts使用</title>
-    <link href="http://yoursite.com/2021/03/26/ts%E4%BD%BF%E7%94%A8/"/>
-    <id>http://yoursite.com/2021/03/26/ts%E4%BD%BF%E7%94%A8/</id>
+    <link href="http://yoursite.com/2021/03/26/TypeScript/ts%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2021/03/26/TypeScript/ts%E4%BD%BF%E7%94%A8/</id>
     <published>2021-03-26T08:33:51.000Z</published>
     <updated>2021-03-29T07:36:13.694Z</updated>
     
@@ -444,8 +444,8 @@
   
   <entry>
     <title>ts</title>
-    <link href="http://yoursite.com/2021/03/26/ts/"/>
-    <id>http://yoursite.com/2021/03/26/ts/</id>
+    <link href="http://yoursite.com/2021/03/26/TypeScript/ts/"/>
+    <id>http://yoursite.com/2021/03/26/TypeScript/ts/</id>
     <published>2021-03-26T06:20:54.000Z</published>
     <updated>2021-03-27T13:30:50.104Z</updated>
     

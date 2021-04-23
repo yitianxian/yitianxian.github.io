@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>ts类 | 记录 | 千里之行，始于足下</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="theme-color" content="#3F51B5">
+  
+  
+  <meta name="keywords" content="TypeScript">
+  <meta name="description" content="ts类  （和java基本一样）12345678910111213141516171819202122232425(() =&amp;gt; &amp;#123;    //父类    class Person &amp;#123;        name: string        age: number        sex: string        //可以给默认值        constructor(na">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ts类">
+<meta property="og:url" content="http://yoursite.com/2021/03/29/TypeScript/ts类/index.html">
+<meta property="og:site_name" content="记录">
+<meta property="og:description" content="ts类  （和java基本一样）12345678910111213141516171819202122232425(() =&amp;gt; &amp;#123;    //父类    class Person &amp;#123;        name: string        age: number        sex: string        //可以给默认值        constructor(na">
+<meta property="og:updated_time" content="2021-03-29T13:55:37.533Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ts类">
+<meta name="twitter:description" content="ts类  （和java基本一样）12345678910111213141516171819202122232425(() =&amp;gt; &amp;#123;    //父类    class Person &amp;#123;        name: string        age: number        sex: string        //可以给默认值        constructor(na">
+  
+    <link rel="alternative" href="/atom.xml" title="记录" type="application/atom+xml">
+  
+  <meta name="summary" content="null">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="loading" class="active"></div>
+
+  <nav id="menu" class="hide" >
+   <div class="inner flex-row-vertical">
+  <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+      <i class="icon icon-lg icon-close"></i>
+  </a>
+  <div class="brand-wrap">
+    <div class="brand">
+      <a href="/" class="avatar"><img src="/img/logo.png"></a>
+      <hgroup class="introduce">
+        <h5 class="nickname">Z-Q-K</h5>
+        <a href="mailto:2280962638@qq.com" title="2280962638@qq.com" class="mail">2280962638@qq.com</a>
+      </hgroup>
+    </div>
+  </div>
+  <div class="scroll-wrap flex-col">
+    <ul class="nav">
+      
+          <li class="waves-block waves-effect">
+            <a href="/"  >
+              <i class="icon icon-lg icon-home"></i>
+              主页
+            </a>
+          </li>
+      
+          <li class="waves-block waves-effect">
+            <a href="/archives"  >
+              <i class="icon icon-lg icon-archives"></i>
+              时间线
+            </a>
+          </li>
+      
+          <li class="waves-block waves-effect">
+            <a href="/tags"  >
+              <i class="icon icon-lg icon-tags"></i>
+              标签
+            </a>
+          </li>
+      
+          <li class="waves-block waves-effect">
+            <a href="https://github.com/yitianxian" target="_blank" >
+              <i class="icon icon-lg icon-github"></i>
+              Github
+            </a>
+          </li>
+      
+    </ul>
+
+    <footer class="footer">
+  <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
+  <p>记录 &copy; 2021</p>
+  <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+</footer>
+
+  </div>
+</div>
+
+  </nav>
+  <main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">ts类</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input " autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header">
+  <div class="container">
+    <h1 class="author">ts类</h1>
+    <h5 class="subtitle">
+        
+            <time datetime="2021-03-29T08:42:04.000Z" itemprop="datePublished" class="page-time">
+  2021-03-29
+</time>
+
+
+        
+    </h5>
+  </div>
+</header>
+
+    <div class="container body-wrap">
+      <article id="post-TypeScript/ts类" 
+  class="article article-type-post" itemprop="blogPost">
+    <div class="post-meta flex-row">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TypeScript/">TypeScript</a></li></ul>
+
+    </div>
+    <div class="post-body">
+        <aside class="post-widget" id="post-widget">
+
+            
+            <div class="post-share" id="post-share">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+            
+
+            
+            <nav class="post-toc-wrap" id="post-toc">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ts类-（和java基本一样）"><span class="post-toc-number">1.</span> <span class="post-toc-text">ts类  （和java基本一样）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#继承"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">继承</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#多态"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">多态</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#修饰符"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">修饰符</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#readonly"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">readonly</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#存取器-getter-和-setter"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">存取器 getter 和 setter</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#抽象类"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">抽象类</span></a></li></ol></li></ol>
+            </nav>
+            
+        </aside>
+
+        <div class="post-main">
+
+            <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="ts类-（和java基本一样）"><a href="#ts类-（和java基本一样）" class="headerlink" title="ts类  （和java基本一样）"></a>ts类  （和java基本一样）</h2><figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">    <span class="comment">//父类</span></div><div class="line">    <span class="keyword">class</span> Person &#123;</div><div class="line">        name: <span class="built_in">string</span></div><div class="line">        age: <span class="built_in">number</span></div><div class="line">        sex: <span class="built_in">string</span></div><div class="line">        <span class="comment">//可以给默认值</span></div><div class="line">        <span class="keyword">constructor</span>(<span class="params">name: <span class="built_in">string</span>, age: <span class="built_in">number</span>=1</span>) &#123;</div><div class="line">            <span class="keyword">this</span>.name = name</div><div class="line">            <span class="keyword">this</span>.age = age</div><div class="line">        &#125;</div><div class="line">        say(str:<span class="built_in">string</span>) &#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">"class say no "</span> + <span class="keyword">this</span>.name + <span class="string">" "</span> + str)</div><div class="line">        &#125;</div><div class="line">        run(distance: <span class="built_in">number</span>=<span class="number">10</span>) &#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="keyword">this</span>.name + <span class="string">" run "</span> + distance)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">var</span> person:Person = <span class="keyword">new</span> Person(<span class="string">"zs"</span>)</div><div class="line">    <span class="comment">// Person.prototype.sex = "man"</span></div><div class="line">    <span class="comment">// //person.sex = "man"</span></div><div class="line">    <span class="comment">// console.log(person.sex)  //man</span></div><div class="line">    person.say(<span class="string">'father'</span>) <span class="comment">//class say no zs father</span></div><div class="line">&#125;)()</div></pre></td></tr></table></figure>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//子类</span></div><div class="line"><span class="keyword">class</span> CPerson <span class="keyword">extends</span> Person &#123;</div><div class="line">        <span class="keyword">constructor</span>(<span class="params">name: <span class="built_in">string</span>, age: <span class="built_in">number</span>=1</span>) &#123;</div><div class="line">            <span class="keyword">super</span>(name, age);</div><div class="line">        &#125;</div><div class="line">        say(str:<span class="built_in">string</span>) &#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">"CPerson "</span> + str)</div><div class="line">            <span class="keyword">super</span>.say(<span class="string">'children'</span>)</div><div class="line">        &#125;</div><div class="line">        run(distance: <span class="built_in">number</span>=<span class="number">100</span>) &#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="keyword">this</span>.name + <span class="string">" run "</span> + distance)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> cp:CPerson = <span class="keyword">new</span> CPerson(<span class="string">"ls"</span>)</div><div class="line">    <span class="comment">// CPerson.prototype.sex = 'woman'</span></div><div class="line">    <span class="comment">// cp.sex = "woman"</span></div><div class="line">    <span class="comment">// console.log(cp.sex) //woman</span></div><div class="line">    cp.say(<span class="string">"child"</span>)  <span class="comment">//CPerson child  CPerson class say no ls</span></div></pre></td></tr></table></figure>
+<h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//父类的引用指向子类对象，不同类型的子类针对相同方法产生不同的行为</span></div><div class="line"><span class="keyword">class</span> CCPerson <span class="keyword">extends</span> Person &#123;</div><div class="line">    <span class="keyword">constructor</span>(<span class="params">name: <span class="built_in">string</span>, age: <span class="built_in">number</span>=1</span>) &#123;</div><div class="line">        <span class="keyword">super</span>(name, age);</div><div class="line">    &#125;</div><div class="line">    run(distance: <span class="built_in">number</span> = <span class="number">1000</span>) &#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name + <span class="string">" run "</span> + distance)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> ccp:CCPerson = <span class="keyword">new</span> CCPerson(<span class="string">'ww'</span>)</div><div class="line"><span class="keyword">var</span> cp1:Person = <span class="keyword">new</span> CPerson(<span class="string">"zl"</span>) <span class="comment">//使用父类型创建子类对象</span></div><div class="line"><span class="keyword">var</span> ccp1:Person = <span class="keyword">new</span> CCPerson(<span class="string">"qq"</span>)</div><div class="line">person.run() <span class="comment">//zs run 10</span></div><div class="line">cp.run() <span class="comment">//ls run 100</span></div><div class="line">ccp.run() <span class="comment">//ww run 1000</span></div><div class="line">cp1.run() <span class="comment">//zl run 100</span></div><div class="line">ccp1.run() <span class="comment">//qq run 1000</span></div></pre></td></tr></table></figure>
+<h3 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h3><p><code>protected</code> 修饰符与 <code>private</code> 修饰符的行为很相似，但有一点不同，<code>protected</code>成员在派生类中仍然可以访问。例如：</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* </span></div><div class="line">访问修饰符: 用来描述类内部的属性/方法的可访问性</div><div class="line">  public: 默认值, 公开的外部也可以访问</div><div class="line">  private: 只能类内部可以访问</div><div class="line">  protected: 类内部和子类可以访问</div><div class="line">*/</div><div class="line"></div><div class="line"><span class="keyword">class</span> Animal &#123;</div><div class="line">  <span class="keyword">public</span> name: <span class="built_in">string</span></div><div class="line"></div><div class="line">  <span class="keyword">public</span> <span class="keyword">constructor</span> (<span class="params">name: <span class="built_in">string</span></span>) &#123;</div><div class="line">    <span class="keyword">this</span>.name = name</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">public</span> run (distance: <span class="built_in">number</span>=<span class="number">0</span>) &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;this.name&#125;</span> run <span class="subst">$&#123;distance&#125;</span>m`</span>)</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">class</span> Person <span class="keyword">extends</span> Animal &#123;</div><div class="line">  <span class="keyword">private</span> age: <span class="built_in">number</span> = <span class="number">18</span></div><div class="line">  <span class="keyword">protected</span> sex: <span class="built_in">string</span> = <span class="string">'男'</span></div><div class="line"></div><div class="line">  run (distance: <span class="built_in">number</span>=<span class="number">5</span>) &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'Person jumping...'</span>)</div><div class="line">    <span class="keyword">super</span>.run(distance)</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">class</span> Student <span class="keyword">extends</span> Person &#123;</div><div class="line">  run (distance: <span class="built_in">number</span>=<span class="number">6</span>) &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'Student jumping...'</span>)</div><div class="line"></div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.sex) <span class="comment">// 子类能看到父类中受保护的成员</span></div><div class="line">    <span class="comment">// console.log(this.age) //  子类看不到父类中私有的成员</span></div><div class="line"></div><div class="line">    <span class="keyword">super</span>.run(distance)</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">new</span> Person(<span class="string">'abc'</span>).name) <span class="comment">// 公开的可见</span></div><div class="line"><span class="comment">// console.log(new Person('abc').sex) // 受保护的不可见</span></div><div class="line"><span class="comment">// console.log(new Person('abc').age) //  私有的不可见</span></div></pre></td></tr></table></figure>
+<h3 id="readonly"><a href="#readonly" class="headerlink" title="readonly"></a>readonly</h3><p>使用 readonly 关键字将属性设置为只读的。 只读属性必须在声明时或构造函数里被初始化。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> Person &#123;</div><div class="line">    readonly name: <span class="built_in">string</span> = <span class="string">'abc'</span></div><div class="line">    <span class="keyword">constructor</span>(<span class="params">name: <span class="built_in">string</span></span>) &#123;</div><div class="line">        <span class="keyword">this</span>.name = name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//参数属性通过给构造函数参数前面添加一个访问限定符来声明。使用 private 限定一个参数属性会声明并初始化一个私有成员；对于 public 和 protected 来说也是一样。</span></div><div class="line"><span class="keyword">class</span> Person &#123;</div><div class="line">  <span class="comment">//仅在构造函数里使用 readonly name: string 参数来创建和初始化 name 成员。 我们把声明和赋值合并至一处</span></div><div class="line">  <span class="keyword">constructor</span>(<span class="params">readonly name: <span class="built_in">string</span></span>) &#123;</div><div class="line">    <span class="keyword">this</span>.name = name</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="存取器-getter-和-setter"><a href="#存取器-getter-和-setter" class="headerlink" title="存取器 getter 和 setter"></a>存取器 getter 和 setter</h3><p>控制对对象成员的访问</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* </span></div><div class="line">静态属性, 是类对象的属性</div><div class="line">非静态属性, 是类的实例对象的属性</div><div class="line">*/</div><div class="line">(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">    <span class="keyword">class</span> Person &#123;</div><div class="line">        <span class="comment">//类中有一个默认的name属性,所以下行代码会报错</span></div><div class="line">        <span class="comment">// static name : string</span></div><div class="line">        firstName: <span class="built_in">string</span> = <span class="string">'A'</span></div><div class="line">        lastName: <span class="built_in">string</span> = <span class="string">'B'</span></div><div class="line">        <span class="keyword">static</span> sex: <span class="built_in">string</span> = <span class="string">"man"</span></div><div class="line">        <span class="keyword">constructor</span>(<span class="params">firstName:<span class="built_in">string</span>, lastName:<span class="built_in">string</span></span>) &#123;</div><div class="line">            <span class="keyword">this</span>.firstName = firstName</div><div class="line">            <span class="keyword">this</span>.lastName = lastName</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">get</span> fullName () &#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.firstName + <span class="string">'-'</span> + <span class="keyword">this</span>.lastName</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">set</span> fullName (value) &#123;</div><div class="line">            <span class="keyword">const</span> names = value.split(<span class="string">'-'</span>)</div><div class="line">            <span class="keyword">this</span>.firstName = names[<span class="number">0</span>]</div><div class="line">            <span class="keyword">this</span>.lastName = names[<span class="number">1</span>]</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">static</span> say() &#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">"static function"</span>)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">const</span> p = <span class="keyword">new</span> Person(<span class="string">"东方"</span>,<span class="string">"不败"</span>)</div><div class="line">    <span class="built_in">console</span>.log(p.fullName) <span class="comment">//东方-不败</span></div><div class="line">    <span class="comment">// console.log(p.sex)// 报错</span></div><div class="line">    <span class="built_in">console</span>.log(Person.sex)<span class="comment">// man</span></div><div class="line">    Person.sex = <span class="string">"woman"</span></div><div class="line">    <span class="built_in">console</span>.log(Person.sex)<span class="comment">// woman</span></div><div class="line">    Person.say() <span class="comment">//static function</span></div><div class="line"></div><div class="line">    p.fullName = <span class="string">'东方-不败'</span> <span class="comment">//东方 不败</span></div><div class="line">    <span class="built_in">console</span>.log(p.firstName, p.lastName)</div><div class="line">&#125;)()</div></pre></td></tr></table></figure>
+<h3 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h3><p>1、抽象类做为其它派生类的基类使用。 它们不能被实例化</p>
+<p>2、不同于接口，抽象类可以包含成员的实现细节</p>
+<p>3、<code>abstract</code> 关键字是用于定义抽象类和在抽象类内部定义抽象方法</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">    <span class="keyword">abstract</span> <span class="keyword">class</span> Animal &#123;</div><div class="line">        <span class="comment">//抽象属性</span></div><div class="line">        <span class="keyword">abstract</span> name:<span class="built_in">string</span> = <span class="string">"animal"</span></div><div class="line">        <span class="comment">// 抽象类， 不能有具体实现</span></div><div class="line">        <span class="keyword">abstract</span> eat()</div><div class="line">        <span class="comment">//实例方法</span></div><div class="line">        say() &#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">"mou mou"</span>)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//不能直接实例话</span></div><div class="line">    <span class="comment">// var animal:Animal = new Animal()</span></div><div class="line">    <span class="keyword">class</span> Dog <span class="keyword">extends</span> Animal &#123;</div><div class="line">        name:<span class="built_in">string</span> = <span class="string">"animal"</span></div><div class="line">        eat() &#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">"dog dog"</span>)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">var</span> dog:Animal = <span class="keyword">new</span> Dog()</div><div class="line">    dog.eat() <span class="comment">//dog dog</span></div><div class="line">    dog.say() <span class="comment">//mou mou</span></div><div class="line">    <span class="built_in">console</span>.log(dog.name) <span class="comment">//animal</span></div><div class="line">&#125;)()</div></pre></td></tr></table></figure>
+
+            
+            
+            <blockquote>
+                <p>
+                本文地址：
+                <a href="http://yoursite.com/2021/03/29/TypeScript/ts类/" target="_blank" rel="external">http://yoursite.com/2021/03/29/TypeScript/ts类/</a>
+                </p>
+                <footer><cite><a href="http://yoursite.com">@记录</a></cite></footer>
+            </blockquote>
+            </div>
+            
+<nav class="post-nav">
+  
+    <div class="waves-block waves-effect prev fl">
+      <a href="/2021/03/29/TypeScript/ts函数/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">ts函数</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next fr">
+      <a href="/2021/03/29/TypeScript/ts接口/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">ts接口</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+            
+            
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="TypeScript/ts类" data-title="ts类" data-url="http://yoursite.com/2021/03/29/TypeScript/ts类/index.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"ysblog"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+        </div>
+    </div>
+</article>
+
+    </div>
+  </main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+<script>
+var BLOG_SHARE = {
+    title: "ts类",
+    pic: "/img/logo.png",
+    summary: document.getElementsByName('summary')[0].content,
+    url: "http://yoursite.com/2021/03/29/TypeScript/ts类/index.html"
+};
+</script>
+<div class="global-share" id="global-share">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<script type="text/template" id="search-tpl">
+<li class="item">
+    <a href="/{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</script>
+
+<script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
