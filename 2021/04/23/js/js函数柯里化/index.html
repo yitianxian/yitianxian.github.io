@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>js函数柯里化 | 记录 | 千里之行，始于足下</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="theme-color" content="#3F51B5">
+  
+  
+  <meta name="keywords" content="js">
+  <meta name="description" content="函数柯里化函数调用继续返回函数，实现多次接收参数最后统一处理只传递给函数一部分参数来调用它，让它返回一个函数去处理剩下的参数简单的柯里化函数：
+123456789function sum(a) &amp;#123;    return (b) =&amp;gt; &amp;#123;        return (c) =&amp;gt; &amp;#123;            return a + b + c        &amp;#1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js函数柯里化">
+<meta property="og:url" content="http://yoursite.com/2021/04/23/js/js函数柯里化/index.html">
+<meta property="og:site_name" content="记录">
+<meta property="og:description" content="函数柯里化函数调用继续返回函数，实现多次接收参数最后统一处理只传递给函数一部分参数来调用它，让它返回一个函数去处理剩下的参数简单的柯里化函数：
+123456789function sum(a) &amp;#123;    return (b) =&amp;gt; &amp;#123;        return (c) =&amp;gt; &amp;#123;            return a + b + c        &amp;#1">
+<meta property="og:updated_time" content="2021-04-23T03:16:05.201Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js函数柯里化">
+<meta name="twitter:description" content="函数柯里化函数调用继续返回函数，实现多次接收参数最后统一处理只传递给函数一部分参数来调用它，让它返回一个函数去处理剩下的参数简单的柯里化函数：
+123456789function sum(a) &amp;#123;    return (b) =&amp;gt; &amp;#123;        return (c) =&amp;gt; &amp;#123;            return a + b + c        &amp;#1">
+  
+    <link rel="alternative" href="/atom.xml" title="记录" type="application/atom+xml">
+  
+  <meta name="summary" content="null">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="loading" class="active"></div>
+
+  <nav id="menu" class="hide" >
+   <div class="inner flex-row-vertical">
+  <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+      <i class="icon icon-lg icon-close"></i>
+  </a>
+  <div class="brand-wrap">
+    <div class="brand">
+      <a href="/" class="avatar"><img src="/img/logo.png"></a>
+      <hgroup class="introduce">
+        <h5 class="nickname">Z-Q-K</h5>
+        <a href="mailto:2280962638@qq.com" title="2280962638@qq.com" class="mail">2280962638@qq.com</a>
+      </hgroup>
+    </div>
+  </div>
+  <div class="scroll-wrap flex-col">
+    <ul class="nav">
+      
+          <li class="waves-block waves-effect">
+            <a href="/"  >
+              <i class="icon icon-lg icon-home"></i>
+              主页
+            </a>
+          </li>
+      
+          <li class="waves-block waves-effect">
+            <a href="/archives"  >
+              <i class="icon icon-lg icon-archives"></i>
+              时间线
+            </a>
+          </li>
+      
+          <li class="waves-block waves-effect">
+            <a href="/tags"  >
+              <i class="icon icon-lg icon-tags"></i>
+              标签
+            </a>
+          </li>
+      
+          <li class="waves-block waves-effect">
+            <a href="https://github.com/yitianxian" target="_blank" >
+              <i class="icon icon-lg icon-github"></i>
+              Github
+            </a>
+          </li>
+      
+    </ul>
+
+    <footer class="footer">
+  <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
+  <p>记录 &copy; 2021</p>
+  <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+</footer>
+
+  </div>
+</div>
+
+  </nav>
+  <main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">js函数柯里化</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input " autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header">
+  <div class="container">
+    <h1 class="author">js函数柯里化</h1>
+    <h5 class="subtitle">
+        
+            <time datetime="2021-04-23T02:42:25.000Z" itemprop="datePublished" class="page-time">
+  2021-04-23
+</time>
+
+
+        
+    </h5>
+  </div>
+</header>
+
+    <div class="container body-wrap">
+      <article id="post-js/js函数柯里化" 
+  class="article article-type-post" itemprop="blogPost">
+    <div class="post-meta flex-row">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+
+    </div>
+    <div class="post-body">
+        <aside class="post-widget" id="post-widget">
+
+            
+            <div class="post-share" id="post-share">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+            
+
+            
+            <nav class="post-toc-wrap" id="post-toc">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#函数柯里化"><span class="post-toc-number">1.</span> <span class="post-toc-text">函数柯里化</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#函数调用继续返回函数，实现多次接收参数最后统一处理"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">函数调用继续返回函数，实现多次接收参数最后统一处理</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#只传递给函数一部分参数来调用它，让它返回一个函数去处理剩下的参数"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">只传递给函数一部分参数来调用它，让它返回一个函数去处理剩下的参数</span></a></li></ol></li></ol>
+            </nav>
+            
+        </aside>
+
+        <div class="post-main">
+
+            <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="函数柯里化"><a href="#函数柯里化" class="headerlink" title="函数柯里化"></a>函数柯里化</h3><h4 id="函数调用继续返回函数，实现多次接收参数最后统一处理"><a href="#函数调用继续返回函数，实现多次接收参数最后统一处理" class="headerlink" title="函数调用继续返回函数，实现多次接收参数最后统一处理"></a>函数调用继续返回函数，实现多次接收参数最后统一处理</h4><h4 id="只传递给函数一部分参数来调用它，让它返回一个函数去处理剩下的参数"><a href="#只传递给函数一部分参数来调用它，让它返回一个函数去处理剩下的参数" class="headerlink" title="只传递给函数一部分参数来调用它，让它返回一个函数去处理剩下的参数"></a>只传递给函数一部分参数来调用它，让它返回一个函数去处理剩下的参数</h4><p>简单的柯里化函数：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">a</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="function">(<span class="params">b</span>) =&gt;</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="function">(<span class="params">c</span>) =&gt;</span> &#123;</div><div class="line">            <span class="keyword">return</span> a + b + c</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(sum(<span class="number">1</span>)(<span class="number">2</span>)(<span class="number">3</span>)); <span class="comment">//6</span></div></pre></td></tr></table></figure>
+<p>应用：</p>
+<p>react中：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">saveFormData = <span class="function">(<span class="params">dataType</span>) =&gt;</span> &#123;</div><div class="line">                <span class="keyword">return</span> <span class="function">(<span class="params">event</span>) =&gt;</span> &#123;</div><div class="line">                    <span class="keyword">this</span>.setState(&#123;[dataType]: event.target.value&#125;)</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line"><span class="comment">//react 默认传递参数event 即实际调用为 this.saveFormData('username')（event）</span></div><div class="line"><span class="comment">//onChange 需要函数作为调用，saveFormData('username') 返回的是一个函数</span></div><div class="line">render() &#123;</div><div class="line">	<span class="keyword">return</span> (</div><div class="line">		<span class="xml"><span class="tag">&lt;<span class="name">input</span> </span></span></div><div class="line">			<span class="attr">type</span>=<span class="string">'text'</span> </div><div class="line">			<span class="attr">name</span>=<span class="string">'username'</span></div><div class="line">			<span class="attr">onChange</span>=<span class="string">&#123;this.saveFormData(</span>'<span class="attr">username</span>')&#125;&gt;</div><div class="line">		<span class="tag">&lt;/<span class="name">input</span>&gt;</span>	</div><div class="line">	)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>数组排序</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line">* @function 指定数组排序规则</div><div class="line">* @param str &#123;string?&#125; 单个属性，不确定个数</div><div class="line">* @param num &#123;Number?&#125; 是否升序 默认降序</div><div class="line">* @version 1.0.0</div><div class="line">* @description 针对特殊业务需求，用于图表的排序</div><div class="line">*/</div><div class="line">sortBy() &#123;</div><div class="line">    <span class="keyword">let</span> num = <span class="number">1</span></div><div class="line">    <span class="keyword">let</span> arr = []</div><div class="line">    <span class="comment">//最后一个参数是数字</span></div><div class="line">    <span class="keyword">if</span>(<span class="keyword">typeof</span> <span class="built_in">arguments</span>[<span class="built_in">arguments</span>.length - <span class="number">1</span>] === <span class="string">'number'</span> &amp;&amp; 				             !<span class="built_in">isNaN</span>(<span class="built_in">arguments</span>[<span class="built_in">arguments</span>.length - <span class="number">1</span>])) &#123;</div><div class="line">        <span class="comment">//获取最后一个参数的值</span></div><div class="line">        num = <span class="built_in">arguments</span>[<span class="built_in">arguments</span>.length - <span class="number">1</span>] ? <span class="number">1</span> : <span class="number">-1</span></div><div class="line">        arr = <span class="built_in">arguments</span>.slice(<span class="number">0</span>, <span class="built_in">arguments</span>.length - <span class="number">1</span>)</div><div class="line">    &#125;<span class="keyword">else</span> &#123;<span class="comment">//最后一个参数不是数字</span></div><div class="line">        arr = <span class="built_in">arguments</span></div><div class="line">    &#125;</div><div class="line">    <span class="comment">// num = num ? 1 : -1</span></div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;</div><div class="line">        <span class="comment">// 获取其他参数的值</span></div><div class="line">        <span class="keyword">let</span> a1 = <span class="number">0</span></div><div class="line">        <span class="keyword">let</span> b1 = <span class="number">0</span></div><div class="line">        <span class="comment">//这里 a[arr[i]] 后端返回的值确定是number</span></div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>, len =  arr.length; i &lt; len; i++) &#123;</div><div class="line">            a1 += a[arr[i]]</div><div class="line">            b1 += b[arr[i]]</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span>(a1 &gt; b1)&#123;</div><div class="line">            <span class="keyword">return</span> num * <span class="number">-1</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span>(a1 &lt; b1)&#123;</div><div class="line">            <span class="keyword">return</span> num * <span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//使用</span></div><div class="line">data.sort(<span class="keyword">this</span>.sortBy(<span class="string">'isLeader'</span>, <span class="string">'isNotLeader'</span>))</div></pre></td></tr></table></figure>
+
+
+            
+            
+            <blockquote>
+                <p>
+                本文地址：
+                <a href="http://yoursite.com/2021/04/23/js/js函数柯里化/" target="_blank" rel="external">http://yoursite.com/2021/04/23/js/js函数柯里化/</a>
+                </p>
+                <footer><cite><a href="http://yoursite.com">@记录</a></cite></footer>
+            </blockquote>
+            </div>
+            
+<nav class="post-nav">
+  
+    <div class="waves-block waves-effect prev fl">
+      <a href="/2021/04/23/react/react生命周期/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">react生命周期</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next fr">
+      <a href="/2021/04/20/css/scss中deep/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">scss中deep</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+            
+            
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="js/js函数柯里化" data-title="js函数柯里化" data-url="http://yoursite.com/2021/04/23/js/js函数柯里化/index.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"ysblog"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+        </div>
+    </div>
+</article>
+
+    </div>
+  </main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+<script>
+var BLOG_SHARE = {
+    title: "js函数柯里化",
+    pic: "/img/logo.png",
+    summary: document.getElementsByName('summary')[0].content,
+    url: "http://yoursite.com/2021/04/23/js/js函数柯里化/index.html"
+};
+</script>
+<div class="global-share" id="global-share">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<script type="text/template" id="search-tpl">
+<li class="item">
+    <a href="/{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</script>
+
+<script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -3,29 +3,26 @@
 <head>
   <meta charset="utf-8">
   
-  <title>scss中deep | 记录 | 千里之行，始于足下</title>
+  <title>css-img踩坑 | 记录 | 千里之行，始于足下</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="theme-color" content="#3F51B5">
   
   
-  <meta name="keywords" content="scss">
-  <meta name="description" content="vue中有的组件是挂载到全局，查看时与app同级，这时的组件样式更改不能在vue文件中的scope中更改，因为无法读取到。
-同时使用deep有三种运算符
-123456789&amp;gt;&amp;gt;&amp;gt; =&amp;gt; 如果你希望 scoped 样式中的一个选择器能够作用得“更深”，例如影响子组件，你可以使用 		&amp;gt;&amp;gt;&amp;gt; 操作符：        有些像 Sass 之类的预处理器无法正确解析">
+  <meta name="keywords" content="css">
+  <meta name="description" content="先上代码:
+123456&amp;lt;div class=&quot;nav-set-item&quot;&amp;gt;    &amp;lt;span&amp;gt;文章&amp;lt;/span&amp;gt;    &amp;lt;img class=&quot;img-down&quot; src=&quot;skin/images/descending-order.png&quot;/&amp;gt;    &amp;lt;img class=&quot;img-up&quot; src=&quot;skin/images/cannot-As">
 <meta property="og:type" content="article">
-<meta property="og:title" content="scss中deep">
-<meta property="og:url" content="http://yoursite.com/2021/04/20/css/scss中deep/index.html">
+<meta property="og:title" content="css-img踩坑">
+<meta property="og:url" content="http://yoursite.com/2021/04/28/css-img踩坑/index.html">
 <meta property="og:site_name" content="记录">
-<meta property="og:description" content="vue中有的组件是挂载到全局，查看时与app同级，这时的组件样式更改不能在vue文件中的scope中更改，因为无法读取到。
-同时使用deep有三种运算符
-123456789&amp;gt;&amp;gt;&amp;gt; =&amp;gt; 如果你希望 scoped 样式中的一个选择器能够作用得“更深”，例如影响子组件，你可以使用 		&amp;gt;&amp;gt;&amp;gt; 操作符：        有些像 Sass 之类的预处理器无法正确解析">
-<meta property="og:updated_time" content="2021-04-20T02:44:20.362Z">
+<meta property="og:description" content="先上代码:
+123456&amp;lt;div class=&quot;nav-set-item&quot;&amp;gt;    &amp;lt;span&amp;gt;文章&amp;lt;/span&amp;gt;    &amp;lt;img class=&quot;img-down&quot; src=&quot;skin/images/descending-order.png&quot;/&amp;gt;    &amp;lt;img class=&quot;img-up&quot; src=&quot;skin/images/cannot-As">
+<meta property="og:updated_time" content="2021-04-28T12:14:08.330Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="scss中deep">
-<meta name="twitter:description" content="vue中有的组件是挂载到全局，查看时与app同级，这时的组件样式更改不能在vue文件中的scope中更改，因为无法读取到。
-同时使用deep有三种运算符
-123456789&amp;gt;&amp;gt;&amp;gt; =&amp;gt; 如果你希望 scoped 样式中的一个选择器能够作用得“更深”，例如影响子组件，你可以使用 		&amp;gt;&amp;gt;&amp;gt; 操作符：        有些像 Sass 之类的预处理器无法正确解析">
+<meta name="twitter:title" content="css-img踩坑">
+<meta name="twitter:description" content="先上代码:
+123456&amp;lt;div class=&quot;nav-set-item&quot;&amp;gt;    &amp;lt;span&amp;gt;文章&amp;lt;/span&amp;gt;    &amp;lt;img class=&quot;img-down&quot; src=&quot;skin/images/descending-order.png&quot;/&amp;gt;    &amp;lt;img class=&quot;img-up&quot; src=&quot;skin/images/cannot-As">
   
     <link rel="alternative" href="/atom.xml" title="记录" type="application/atom+xml">
   
@@ -102,7 +99,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">scss中deep</div>
+        <div class="flex-col header-title ellipsis">css-img踩坑</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -123,11 +120,11 @@
 </header>
 <header class="content-header">
   <div class="container">
-    <h1 class="author">scss中deep</h1>
+    <h1 class="author">css-img踩坑</h1>
     <h5 class="subtitle">
         
-            <time datetime="2021-04-20T02:29:18.000Z" itemprop="datePublished" class="page-time">
-  2021-04-20
+            <time datetime="2021-04-28T11:58:21.000Z" itemprop="datePublished" class="page-time">
+  2021-04-28
 </time>
 
 
@@ -137,11 +134,11 @@
 </header>
 
     <div class="container body-wrap">
-      <article id="post-css/scss中deep" 
+      <article id="post-css-img踩坑" 
   class="article article-type-post" itemprop="blogPost">
     <div class="post-meta flex-row">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scss/">scss</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
 
     </div>
     <div class="post-body">
@@ -196,9 +193,13 @@
         <div class="post-main">
 
             <div class="post-content" id="post-content" itemprop="postContent">
-            <p>vue中有的组件是挂载到全局，查看时与app同级，这时的组件样式更改不能在vue文件中的scope中更改，因为无法读取到。</p>
-<p>同时使用deep有三种运算符</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; =&gt; 如果你希望 scoped 样式中的一个选择器能够作用得“更深”，例如影响子组件，你可以使用 		&gt;&gt;&gt; 操作符：</div><div class="line">        有些像 Sass 之类的预处理器无法正确解析 &gt;&gt;&gt;。这种情况下你可以使用 /deep/ 或 			::v-deep 操作符取而代之——两者都是 &gt;&gt;&gt; 的别名，同样可以正常工作</div><div class="line"></div><div class="line">/deep/ =&gt; 在scss中有时不能正确编译</div><div class="line"></div><div class="line">::v-deep =&gt; 与/deep/用法一致，听说比/deep/快</div><div class="line">	::v-deep .MySteps &#123;</div><div class="line">        width: 50% !important;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+            <p>先上代码:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"nav-set-item"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span>文章<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"img-down"</span> <span class="attr">src</span>=<span class="string">"skin/images/descending-order.png"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"img-up"</span> <span class="attr">src</span>=<span class="string">"skin/images/cannot-Ascending-order-.png"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"img-del"</span> <span class="attr">src</span>=<span class="string">"skin/images/dele.png"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.nav-set-item</span> <span class="selector-tag">img</span><span class="selector-pseudo">:first-child</span> &#123;</div><div class="line">	<span class="attribute">position</span>: absulate;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这一段css无论如何都不能生效</p>
+<p>后来问大佬,原来css中处理img并不是当成img,css将span也当作img处理,所以这样是选中的是第一个span</p>
+<p>解决方式::从第二个元素开始</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.nav-set-item</span> <span class="selector-tag">img</span><span class="selector-pseudo">:nth-child(2)</span> &#123;</div><div class="line">	<span class="attribute">left</span>: <span class="number">721px</span>;</div><div class="line">	<span class="attribute">top</span>:<span class="number">13px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
 
             
@@ -206,7 +207,7 @@
             <blockquote>
                 <p>
                 本文地址：
-                <a href="http://yoursite.com/2021/04/20/css/scss中deep/" target="_blank" rel="external">http://yoursite.com/2021/04/20/css/scss中deep/</a>
+                <a href="http://yoursite.com/2021/04/28/css-img踩坑/" target="_blank" rel="external">http://yoursite.com/2021/04/28/css-img踩坑/</a>
                 </p>
                 <footer><cite><a href="http://yoursite.com">@记录</a></cite></footer>
             </blockquote>
@@ -214,19 +215,12 @@
             
 <nav class="post-nav">
   
-    <div class="waves-block waves-effect prev fl">
-      <a href="/2021/04/23/js/js函数柯里化/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">js函数柯里化</h4>
-      </a>
-    </div>
-  
 
   
     <div class="waves-block waves-effect next fr">
-      <a href="/2021/04/19/vue3/vue3踩坑记录/" id="post-next" class="post-nav-link">
+      <a href="/2021/04/28/reactRouter/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">vue3踩坑记录</h4>
+        <h4 class="title">reactRouter</h4>
       </a>
     </div>
   
@@ -237,7 +231,7 @@
             
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="css/scss中deep" data-title="scss中deep" data-url="http://yoursite.com/2021/04/20/css/scss中deep/index.html"></div>
+	<div class="ds-thread" data-thread-key="css-img踩坑" data-title="css-img踩坑" data-url="http://yoursite.com/2021/04/28/css-img踩坑/index.html"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -269,10 +263,10 @@
 
 <script>
 var BLOG_SHARE = {
-    title: "scss中deep",
+    title: "css-img踩坑",
     pic: "/img/logo.png",
     summary: document.getElementsByName('summary')[0].content,
-    url: "http://yoursite.com/2021/04/20/css/scss中deep/index.html"
+    url: "http://yoursite.com/2021/04/28/css-img踩坑/index.html"
 };
 </script>
 <div class="global-share" id="global-share">
