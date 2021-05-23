@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>cropper使用 | 记录 | 千里之行，始于足下</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="theme-color" content="#3F51B5">
+  
+  
+  <meta name="keywords" content="jquery">
+  <meta name="description" content="croper 图片裁剪上传插件html引入12&amp;lt;script type=&quot;text/javascript&quot; src=&quot;libs/js/cropper.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;link href=&quot;libs/css/cropper.min.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&amp;gt;
+使用12345678910111">
+<meta property="og:type" content="article">
+<meta property="og:title" content="cropper使用">
+<meta property="og:url" content="http://yoursite.com/2021/05/09/jquery/cropper使用/index.html">
+<meta property="og:site_name" content="记录">
+<meta property="og:description" content="croper 图片裁剪上传插件html引入12&amp;lt;script type=&quot;text/javascript&quot; src=&quot;libs/js/cropper.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;link href=&quot;libs/css/cropper.min.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&amp;gt;
+使用12345678910111">
+<meta property="og:image" content="http://yoursite.com/C:\Users\zhang\Desktop\viewNode.png">
+<meta property="og:updated_time" content="2021-05-09T11:38:16.531Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="cropper使用">
+<meta name="twitter:description" content="croper 图片裁剪上传插件html引入12&amp;lt;script type=&quot;text/javascript&quot; src=&quot;libs/js/cropper.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;link href=&quot;libs/css/cropper.min.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&amp;gt;
+使用12345678910111">
+<meta name="twitter:image" content="http://yoursite.com/C:\Users\zhang\Desktop\viewNode.png">
+  
+    <link rel="alternative" href="/atom.xml" title="记录" type="application/atom+xml">
+  
+  <meta name="summary" content="null">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="loading" class="active"></div>
+
+  <nav id="menu" class="hide" >
+   <div class="inner flex-row-vertical">
+  <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+      <i class="icon icon-lg icon-close"></i>
+  </a>
+  <div class="brand-wrap">
+    <div class="brand">
+      <a href="/" class="avatar"><img src="/img/logo.png"></a>
+      <hgroup class="introduce">
+        <h5 class="nickname">Z-Q-K</h5>
+        <a href="mailto:2280962638@qq.com" title="2280962638@qq.com" class="mail">2280962638@qq.com</a>
+      </hgroup>
+    </div>
+  </div>
+  <div class="scroll-wrap flex-col">
+    <ul class="nav">
+      
+          <li class="waves-block waves-effect">
+            <a href="/"  >
+              <i class="icon icon-lg icon-home"></i>
+              主页
+            </a>
+          </li>
+      
+          <li class="waves-block waves-effect">
+            <a href="/archives"  >
+              <i class="icon icon-lg icon-archives"></i>
+              时间线
+            </a>
+          </li>
+      
+          <li class="waves-block waves-effect">
+            <a href="/tags"  >
+              <i class="icon icon-lg icon-tags"></i>
+              标签
+            </a>
+          </li>
+      
+          <li class="waves-block waves-effect">
+            <a href="https://github.com/yitianxian" target="_blank" >
+              <i class="icon icon-lg icon-github"></i>
+              Github
+            </a>
+          </li>
+      
+    </ul>
+
+    <footer class="footer">
+  <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
+  <p>记录 &copy; 2021</p>
+  <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+</footer>
+
+  </div>
+</div>
+
+  </nav>
+  <main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">cropper使用</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input " autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header">
+  <div class="container">
+    <h1 class="author">cropper使用</h1>
+    <h5 class="subtitle">
+        
+            <time datetime="2021-05-09T05:05:40.000Z" itemprop="datePublished" class="page-time">
+  2021-05-09
+</time>
+
+
+        
+    </h5>
+  </div>
+</header>
+
+    <div class="container body-wrap">
+      <article id="post-jquery/cropper使用" 
+  class="article article-type-post" itemprop="blogPost">
+    <div class="post-meta flex-row">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/">jquery</a></li></ul>
+
+    </div>
+    <div class="post-body">
+        <aside class="post-widget" id="post-widget">
+
+            
+            <div class="post-share" id="post-share">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+            
+
+            
+            <nav class="post-toc-wrap" id="post-toc">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#croper-图片裁剪上传插件"><span class="post-toc-number">1.</span> <span class="post-toc-text">croper 图片裁剪上传插件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#html引入"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">html引入</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#使用"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">使用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#参数解析："><span class="post-toc-number">1.3.</span> <span class="post-toc-text">参数解析：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#viewMode-默认0，-可选（0，-1，2，3）"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">viewMode 默认0， 可选（0， 1，2，3）</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#preview-预览图"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">preview 预览图</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#dragMode-（移动模式）可以双击切换"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">dragMode （移动模式）可以双击切换</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#其他参数"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">其他参数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#函数"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">函数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#api"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">api</span></a></li></ol></li></ol>
+            </nav>
+            
+        </aside>
+
+        <div class="post-main">
+
+            <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="croper-图片裁剪上传插件"><a href="#croper-图片裁剪上传插件" class="headerlink" title="croper 图片裁剪上传插件"></a>croper 图片裁剪上传插件</h3><h4 id="html引入"><a href="#html引入" class="headerlink" title="html引入"></a>html引入</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"libs/js/cropper.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"libs/css/cropper.min.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> /&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">id</span>=<span class="string">"image"</span> <span class="attr">src</span>=<span class="string">"../images/picture.jpg"</span> <span class="attr">alt</span>=<span class="string">"Picture"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="built_in">window</span>.addEventListener(<span class="string">'DOMContentLoaded'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">var</span> image = <span class="built_in">document</span>.querySelector(<span class="string">'#image'</span>);</div><div class="line">      <span class="keyword">var</span> cropper = <span class="keyword">new</span> Cropper(image, &#123;</div><div class="line">		参数</div><div class="line">      &#125;);</div><div class="line">    &#125;);</div><div class="line">    </div><div class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="参数解析："><a href="#参数解析：" class="headerlink" title="参数解析："></a>参数解析：</h4><h5 id="viewMode-默认0，-可选（0，-1，2，3）"><a href="#viewMode-默认0，-可选（0，-1，2，3）" class="headerlink" title="viewMode 默认0， 可选（0， 1，2，3）"></a>viewMode 默认0， 可选（0， 1，2，3）</h5><p><img src="C:\Users\zhang\Desktop\viewNode.png" alt="viewNode"></p>
+<p>解析：</p>
+<p>值为3： 让 img 填满 div 可放大不能缩小</p>
+<p>值为2： 裁剪框不能超过 img， img 中的高与 div 一致</p>
+<p>值为1：裁剪框不能超过图片</p>
+<p>值为0： 裁剪框没有限制</p>
+<h4 id="preview-预览图"><a href="#preview-预览图" class="headerlink" title="preview 预览图"></a>preview 预览图</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">.small &#123;</div><div class="line">    overflow: hidden;</div><div class="line">    height: 100px;</div><div class="line">    width: 100px;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col col-6"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">id</span>=<span class="string">"image"</span> <span class="attr">src</span>=<span class="string">"../images/picture.jpg"</span> <span class="attr">alt</span>=<span class="string">"Picture"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"small"</span> &gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"> window.addEventListener('DOMContentLoaded', function () &#123;</div><div class="line">    var image = document.querySelector('#image');</div><div class="line">    var cropper = new Cropper(image, &#123;</div><div class="line">      aspectRatio:1/1,</div><div class="line">      viewMode:0,</div><div class="line">      preview:'.small'</div><div class="line">    &#125;);</div><div class="line">  &#125;);</div></pre></td></tr></table></figure>
+<p>注意事项：用于预览的div必须有固定大小，最好超出部分隐藏，即 overflow: hidden;</p>
+<h4 id="dragMode-（移动模式）可以双击切换"><a href="#dragMode-（移动模式）可以双击切换" class="headerlink" title="dragMode （移动模式）可以双击切换"></a>dragMode （移动模式）可以双击切换</h4><p>move：可以移动裁剪框。不能重选</p>
+<p>crop：可以重新选择框，不能拖动</p>
+<p>none：什么都不处理</p>
+<h4 id="其他参数"><a href="#其他参数" class="headerlink" title="其他参数"></a>其他参数</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> image = <span class="built_in">document</span>.querySelector(<span class="string">'#image'</span>);</div><div class="line"><span class="keyword">var</span> cropper = <span class="keyword">new</span> Cropper(image, &#123;</div><div class="line">  <span class="comment">//所有Boolean 不写默认都为true</span></div><div class="line"></div><div class="line">  aspectRatio:<span class="number">1</span>/<span class="number">1</span>,</div><div class="line">  <span class="attr">viewMode</span>:<span class="number">0</span>,</div><div class="line">  <span class="attr">preview</span>:<span class="string">'.small'</span>,</div><div class="line">  <span class="attr">dragMode</span>:<span class="string">'move'</span>,</div><div class="line">  <span class="attr">responsive</span>:<span class="literal">true</span>, <span class="comment">//在调整窗口大小的时候重新渲染cropper</span></div><div class="line">  restore:<span class="literal">true</span>,<span class="comment">//在调整窗口大小后恢复裁剪的区域</span></div><div class="line">  checkCrossOrigin:<span class="literal">true</span>,<span class="comment">//检查图片是否为快于图片</span></div><div class="line">  modal:<span class="literal">true</span>,<span class="comment">//是否开启遮罩 未选中的地方暗色处理</span></div><div class="line">  guides:<span class="literal">true</span>,<span class="comment">//是否显示裁剪虚线</span></div><div class="line">  highlight:<span class="literal">true</span>,<span class="comment">//将选中区域亮色处理</span></div><div class="line">  background:<span class="literal">true</span>,<span class="comment">//是否显示网格背景</span></div><div class="line">  center:<span class="literal">true</span>,<span class="comment">//裁剪框是否在图片中心</span></div><div class="line">  autoCrop:<span class="literal">true</span>,<span class="comment">//初始化时是否自动显示裁剪框</span></div><div class="line">  autoCropArea:<span class="number">1</span>,<span class="comment">//初始化时裁剪框的大小与原图的比例  0-1之间</span></div><div class="line">  movable:<span class="literal">true</span>,<span class="comment">//是否允许移动图片</span></div><div class="line">  rotatable:<span class="literal">true</span>,<span class="comment">//是否允许旋转图片, 需要函数操作</span></div><div class="line">  scalable:<span class="literal">true</span>,<span class="comment">//是否允许翻转图片</span></div><div class="line">  zoomable:<span class="literal">true</span>,<span class="comment">//是否放大缩小图片, 需要函数操作</span></div><div class="line">  zoomOnTouch:<span class="literal">true</span>,<span class="comment">//是否可以通过触摸形式缩放图片 移动端</span></div><div class="line">  zoomOnWheel:<span class="literal">true</span>,<span class="comment">//是否可以通过鼠标缩放图片</span></div><div class="line">  wheelZoomRatio:<span class="number">0.1</span>,<span class="comment">//设置鼠标控制缩放的比列</span></div><div class="line">  cropBoxMovable:<span class="literal">true</span>,<span class="comment">//是否可以移动裁剪框</span></div><div class="line">  cropBoxResizable:<span class="literal">true</span>,<span class="comment">//是否可以调整裁剪框的大小</span></div><div class="line">  toggleDragModeOnDblclick:<span class="literal">false</span>,<span class="comment">//设置dragMode是否可以相互切换, 双击鼠标切换</span></div><div class="line"></div><div class="line">  <span class="comment">//设置container 最小</span></div><div class="line">  minContainerWidth:<span class="number">0</span>,<span class="comment">//设置container宽度</span></div><div class="line">  minContainerHeight:<span class="number">0</span>,<span class="comment">//设置container高度</span></div><div class="line"></div><div class="line">  <span class="comment">//设置canvas  最小</span></div><div class="line">  minCanvasWidth:<span class="number">0</span>,<span class="comment">//canvas宽度</span></div><div class="line">  minCanvasHeight:<span class="number">0</span>,<span class="comment">//canvas高度</span></div><div class="line"></div><div class="line">  <span class="comment">//设置裁剪框  最小</span></div><div class="line">  minCropBoxWidth:<span class="number">500</span>,<span class="comment">//裁剪框 宽度</span></div><div class="line">  minCropBoxHeight:<span class="number">500</span>,<span class="comment">//裁剪框 高度</span></div><div class="line"></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h4 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> image = <span class="built_in">document</span>.querySelector(<span class="string">'#image'</span>);</div><div class="line"><span class="keyword">var</span> cropper = <span class="keyword">new</span> Cropper(image, &#123;</div><div class="line">  <span class="comment">//插件准备完成时执行</span></div><div class="line">  ready(event) &#123;</div><div class="line">    <span class="built_in">console</span>.log(event)</div><div class="line">  &#125;,</div><div class="line">  <span class="comment">//开始移动裁剪框时执行的函数</span></div><div class="line">  cropstart(event) &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'start'</span> + event)</div><div class="line">  &#125;,</div><div class="line">  <span class="comment">//移动裁剪框的时候, 每一帧都会调用</span></div><div class="line">  cropmove(event) &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'move'</span> + event)</div><div class="line">  &#125;,</div><div class="line">  <span class="comment">//结束移动裁剪框时执行的函数</span></div><div class="line">  cropend(event) &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'end'</span> + event)</div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  <span class="comment">//裁剪框变化执行的函数</span></div><div class="line">  crop(event) &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'crop'</span> + event)</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h4 id="api"><a href="#api" class="headerlink" title="api"></a>api</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'#reset'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//将图像和裁剪框重置为初始状态</span></div><div class="line">    cropper.reset()</div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#clear'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//清除裁剪框</span></div><div class="line">    cropper.clear()</div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#replace'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//替换的图片 =&gt; string, 替换图片的比例是否和原图相同 =&gt; boolean</span></div><div class="line">    cropper.replace(<span class="string">"../images/picture-2.jpg"</span>, <span class="literal">false</span>)</div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#enable'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//替换的图片 =&gt; string, 替换图片的比例是否和原图相同 =&gt; boolean</span></div><div class="line">    cropper.enable()</div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#disable'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//替换的图片 =&gt; string, 替换图片的比例是否和原图相同 =&gt; boolean</span></div><div class="line">    cropper.disable()</div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#destroy'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//销毁cropper, 并在图像中销毁整个cropper</span></div><div class="line">    cropper.destroy()</div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#movex'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//移动x坐标  相对</span></div><div class="line">    cropper.move(<span class="number">1</span>,<span class="number">0</span>)</div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#movey'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//移动y坐标  相对</span></div><div class="line">    cropper.move(<span class="number">0</span>,<span class="number">1</span>)</div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#moveTox'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//移动x坐标  绝对</span></div><div class="line">    cropper.moveTo(<span class="number">1</span>,<span class="number">0</span>)</div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#moveToy'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//移动y坐标  绝对</span></div><div class="line">    cropper.moveTo(<span class="number">0</span>,<span class="number">1</span>)</div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#zoomG'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//放大</span></div><div class="line">    cropper.zoom(<span class="number">0.1</span>)</div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#zoomS'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//缩小</span></div><div class="line">    cropper.zoom(<span class="number">-0.1</span>)</div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#zoomToG'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//放大到</span></div><div class="line">    cropper.zoomTo(<span class="number">2</span>)</div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#zoomToS'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//缩小到</span></div><div class="line">    cropper.zoomTo(<span class="number">0.1</span>)</div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#rotateA'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//逆时针旋转</span></div><div class="line">    cropper.rotate(<span class="number">-45</span>)</div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#rotateB'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//顺时针旋转</span></div><div class="line">    cropper.rotate(<span class="number">45</span>)</div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#rotateToA'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//逆时针旋转到</span></div><div class="line">    cropper.rotateTo(<span class="number">-45</span>)</div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#rotateToB'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//顺时针旋转到</span></div><div class="line">    cropper.rotateTo(<span class="number">45</span>)</div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#scalex'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//沿x翻转</span></div><div class="line">    cropper.scale(<span class="number">1</span>, <span class="number">-1</span>)</div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#scaley'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//沿y翻转</span></div><div class="line">    cropper.scale(<span class="number">-1</span>, <span class="number">1</span>)</div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#scalexy'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//沿xy同时翻转</span></div><div class="line">    cropper.scale(<span class="number">-1</span>)</div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#scaleFromX'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//缩放x坐标默认为1</span></div><div class="line">    cropper.scaleX(<span class="number">0.5</span>)</div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#scaleFromY'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//沿缩放y坐标</span></div><div class="line">    cropper.scaleY(<span class="number">2</span>)</div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#getData'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//获取粗略的的数据</span></div><div class="line">    <span class="built_in">console</span>.log(cropper.getData())</div><div class="line">    <span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify(cropper.getData().toLocaleString()))</div><div class="line">    $(<span class="string">'#message'</span>).append(cropper.getData().toString())</div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#setData'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//设置裁剪框的数据</span></div><div class="line">    cropper.setData(&#123;</div><div class="line">        <span class="comment">// width:100,</span></div><div class="line">        <span class="comment">// height:100</span></div><div class="line">    &#125;)</div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#getContainerData'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//获取container数据</span></div><div class="line">    $(<span class="string">'#message'</span>).append(cropper.getContainerData().toString())</div><div class="line">&#125;)</div><div class="line"><span class="comment">// $('#setData').on('click', function () &#123;</span></div><div class="line"><span class="comment">//   //没有这个api  setImgData 同样没有</span></div><div class="line"><span class="comment">//   cropper.setContainerData(&#123;</span></div><div class="line"><span class="comment">//     width:500,</span></div><div class="line"><span class="comment">//     height:500</span></div><div class="line"><span class="comment">//   &#125;)</span></div><div class="line"><span class="comment">//   alert(123)</span></div><div class="line"><span class="comment">// &#125;)</span></div><div class="line">$(<span class="string">'#getImgData'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//获取img数据</span></div><div class="line">    $(<span class="string">'#message'</span>).append(<span class="built_in">JSON</span>.stringify(cropper.getImageData().toString()))</div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#getCanvasData'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//获取canvas数据</span></div><div class="line">    <span class="built_in">console</span>.log(cropper.getCanvasData())</div><div class="line">    $(<span class="string">'#message'</span>).append(<span class="built_in">JSON</span>.stringify(cropper.getCanvasData().toString()))</div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#setCanvasData'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//设置canvas数据</span></div><div class="line">    cropper.setCanvasData(&#123;</div><div class="line">        <span class="attr">left</span>:<span class="number">0</span>,</div><div class="line">        <span class="attr">top</span>:<span class="number">0</span>,</div><div class="line">        <span class="attr">width</span>:<span class="number">200</span>,</div><div class="line">        <span class="attr">height</span>:<span class="number">200</span></div><div class="line">    &#125;)</div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#getCropperBoxData'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//获取 裁剪框 数据</span></div><div class="line">    <span class="built_in">console</span>.log(cropper.getCropBoxData())</div><div class="line">    $(<span class="string">'#message'</span>).append(<span class="built_in">JSON</span>.stringify(cropper.getCropBoxData().toString()))</div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#setCropperBoxData'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//设置 裁剪框 数据</span></div><div class="line">    cropper.setCropBoxData(&#123;</div><div class="line">        <span class="attr">left</span>:<span class="number">0</span>,</div><div class="line">        <span class="attr">top</span>:<span class="number">0</span>,</div><div class="line">        <span class="attr">width</span>:<span class="number">400</span>,</div><div class="line">        <span class="attr">height</span>:<span class="number">400</span></div><div class="line">    &#125;)</div><div class="line"></div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#getCroppedCanvas'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//获取 裁剪框中的图片</span></div><div class="line">    $(<span class="string">'#message'</span>).append( cropper.getCroppedCanvas())</div><div class="line">    <span class="built_in">console</span>.log(cropper.getCroppedCanvas().toDataURL(<span class="string">'image/jpeg'</span>))</div><div class="line"></div><div class="line">&#125;)</div><div class="line"></div><div class="line">$(<span class="string">'#getAspectRadio'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//获取 裁剪框中的图片</span></div><div class="line">    $(<span class="string">'#message'</span>).append( cropper.getCroppedCanvas())</div><div class="line">    <span class="built_in">console</span>.log(cropper.getCroppedCanvas().toDataURL(<span class="string">'image/jpeg'</span>))</div><div class="line"></div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#setAspectRadio'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//修改裁剪框的长宽比</span></div><div class="line">    cropper.setAspectRatio(<span class="number">2</span>/<span class="number">1</span>)</div><div class="line"></div><div class="line">&#125;)</div><div class="line">$(<span class="string">'#setData'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//设置拖拽模式</span></div><div class="line">    cropper.setDragMode(<span class="string">'none'</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+
+
+            
+            
+            <blockquote>
+                <p>
+                本文地址：
+                <a href="http://yoursite.com/2021/05/09/jquery/cropper使用/" target="_blank" rel="external">http://yoursite.com/2021/05/09/jquery/cropper使用/</a>
+                </p>
+                <footer><cite><a href="http://yoursite.com">@记录</a></cite></footer>
+            </blockquote>
+            </div>
+            
+<nav class="post-nav">
+  
+    <div class="waves-block waves-effect prev fl">
+      <a href="/2021/05/10/react/redux/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">redux</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next fr">
+      <a href="/2021/05/06/jquery/juqey踩坑/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">juqey踩坑</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+            
+            
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="jquery/cropper使用" data-title="cropper使用" data-url="http://yoursite.com/2021/05/09/jquery/cropper使用/index.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"ysblog"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+        </div>
+    </div>
+</article>
+
+    </div>
+  </main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+<script>
+var BLOG_SHARE = {
+    title: "cropper使用",
+    pic: "/img/logo.png",
+    summary: document.getElementsByName('summary')[0].content,
+    url: "http://yoursite.com/2021/05/09/jquery/cropper使用/index.html"
+};
+</script>
+<div class="global-share" id="global-share">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<script type="text/template" id="search-tpl">
+<li class="item">
+    <a href="/{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</script>
+
+<script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

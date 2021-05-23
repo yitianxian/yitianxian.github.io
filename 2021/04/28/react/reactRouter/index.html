@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>reactRouter | 记录 | 千里之行，始于足下</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="theme-color" content="#3F51B5">
+  
+  
+  <meta name="keywords" content="react">
+  <meta name="description" content="安装1npm i --save react-router-dom
+初级使用路由模式同样有两种 hash（HashRouter） 和 history(BrowserRouter)
+123456789101112131415//index.js中包裹Appimport &amp;#123;BrowserRouter&amp;#125; from &apos;react-router-dom&apos;ReactDOM.render(">
+<meta property="og:type" content="article">
+<meta property="og:title" content="reactRouter">
+<meta property="og:url" content="http://yoursite.com/2021/04/28/react/reactRouter/index.html">
+<meta property="og:site_name" content="记录">
+<meta property="og:description" content="安装1npm i --save react-router-dom
+初级使用路由模式同样有两种 hash（HashRouter） 和 history(BrowserRouter)
+123456789101112131415//index.js中包裹Appimport &amp;#123;BrowserRouter&amp;#125; from &apos;react-router-dom&apos;ReactDOM.render(">
+<meta property="og:updated_time" content="2021-05-06T11:56:53.907Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="reactRouter">
+<meta name="twitter:description" content="安装1npm i --save react-router-dom
+初级使用路由模式同样有两种 hash（HashRouter） 和 history(BrowserRouter)
+123456789101112131415//index.js中包裹Appimport &amp;#123;BrowserRouter&amp;#125; from &apos;react-router-dom&apos;ReactDOM.render(">
+  
+    <link rel="alternative" href="/atom.xml" title="记录" type="application/atom+xml">
+  
+  <meta name="summary" content="null">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="loading" class="active"></div>
+
+  <nav id="menu" class="hide" >
+   <div class="inner flex-row-vertical">
+  <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+      <i class="icon icon-lg icon-close"></i>
+  </a>
+  <div class="brand-wrap">
+    <div class="brand">
+      <a href="/" class="avatar"><img src="/img/logo.png"></a>
+      <hgroup class="introduce">
+        <h5 class="nickname">Z-Q-K</h5>
+        <a href="mailto:2280962638@qq.com" title="2280962638@qq.com" class="mail">2280962638@qq.com</a>
+      </hgroup>
+    </div>
+  </div>
+  <div class="scroll-wrap flex-col">
+    <ul class="nav">
+      
+          <li class="waves-block waves-effect">
+            <a href="/"  >
+              <i class="icon icon-lg icon-home"></i>
+              主页
+            </a>
+          </li>
+      
+          <li class="waves-block waves-effect">
+            <a href="/archives"  >
+              <i class="icon icon-lg icon-archives"></i>
+              时间线
+            </a>
+          </li>
+      
+          <li class="waves-block waves-effect">
+            <a href="/tags"  >
+              <i class="icon icon-lg icon-tags"></i>
+              标签
+            </a>
+          </li>
+      
+          <li class="waves-block waves-effect">
+            <a href="https://github.com/yitianxian" target="_blank" >
+              <i class="icon icon-lg icon-github"></i>
+              Github
+            </a>
+          </li>
+      
+    </ul>
+
+    <footer class="footer">
+  <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
+  <p>记录 &copy; 2021</p>
+  <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+</footer>
+
+  </div>
+</div>
+
+  </nav>
+  <main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">reactRouter</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input " autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header">
+  <div class="container">
+    <h1 class="author">reactRouter</h1>
+    <h5 class="subtitle">
+        
+            <time datetime="2021-04-28T11:23:20.000Z" itemprop="datePublished" class="page-time">
+  2021-04-28
+</time>
+
+
+        
+    </h5>
+  </div>
+</header>
+
+    <div class="container body-wrap">
+      <article id="post-react/reactRouter" 
+  class="article article-type-post" itemprop="blogPost">
+    <div class="post-meta flex-row">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
+
+    </div>
+    <div class="post-body">
+        <aside class="post-widget" id="post-widget">
+
+            
+            <div class="post-share" id="post-share">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+            
+
+            
+            <nav class="post-toc-wrap" id="post-toc">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装"><span class="post-toc-number">1.</span> <span class="post-toc-text">安装</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#初级使用"><span class="post-toc-number">2.</span> <span class="post-toc-text">初级使用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#NavLink"><span class="post-toc-number">3.</span> <span class="post-toc-text">NavLink</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Switch-Redirect-exact"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">Switch   Redirect  exact</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#路由注册顺序（嵌套路由）"><span class="post-toc-number">4.</span> <span class="post-toc-text">路由注册顺序（嵌套路由）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#向路由组件传递参数"><span class="post-toc-number">5.</span> <span class="post-toc-text">向路由组件传递参数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#params（路由中路径传参）"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">params（路由中路径传参）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#search-query"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">search(query)</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#state（地址栏不会跟上东西）"><span class="post-toc-number">6.</span> <span class="post-toc-text">state（地址栏不会跟上东西）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#路由跳转模式（push-replace）"><span class="post-toc-number">7.</span> <span class="post-toc-text">路由跳转模式（push    replace）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#push（默认）"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">push（默认）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#replace"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">replace</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#编程式路由导航（this-props-history-api）"><span class="post-toc-number">8.</span> <span class="post-toc-text">编程式路由导航（this.props.history  api）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#withRouter"><span class="post-toc-number">9.</span> <span class="post-toc-text">withRouter</span></a></li></ol>
+            </nav>
+            
+        </aside>
+
+        <div class="post-main">
+
+            <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm i --save react-router-dom</div></pre></td></tr></table></figure>
+<h3 id="初级使用"><a href="#初级使用" class="headerlink" title="初级使用"></a>初级使用</h3><p>路由模式同样有两种 hash（HashRouter） 和 history(BrowserRouter)</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">//index.js中包裹App</div><div class="line">import &#123;BrowserRouter&#125; from 'react-router-dom'</div><div class="line">ReactDOM.render(</div><div class="line">  &lt;BrowserRouter&gt;</div><div class="line">    &lt;App /&gt;</div><div class="line">  &lt;/BrowserRouter&gt;,</div><div class="line">  document.getElementById('root')</div><div class="line">);</div><div class="line"></div><div class="line">//导航区</div><div class="line">&lt;Link classname='list-group-item' to="/about"&gt;About&lt;/Link&gt;</div><div class="line">&lt;Link classname='list-group-item' to="/home"&gt;Home&lt;/Link&gt;</div><div class="line">//展示区</div><div class="line">&lt;Route path='/home' compoent=&#123;Home&#125;&gt;&lt;/Route&gt;</div><div class="line">&lt;Route path='/about' compoent=&#123;About&#125;&gt;&lt;/Route&gt;</div></pre></td></tr></table></figure>
+<h3 id="NavLink"><a href="#NavLink" class="headerlink" title="NavLink"></a>NavLink</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;NavLink&#125; <span class="keyword">from</span> <span class="string">'react-router-dom'</span></div><div class="line"><span class="comment">//可以传入选中的class类名</span></div><div class="line">&lt;NavLink activeClassName=<span class="string">'active'</span> className=<span class="string">'list-group-item'</span> to=<span class="string">"/about"</span>&gt;About&lt;<span class="regexp">/NavLink&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="Switch-Redirect-exact"><a href="#Switch-Redirect-exact" class="headerlink" title="Switch   Redirect  exact"></a>Switch   Redirect  exact</h4><figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//exact 路由严格模式，谨慎使用</span></div><div class="line"><span class="comment">//Switch  寻找到路由匹配后不会在向下寻找，提高效率</span></div><div class="line"><span class="comment">//Redirect 重定向，要写在 Switch 最后</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> &#123;Route, Switch, Redirect&#125; <span class="keyword">from</span> <span class="string">'react-router-dom'</span></div><div class="line">&lt;Switch&gt;</div><div class="line">    &#123;<span class="comment">/* exact 开启严格匹配 */</span>&#125;</div><div class="line">    &lt;Route exact path=<span class="string">'/home'</span> component=&#123;Home&#125;&gt;</div><div class="line"></div><div class="line">    <span class="xml"><span class="tag">&lt;/<span class="name">Route</span>&gt;</span></span></div><div class="line">    &lt;Route exact path=<span class="string">'/about'</span> component=&#123;About&#125;&gt;</div><div class="line"></div><div class="line">    <span class="xml"><span class="tag">&lt;/<span class="name">Route</span>&gt;</span></span></div><div class="line">    &#123;<span class="comment">/* 重定向 */</span>&#125;</div><div class="line">    &lt;Redirect to=<span class="string">'/about'</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">Redirect</span>&gt;</span></span></div><div class="line">&lt;<span class="regexp">/Switch&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="路由注册顺序（嵌套路由）"><a href="#路由注册顺序（嵌套路由）" class="headerlink" title="路由注册顺序（嵌套路由）"></a>路由注册顺序（嵌套路由）</h3><p>子路由要带上父路由。</p>
+<p>路由注册是由顺序的，先注册app中的路由。</p>
+<p>所以要慎用 exact 会使二级路由失效。</p>
+<h3 id="向路由组件传递参数"><a href="#向路由组件传递参数" class="headerlink" title="向路由组件传递参数"></a>向路由组件传递参数</h3><h4 id="params（路由中路径传参）"><a href="#params（路由中路径传参）" class="headerlink" title="params（路由中路径传参）"></a>params（路由中路径传参）</h4><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">//和vue一样</div><div class="line">&lt;li key=&#123;item.id&#125;&gt;</div><div class="line">    &lt;Link to=&#123;`/home/message/detail/$&#123;item.id&#125;/$&#123;item.title&#125;`&#125;&gt;&#123;item.title&#125;&lt;/Link&gt;</div><div class="line">&lt;/li&gt;</div><div class="line">&lt;Switch&gt;</div><div class="line">    &lt;Route path='/home/message/detail/:id/:title' component=&#123;Detail&#125;&gt;&lt;/Route&gt;</div><div class="line">&lt;/Switch&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//组件中用props接收</span></div><div class="line"><span class="keyword">const</span> &#123;id, title&#125; = <span class="keyword">this</span>.props.match.params</div><div class="line"><span class="keyword">return</span> (</div><div class="line">    <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></div><div class="line">        <span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span>id: &#123;id&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span>title: &#123;title&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">)</div></pre></td></tr></table></figure>
+<h4 id="search-query"><a href="#search-query" class="headerlink" title="search(query)"></a>search(query)</h4><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//声明</div><div class="line">&lt;Link to=&#123;`/home/message/detail/?id=$&#123;item.id&#125;&amp;title=$&#123;item.title&#125;`&#125;&gt;&#123;item.title&#125;&lt;/Link&gt;</div><div class="line">&lt;Route path='/home/message/detail' component=&#123;Detail&#125;&gt;&lt;/Route&gt;</div><div class="line">&lt;/Switch&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//react  自引入的querystring进行解构</span></div><div class="line"><span class="keyword">import</span> qs <span class="keyword">from</span> <span class="string">'querystring'</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> &#123;search&#125; = <span class="keyword">this</span>.props.location</div><div class="line"><span class="keyword">const</span> &#123;id, title&#125; = qs.parse(search.slice(<span class="number">1</span>))</div></pre></td></tr></table></figure>
+<p>ps:   urlencode格式:   key1=valueq&amp;key2=value2</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">qs.stringify(&#123;<span class="attr">id</span>:<span class="string">'01'</span>, <span class="attr">value</span>:<span class="string">'aa'</span>&#125;)  =&gt;  id=<span class="number">01</span>&amp;value=aa</div><div class="line">qs.parse(<span class="string">'id=01&amp;value=aa'</span>)  =&gt;  &#123;<span class="attr">id</span>:<span class="string">'01'</span>, <span class="attr">value</span>:<span class="string">'aa'</span>&#125;</div></pre></td></tr></table></figure>
+<h3 id="state（地址栏不会跟上东西）"><a href="#state（地址栏不会跟上东西）" class="headerlink" title="state（地址栏不会跟上东西）"></a>state（地址栏不会跟上东西）</h3><p>传递对象参数，默认值问undefined</p>
+<p>用于使用histroy模式时，state存在history中（缓存），所以刷新不会丢失数据，但是如果清除缓存就会出问题</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;Link to=&#123;&#123;pathname:'/home/message/detail',state:&#123;id:item.id,title:item.title&#125;&#125;&#125;&gt;&#123;item.title&#125;&lt;/Link&gt;</div><div class="line"></div><div class="line">const &#123;id, title&#125; = this.props.location.state</div></pre></td></tr></table></figure>
+<h3 id="路由跳转模式（push-replace）"><a href="#路由跳转模式（push-replace）" class="headerlink" title="路由跳转模式（push    replace）"></a>路由跳转模式（push    replace）</h3><h4 id="push（默认）"><a href="#push（默认）" class="headerlink" title="push（默认）"></a>push（默认）</h4><p>push会留下历史记录</p>
+<h4 id="replace"><a href="#replace" class="headerlink" title="replace"></a>replace</h4><p>不会有历史记录</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;Link replace to=&#123;&#123;<span class="attr">pathname</span>:<span class="string">'/home/message/detail'</span>,<span class="attr">state</span>:&#123;<span class="attr">id</span>:item.id,<span class="attr">title</span>:item.title&#125;&#125;&#125;&gt;&#123;item.title&#125;&lt;<span class="regexp">/Link&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="编程式路由导航（this-props-history-api）"><a href="#编程式路由导航（this-props-history-api）" class="headerlink" title="编程式路由导航（this.props.history  api）"></a>编程式路由导航（this.props.history  api）</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//params</span></div><div class="line"><span class="keyword">this</span>.props.history.replace(<span class="string">`/home/<span class="subst">$&#123;id&#125;</span>`</span>)</div><div class="line"><span class="keyword">this</span>.props.history.push(<span class="string">`/home/<span class="subst">$&#123;id&#125;</span>`</span>)</div><div class="line"></div><div class="line"><span class="comment">//query</span></div><div class="line"><span class="keyword">this</span>.props.history.replace(<span class="string">`/home?id=<span class="subst">$&#123;id&#125;</span>`</span>)</div><div class="line"><span class="keyword">this</span>.props.history.push(<span class="string">`/home?id=<span class="subst">$&#123;id&#125;</span>`</span>)</div><div class="line"></div><div class="line"><span class="comment">//state</span></div><div class="line"><span class="keyword">this</span>.props.history.replace(<span class="string">`/home/message/detail`</span>,&#123;id, title&#125;)</div><div class="line"><span class="keyword">this</span>.props.history.push(<span class="string">`/home/message/detail`</span>,&#123;id, title&#125;)</div><div class="line"></div><div class="line"><span class="comment">//前进</span></div><div class="line"><span class="keyword">this</span>.props.history.goForward()</div><div class="line"><span class="comment">//后退</span></div><div class="line"><span class="keyword">this</span>.props.history.goBack()</div><div class="line"><span class="comment">//前进后退几步</span></div><div class="line"><span class="keyword">this</span>.props.history.go(n)</div></pre></td></tr></table></figure>
+<h3 id="withRouter"><a href="#withRouter" class="headerlink" title="withRouter"></a>withRouter</h3><p>使一般组件获得路由组件的api</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;withRouter&#125; <span class="keyword">from</span> <span class="string">'react-router-dom'</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">index</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">    goForword =<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">        <span class="keyword">this</span>.props.history.goForward()</div><div class="line">    &#125;</div><div class="line">    goBack =<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">        <span class="keyword">this</span>.props.history.goBack()</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    render() &#123;</div><div class="line">        <span class="keyword">return</span> (</div><div class="line">            <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></div><div class="line">                Header</div><div class="line">                <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;this.goForword&#125;</span>&gt;</span>前进<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;this.goBack&#125;</span>&gt;</span>回退<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        );</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> withRouter(index);</div></pre></td></tr></table></figure>
+
+
+            
+            
+            <blockquote>
+                <p>
+                本文地址：
+                <a href="http://yoursite.com/2021/04/28/react/reactRouter/" target="_blank" rel="external">http://yoursite.com/2021/04/28/react/reactRouter/</a>
+                </p>
+                <footer><cite><a href="http://yoursite.com">@记录</a></cite></footer>
+            </blockquote>
+            </div>
+            
+<nav class="post-nav">
+  
+    <div class="waves-block waves-effect prev fl">
+      <a href="/2021/04/28/css/css-img踩坑/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">css-img踩坑</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next fr">
+      <a href="/2021/04/25/react/react组件间传递参数/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">react组件间传递参数</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+            
+            
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="react/reactRouter" data-title="reactRouter" data-url="http://yoursite.com/2021/04/28/react/reactRouter/index.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"ysblog"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+        </div>
+    </div>
+</article>
+
+    </div>
+  </main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+<script>
+var BLOG_SHARE = {
+    title: "reactRouter",
+    pic: "/img/logo.png",
+    summary: document.getElementsByName('summary')[0].content,
+    url: "http://yoursite.com/2021/04/28/react/reactRouter/index.html"
+};
+</script>
+<div class="global-share" id="global-share">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<script type="text/template" id="search-tpl">
+<li class="item">
+    <a href="/{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</script>
+
+<script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
