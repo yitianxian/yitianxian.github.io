@@ -3,20 +3,41 @@
 <head>
   <meta charset="utf-8">
   
-  <title>react拓展 | 记录 | 千里之行，始于足下</title>
+  <title>react-ts-ui | 记录 | 千里之行，始于足下</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="theme-color" content="#3F51B5">
   
   
   <meta name="keywords" content="react">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="react拓展">
-<meta property="og:url" content="http://yoursite.com/2021/05/19/react拓展/index.html">
+  <meta name="description" content="新项目创建1、npm i -g create-react-app
+2、创建初始携带ts的react项目：npx create-react-app my-app –template typescript
+实测：npx create-react-app my-app –typescript 初始文件非ts
+踩坑：
+使用ts会对项目进行语法检查
+如果使用类方式定义组件，需要先定义props的类型
+123">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react-ts-ui">
+<meta property="og:url" content="http://yoursite.com/2021/05/23/react/react-ts-ui/index.html">
 <meta property="og:site_name" content="记录">
-<meta property="og:updated_time" content="2021-05-19T12:20:04.514Z">
+<meta property="og:description" content="新项目创建1、npm i -g create-react-app
+2、创建初始携带ts的react项目：npx create-react-app my-app –template typescript
+实测：npx create-react-app my-app –typescript 初始文件非ts
+踩坑：
+使用ts会对项目进行语法检查
+如果使用类方式定义组件，需要先定义props的类型
+123">
+<meta property="og:updated_time" content="2021-05-23T07:46:20.767Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="react拓展">
+<meta name="twitter:title" content="react-ts-ui">
+<meta name="twitter:description" content="新项目创建1、npm i -g create-react-app
+2、创建初始携带ts的react项目：npx create-react-app my-app –template typescript
+实测：npx create-react-app my-app –typescript 初始文件非ts
+踩坑：
+使用ts会对项目进行语法检查
+如果使用类方式定义组件，需要先定义props的类型
+123">
   
     <link rel="alternative" href="/atom.xml" title="记录" type="application/atom+xml">
   
@@ -93,7 +114,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">react拓展</div>
+        <div class="flex-col header-title ellipsis">react-ts-ui</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -114,11 +135,11 @@
 </header>
 <header class="content-header">
   <div class="container">
-    <h1 class="author">react拓展</h1>
+    <h1 class="author">react-ts-ui</h1>
     <h5 class="subtitle">
         
-            <time datetime="2021-05-19T12:19:38.000Z" itemprop="datePublished" class="page-time">
-  2021-05-19
+            <time datetime="2021-05-23T07:10:23.000Z" itemprop="datePublished" class="page-time">
+  2021-05-23
 </time>
 
 
@@ -128,7 +149,7 @@
 </header>
 
     <div class="container body-wrap">
-      <article id="post-react拓展" 
+      <article id="post-react/react-ts-ui" 
   class="article article-type-post" itemprop="blogPost">
     <div class="post-meta flex-row">
         
@@ -179,7 +200,7 @@
 
             
             <nav class="post-toc-wrap" id="post-toc">
-            
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#新项目创建"><span class="post-toc-number">1.</span> <span class="post-toc-text">新项目创建</span></a></li></ol>
             </nav>
             
         </aside>
@@ -187,14 +208,23 @@
         <div class="post-main">
 
             <div class="post-content" id="post-content" itemprop="postContent">
-            
+            <h3 id="新项目创建"><a href="#新项目创建" class="headerlink" title="新项目创建"></a>新项目创建</h3><p>1、npm i -g create-react-app</p>
+<p>2、创建初始携带ts的react项目：npx create-react-app my-app –template typescript</p>
+<p>实测：npx create-react-app my-app –typescript 初始文件非ts</p>
+<p>踩坑：</p>
+<p>使用ts会对项目进行语法检查</p>
+<p>如果使用类方式定义组件，需要先定义props的类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">import React, &#123;Component&#125; from &apos;react&apos;;</div><div class="line"></div><div class="line">type Props = &#123;</div><div class="line">    message: string</div><div class="line">&#125;;</div><div class="line"></div><div class="line"></div><div class="line">class Hello extends Component&lt;Props&gt; &#123;</div><div class="line">    render() &#123;</div><div class="line">        const &#123;message&#125; = this.props</div><div class="line">        return (</div><div class="line">            &lt;div&gt;</div><div class="line">                &lt;h2&gt;&#123;message&#125;&lt;/h2&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">        );</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">export default Hello;</div></pre></td></tr></table></figure>
+<p>ps:type 是ts的一种类型</p>
+<p><a href="https://www.cnblogs.com/EnSnail/p/11233592.html" target="_blank" rel="external">https://www.cnblogs.com/EnSnail/p/11233592.html</a></p>
+
 
             
             
             <blockquote>
                 <p>
                 本文地址：
-                <a href="http://yoursite.com/2021/05/19/react拓展/" target="_blank" rel="external">http://yoursite.com/2021/05/19/react拓展/</a>
+                <a href="http://yoursite.com/2021/05/23/react/react-ts-ui/" target="_blank" rel="external">http://yoursite.com/2021/05/23/react/react-ts-ui/</a>
                 </p>
                 <footer><cite><a href="http://yoursite.com">@记录</a></cite></footer>
             </blockquote>
@@ -203,18 +233,18 @@
 <nav class="post-nav">
   
     <div class="waves-block waves-effect prev fl">
-      <a href="/2021/05/23/react/react-ts-ui/" id="post-prev" class="post-nav-link">
+      <a href="/2021/05/25/html/html踩坑/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">react-ts-ui</h4>
+        <h4 class="title">html</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next fr">
-      <a href="/2021/05/10/react/redux/" id="post-next" class="post-nav-link">
+      <a href="/2021/05/19/react拓展/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">redux</h4>
+        <h4 class="title">react拓展</h4>
       </a>
     </div>
   
@@ -225,7 +255,7 @@
             
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="react拓展" data-title="react拓展" data-url="http://yoursite.com/2021/05/19/react拓展/index.html"></div>
+	<div class="ds-thread" data-thread-key="react/react-ts-ui" data-title="react-ts-ui" data-url="http://yoursite.com/2021/05/23/react/react-ts-ui/index.html"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -257,10 +287,10 @@
 
 <script>
 var BLOG_SHARE = {
-    title: "react拓展",
+    title: "react-ts-ui",
     pic: "/img/logo.png",
     summary: document.getElementsByName('summary')[0].content,
-    url: "http://yoursite.com/2021/05/19/react拓展/index.html"
+    url: "http://yoursite.com/2021/05/23/react/react-ts-ui/index.html"
 };
 </script>
 <div class="global-share" id="global-share">

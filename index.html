@@ -126,22 +126,22 @@
       <ul class="post-list">
   
     <li class="post-list-item">
-        <article id="post-react拓展"
+        <article id="post-vue3使用svg"
   class="article article-type-post" itemprop="blogPost">
      
 
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2021/05/19/react拓展/">react拓展</a>
+      <a class="post-title-link" href="/2021/07/30/vue3使用svg/">vue3使用svg</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time datetime="2021-05-19T12:19:38.000Z" itemprop="datePublished" class="post-time">
-  2021-05-19
+        <time datetime="2021-07-30T03:47:23.000Z" itemprop="datePublished" class="post-time">
+  2021-07-30
 </time>
 
         
@@ -152,37 +152,38 @@
     <div class="post-content" id="post-content" itemprop="postContent" >
 
     
-        
+           创建放svg图标的文件夹  src/assets/icons/svg 
+   vite.config.ts 中导入       1  2  3      plugins: [vue(),       //这里已经将src/icons/svg/下的svg全部导入，无需再单独导入       [svgBuilder( './src/assets/icons/svg/' )]],      
     
     
-        <a href="/2021/05/19/react拓展/" class="post-more waves-effect waves-button">
+        <a href="/2021/07/30/vue3使用svg/" class="post-more waves-effect waves-button">
             阅读全文...
         </a>
     </div>
     
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue-vite/">vue+vite</a></li></ul>
 
 </article>
 
     </li>
   
     <li class="post-list-item">
-        <article id="post-react/redux"
+        <article id="post-vue3CompositionApi解析"
   class="article article-type-post" itemprop="blogPost">
      
 
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2021/05/10/react/redux/">redux</a>
+      <a class="post-title-link" href="/2021/07/13/vue3CompositionApi解析/">vue3CompositionApi解析</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time datetime="2021-05-10T10:48:01.000Z" itemprop="datePublished" class="post-time">
-  2021-05-10
+        <time datetime="2021-07-13T09:55:18.000Z" itemprop="datePublished" class="post-time">
+  2021-07-13
 </time>
 
         
@@ -193,39 +194,37 @@
     <div class="post-content" id="post-content" itemprop="postContent" >
 
     
-           状态管理工具  redux在 react， angular， vue中都可以使用，常用于react 
-  store会更改状态，但是不会更新页面！！！！！  
-    store.js: 使用store管理所有reduce对象       1  2  3  4  5  6  7  8  9  10       /*   *  该文件专门用于暴露store对象，整个项目有且只有一个  */  
+           import { } from ‘vue’       1  2  3  4  5  6  7  8  9  10      ref:  	 1.  创建一个响应式数据，当数据发生改变时，Vue会自动更新UI  		仅能监听基本类型的变化，不能监听复杂类型的变化（比如对象、数组）       2.  通过ref属性获取元素      	vue3需要借助生命周期方法，在setup执行时，tem
     
     
-        <a href="/2021/05/10/react/redux/" class="post-more waves-effect waves-button">
+        <a href="/2021/07/13/vue3CompositionApi解析/" class="post-more waves-effect waves-button">
             阅读全文...
         </a>
     </div>
     
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue3/">vue3</a></li></ul>
 
 </article>
 
     </li>
   
     <li class="post-list-item">
-        <article id="post-jquery/cropper使用"
+        <article id="post-vite搭建vue3-0项目"
   class="article article-type-post" itemprop="blogPost">
      
 
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2021/05/09/jquery/cropper使用/">cropper使用</a>
+      <a class="post-title-link" href="/2021/07/12/vite搭建vue3-0项目/">vite搭建vue3.0项目</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time datetime="2021-05-09T05:05:40.000Z" itemprop="datePublished" class="post-time">
-  2021-05-09
+        <time datetime="2021-07-12T08:35:58.000Z" itemprop="datePublished" class="post-time">
+  2021-07-12
 </time>
 
         
@@ -236,37 +235,37 @@
     <div class="post-content" id="post-content" itemprop="postContent" >
 
     
-           croper 图片裁剪上传插件    html引入       1  2       &lt; script   type = "text/javascript"   src = "libs/js/cropper.min.js" &gt;    &lt;/ script &gt;    &lt; link   href = "libs/css/cropper.min.css"   rel =
+           初始化       1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40  41  42  43  44  45  46  47  48      
     
     
-        <a href="/2021/05/09/jquery/cropper使用/" class="post-more waves-effect waves-button">
+        <a href="/2021/07/12/vite搭建vue3-0项目/" class="post-more waves-effect waves-button">
             阅读全文...
         </a>
     </div>
     
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/">jquery</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue3/">vue3</a></li></ul>
 
 </article>
 
     </li>
   
     <li class="post-list-item">
-        <article id="post-jquery/juqey踩坑"
+        <article id="post-nginx常用命令"
   class="article article-type-post" itemprop="blogPost">
      
 
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2021/05/06/jquery/juqey踩坑/">juqey踩坑</a>
+      <a class="post-title-link" href="/2021/07/09/nginx常用命令/">nginx常用命令</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time datetime="2021-05-06T07:57:46.000Z" itemprop="datePublished" class="post-time">
-  2021-05-06
+        <time datetime="2021-07-09T01:58:30.000Z" itemprop="datePublished" class="post-time">
+  2021-07-09
 </time>
 
         
@@ -277,37 +276,39 @@
     <div class="post-content" id="post-content" itemprop="postContent" >
 
     
-           选择父页面元素（top.document）       1  2  3  4  5  6  7  8  9  10      $("[key= 'finishPhoto'] .title", top.document).append(`      &lt; div   style = "float: right;             font-size: 14px;           
+           1、杀死 nginx 进程       1      taskkill /fi &quot;imagename eq nginx.EXE&quot; /f      
+   2、启动       1      start nginx.exe      
+
     
     
-        <a href="/2021/05/06/jquery/juqey踩坑/" class="post-more waves-effect waves-button">
+        <a href="/2021/07/09/nginx常用命令/" class="post-more waves-effect waves-button">
             阅读全文...
         </a>
     </div>
     
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/">jquery</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/">nginx</a></li></ul>
 
 </article>
 
     </li>
   
     <li class="post-list-item">
-        <article id="post-css/css-img踩坑"
+        <article id="post-vue路由模式"
   class="article article-type-post" itemprop="blogPost">
      
 
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2021/04/28/css/css-img踩坑/">css-img踩坑</a>
+      <a class="post-title-link" href="/2021/07/07/vue路由模式/">vue路由模式</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time datetime="2021-04-28T11:58:21.000Z" itemprop="datePublished" class="post-time">
-  2021-04-28
+        <time datetime="2021-07-07T00:57:13.000Z" itemprop="datePublished" class="post-time">
+  2021-07-07
 </time>
 
         
@@ -318,100 +319,104 @@
     <div class="post-content" id="post-content" itemprop="postContent" >
 
     
-         先上代码: 
-      1  2  3  4  5  6       &lt; div   class = "nav-set-item" &gt;        &lt; span &gt; 文章 &lt;/ span &gt;        &lt; img   class = "img-down"   src = "skin/images/descending-order.png" /&g
-    
-    
-        <a href="/2021/04/28/css/css-img踩坑/" class="post-more waves-effect waves-button">
-            阅读全文...
-        </a>
-    </div>
-    
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
-
-</article>
-
-    </li>
-  
-    <li class="post-list-item">
-        <article id="post-react/reactRouter"
-  class="article article-type-post" itemprop="blogPost">
-     
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2021/04/28/react/reactRouter/">reactRouter</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time datetime="2021-04-28T11:23:20.000Z" itemprop="datePublished" class="post-time">
-  2021-04-28
-</time>
-
-        
-
-
-    </div>
-
-    <div class="post-content" id="post-content" itemprop="postContent" >
-
-    
-           安装       1      npm i --save react-router-dom      
-   初级使用  路由模式同样有两种 hash（HashRouter） 和 history(BrowserRouter) 
-      1  2  3  4  5  6  7  8  9  10  11  12  13  14  15      //index.js中包裹App  impo
-    
-    
-        <a href="/2021/04/28/react/reactRouter/" class="post-more waves-effect waves-button">
-            阅读全文...
-        </a>
-    </div>
-    
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
-
-</article>
-
-    </li>
-  
-    <li class="post-list-item">
-        <article id="post-react/react组件间传递参数"
-  class="article article-type-post" itemprop="blogPost">
-     
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2021/04/25/react/react组件间传递参数/">react组件间传递参数</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time datetime="2021-04-25T03:40:12.000Z" itemprop="datePublished" class="post-time">
-  2021-04-25
-</time>
-
-        
-
-
-    </div>
-
-    <div class="post-content" id="post-content" itemprop="postContent" >
-
-    
-           父传子 props  与vue一样 ：组件无论是使用函数声明还是通过 class 声明，都决不能修改自身的 props** 
+           路由模式  前端路由的核心，就在于 ——  改变视图的同时不会向后端发出请求  
  
- 正常情况下 props 的拥有权不属于当前组件，是别人传给你的，你用的时候用 props 来引用，所以修改的权限应该由上面来决定 
- 
- 父组件传值： 
-      1  2  3  4  5  6  7  8  9  10  11  12  13  14  1
+  hash 
+ 带 # 号 
+ hash 虽然出现在 URL 中，但不会被包括在 HTTP 请求中，对后端完全没有影响，因此改变 hash 不会重新加载页面。 
+      1  2  3  4  5  6      hash原理其实是浏览器监听了一个onhashchange的方法来改变页面的跳转的  w
     
     
-        <a href="/2021/04/25/react/react组件间传递参数/" class="post-more waves-effect waves-button">
+        <a href="/2021/07/07/vue路由模式/" class="post-more waves-effect waves-button">
+            阅读全文...
+        </a>
+    </div>
+    
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
+
+</article>
+
+    </li>
+  
+    <li class="post-list-item">
+        <article id="post-Jest"
+  class="article article-type-post" itemprop="blogPost">
+     
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2021/05/27/Jest/">jtest</a>
+    </h3>
+  
+
+
+
+    <div class="post-meta">
+        <time datetime="2021-05-27T12:25:37.000Z" itemprop="datePublished" class="post-time">
+  2021-05-27
+</time>
+
+        
+
+
+    </div>
+
+    <div class="post-content" id="post-content" itemprop="postContent" >
+
+    
+           jest 是react自动集成的  jest 会自动检测 ： 
+ 1. _tests_ 文件夹下的js(ts)文件 
+ 2.以 .test.js 结尾的文件 
+ 3.以 .spec.js 结尾的文件 
+ ps:eslint 检测 
+      1  2       env:      "jest":   true       
+   使用react 中的 testing-library库(内
+    
+    
+        <a href="/2021/05/27/Jest/" class="post-more waves-effect waves-button">
+            阅读全文...
+        </a>
+    </div>
+    
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Jest/">Jest</a></li></ul>
+
+</article>
+
+    </li>
+  
+    <li class="post-list-item">
+        <article id="post-react/react-ClassNames"
+  class="article article-type-post" itemprop="blogPost">
+     
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2021/05/27/react/react-ClassNames/">react_ClassNames</a>
+    </h3>
+  
+
+
+
+    <div class="post-meta">
+        <time datetime="2021-05-27T11:43:06.000Z" itemprop="datePublished" class="post-time">
+  2021-05-27
+</time>
+
+        
+
+
+    </div>
+
+    <div class="post-content" id="post-content" itemprop="postContent" >
+
+    
+           classNames 插件       1  2  3      npm install classnames --save     import  classnames  from   'classnames'       
+      1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17       //可接受多个参数    
+    
+    
+        <a href="/2021/05/27/react/react-ClassNames/" class="post-more waves-effect waves-button">
             阅读全文...
         </a>
     </div>
@@ -423,22 +428,22 @@
     </li>
   
     <li class="post-list-item">
-        <article id="post-react/react生命周期"
+        <article id="post-es6字符串"
   class="article article-type-post" itemprop="blogPost">
      
 
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2021/04/23/react/react生命周期/">react生命周期</a>
+      <a class="post-title-link" href="/2021/05/27/es6字符串/">es6字符串</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time datetime="2021-04-23T05:31:53.000Z" itemprop="datePublished" class="post-time">
-  2021-04-23
+        <time datetime="2021-05-27T09:27:31.000Z" itemprop="datePublished" class="post-time">
+  2021-05-27
 </time>
 
         
@@ -449,41 +454,38 @@
     <div class="post-content" id="post-content" itemprop="postContent" >
 
     
-           旧生命周期    react旧生命周期   .png) 
-   vue  旧生命周期    
-   react新生命周期   .png) 
- 使用： 
-      1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29  30  31  
+           新增的字符串方法  1、charAt 
+      1  2  3       //index必需。表示字符串中某个位置的数字，即字符在字符串中的下标。    //字符串中第一个字符的下标是 0。如果参数 index 不在 0 与 string.length 之间，该方法将返回一个空字符串。   stringObject.charAt(index)      
     
     
-        <a href="/2021/04/23/react/react生命周期/" class="post-more waves-effect waves-button">
+        <a href="/2021/05/27/es6字符串/" class="post-more waves-effect waves-button">
             阅读全文...
         </a>
     </div>
     
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/reactreact旧生命周期/">reactreact旧生命周期</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/es6/">es6</a></li></ul>
 
 </article>
 
     </li>
   
     <li class="post-list-item">
-        <article id="post-js/js函数柯里化"
+        <article id="post-git操作"
   class="article article-type-post" itemprop="blogPost">
      
 
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2021/04/23/js/js函数柯里化/">js函数柯里化</a>
+      <a class="post-title-link" href="/2021/05/25/git操作/">git操作</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time datetime="2021-04-23T02:42:25.000Z" itemprop="datePublished" class="post-time">
-  2021-04-23
+        <time datetime="2021-05-25T09:29:02.000Z" itemprop="datePublished" class="post-time">
+  2021-05-25
 </time>
 
         
@@ -494,38 +496,40 @@
     <div class="post-content" id="post-content" itemprop="postContent" >
 
     
-           函数柯里化    函数调用继续返回函数，实现多次接收参数最后统一处理    只传递给函数一部分参数来调用它，让它返回一个函数去处理剩下的参数  简单的柯里化函数： 
-      1  2  3  4  5  6  7  8  9        function   sum ( a )  &#123;       return   ( b ) =&gt;  &#123;           r
+           初始化       1      git init      
+   添加到本地仓库       1      git add .      
+   添加说明       1      git commit -m &quot;first commit&quot;      
+   连接到guthub仓库       1      git remote add origin https://g
     
     
-        <a href="/2021/04/23/js/js函数柯里化/" class="post-more waves-effect waves-button">
+        <a href="/2021/05/25/git操作/" class="post-more waves-effect waves-button">
             阅读全文...
         </a>
     </div>
     
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
 
 </article>
 
     </li>
   
     <li class="post-list-item">
-        <article id="post-css/scss中deep"
+        <article id="post-html/html踩坑"
   class="article article-type-post" itemprop="blogPost">
      
 
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2021/04/20/css/scss中deep/">scss中deep</a>
+      <a class="post-title-link" href="/2021/05/25/html/html踩坑/">html</a>
     </h3>
   
 
 
 
     <div class="post-meta">
-        <time datetime="2021-04-20T02:29:18.000Z" itemprop="datePublished" class="post-time">
-  2021-04-20
+        <time datetime="2021-05-25T08:31:47.000Z" itemprop="datePublished" class="post-time">
+  2021-05-25
 </time>
 
         
@@ -536,17 +540,20 @@
     <div class="post-content" id="post-content" itemprop="postContent" >
 
     
-         vue中有的组件是挂载到全局，查看时与app同级，这时的组件样式更改不能在vue文件中的scope中更改，因为无法读取到。 
- 同时使用deep有三种运算符 
-      1  2  3  4  5  6  7  8  9      &gt;&gt;&gt; =&gt; 如果你希望 scoped 样式中的一个选择器能够作用得“更深”，例如影响子组件，你可以使用 		&gt;&gt;&gt; 操作
+           兼容性  公司需求做一个纯 html 加 jq 页面，由于是中期接手不知道需要兼容到 ie10，所以出现许多兼容性问题 
+ 1、不加前缀的 grid 布局不兼容 ie，加了也可能会有各种问题。。直接放弃 
+ 2、flex 从 ie10开始兼容，且无需前缀（实测） 
+ 3、不支持 css 的 unset 属性，需要手动覆盖继承的属性 
+ ​    背景色可用：transparent   
+ ​
     
     
-        <a href="/2021/04/20/css/scss中deep/" class="post-more waves-effect waves-button">
+        <a href="/2021/05/25/html/html踩坑/" class="post-more waves-effect waves-button">
             阅读全文...
         </a>
     </div>
     
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scss/">scss</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html-jq/">html jq</a></li></ul>
 
 </article>
 
@@ -556,7 +563,7 @@
 
 <nav id="page-nav">
     <div class="inner">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
     </div>
 </nav>
 

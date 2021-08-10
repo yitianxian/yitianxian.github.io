@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-05-19T12:20:04.514Z</updated>
+  <updated>2021-07-30T03:49:49.950Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,254 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue3使用svg</title>
+    <link href="http://yoursite.com/2021/07/30/vue3%E4%BD%BF%E7%94%A8svg/"/>
+    <id>http://yoursite.com/2021/07/30/vue3%E4%BD%BF%E7%94%A8svg/</id>
+    <published>2021-07-30T03:47:23.000Z</published>
+    <updated>2021-07-30T03:49:49.950Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="创建放svg图标的文件夹"><a href="#创建放svg图标的文件夹" class="headerlink" title="创建放svg图标的文件夹"></a>创建放svg图标的文件夹</h3><p>src/assets/icons/svg</p><h3 id="vite-config-ts-中导入"><a href="#vite-config-ts-中导入" class="headerlink" title="vite.config.ts 中导入"></a>vite.config.ts 中导入</h3><figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">plugins: [vue(),</div><div class="line">    <span class="comment">//这里已经将src/icons/svg/下的svg全部导入，无需再单独导入</span></div><div class="line">    [svgBuilder(<span class="string">'./src/assets/icons/svg/'</span>)]],</div></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;创建放svg图标的文件夹&quot;&gt;&lt;a href=&quot;#创建放svg图标的文件夹&quot; class=&quot;headerlink&quot; title=&quot;创建放svg图标的文件夹&quot;&gt;&lt;/a&gt;创建放svg图标的文件夹&lt;/h3&gt;&lt;p&gt;src/assets/icons/svg&lt;/p&gt;
+&lt;h3 i</summary>
+      
+    
+    
+    
+    
+    <category term="vue+vite" scheme="http://yoursite.com/tags/vue-vite/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue3CompositionApi解析</title>
+    <link href="http://yoursite.com/2021/07/13/vue3CompositionApi%E8%A7%A3%E6%9E%90/"/>
+    <id>http://yoursite.com/2021/07/13/vue3CompositionApi%E8%A7%A3%E6%9E%90/</id>
+    <published>2021-07-13T09:55:18.000Z</published>
+    <updated>2021-07-13T10:20:30.095Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="import-from-‘vue’"><a href="#import-from-‘vue’" class="headerlink" title="import { } from ‘vue’"></a>import { } from ‘vue’</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">ref:</div><div class="line"><span class="number">1.</span> 创建一个响应式数据，当数据发生改变时，Vue会自动更新UI</div><div class="line">仅能监听基本类型的变化，不能监听复杂类型的变化（比如对象、数组）</div><div class="line">    <span class="number">2.</span> 通过ref属性获取元素</div><div class="line">    vue3需要借助生命周期方法，在setup执行时，template中的元素还没挂载到页面上，所以必须在mounted之后才能获取到元素。</div><div class="line"></div><div class="line"></div><div class="line">PropType:</div><div class="line">   接受一个泛型，可以将一个array的构造函数返回传入的泛型类型</div><div class="line">   可以把一个构造函数断言成一个类型</div></pre></td></tr></table></figure><h3 id="import-from-‘vue-router’"><a href="#import-from-‘vue-router’" class="headerlink" title="import {} from ‘vue-router’"></a>import {} from ‘vue-router’</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">RouteRecordRaw</div><div class="line">路由配置格式</div></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;import-from-‘vue’&quot;&gt;&lt;a href=&quot;#import-from-‘vue’&quot; class=&quot;headerlink&quot; title=&quot;import { } from ‘vue’&quot;&gt;&lt;/a&gt;import { } from ‘vue’&lt;/h3&gt;&lt;figu</summary>
+      
+    
+    
+    
+    
+    <category term="vue3" scheme="http://yoursite.com/tags/vue3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vite搭建vue3.0项目</title>
+    <link href="http://yoursite.com/2021/07/12/vite%E6%90%AD%E5%BB%BAvue3-0%E9%A1%B9%E7%9B%AE/"/>
+    <id>http://yoursite.com/2021/07/12/vite%E6%90%AD%E5%BB%BAvue3-0%E9%A1%B9%E7%9B%AE/</id>
+    <published>2021-07-12T08:35:58.000Z</published>
+    <updated>2021-08-02T11:40:32.481Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//npm init vite-app &lt;project-name&gt;  或 npm init @vitejs/app</span></div><div class="line"></div><div class="line">npm init @vitejs/app my-vue-app --template vue-ts</div><div class="line"></div><div class="line">npm install</div><div class="line"></div><div class="line">npm run dev</div><div class="line"></div><div class="line"><span class="comment">//初始化后的项目会生成一个vite.config.ts文件</span></div><div class="line">npm add @types/node -D</div><div class="line"></div><div class="line">npm add</div><div class="line"> @typescript-eslint/eslint-plugin</div><div class="line">    @typescript-eslint/parser</div><div class="line">    @vue/eslint-config-prettier</div><div class="line">    @vue/eslint-config-typescript</div><div class="line">    babel-eslint</div><div class="line">    eslint</div><div class="line">    eslint-plugin-prettier</div><div class="line">    eslint-plugin-vue</div><div class="line">    prettier</div><div class="line">    babel-polyfill</div><div class="line">-D</div><div class="line"></div><div class="line">npm install sass --save</div><div class="line">npm install node-sass --save</div><div class="line">npm install sass-loader --save</div><div class="line">npm add @vitejs/plugin-vue-jsx --save</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//安装elementplus</span></div><div class="line">npm install element-plus --save</div><div class="line"><span class="comment">//安装 vuex</span></div><div class="line">npm install vuex@next --save</div><div class="line"><span class="comment">//安装vue-router</span></div><div class="line">npm install vue-router@next</div><div class="line"><span class="comment">//安装axios</span></div><div class="line">npm install axios --save</div><div class="line"></div><div class="line"><span class="comment">//使用</span></div><div class="line"><span class="keyword">import</span> &#123; createApp, Vue &#125; <span class="keyword">from</span> <span class="string">'vue'</span>;</div><div class="line"><span class="keyword">import</span> ElementPlus <span class="keyword">from</span> <span class="string">'element-plus'</span>;</div><div class="line"><span class="keyword">import</span> <span class="string">'element-plus/lib/theme-chalk/index.css'</span>;</div><div class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App.vue'</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> app = createApp(App)</div><div class="line">app.use(ElementPlus)</div><div class="line">app.mount(<span class="string">'#app'</span>)</div></pre></td></tr></table></figure><h3 id="路由配置"><a href="#路由配置" class="headerlink" title="路由配置"></a>路由配置</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//安装vue-router</span></div><div class="line">npm install vue-router@next</div><div class="line"><span class="comment">//安装 nprogress 进度条</span></div><div class="line">npm i --save-dev @types/nprogress</div></pre></td></tr></table></figure><h4 id="index-ts"><a href="#index-ts" class="headerlink" title="index.ts"></a>index.ts</h4><figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;初始化&quot;&gt;&lt;a href=&quot;#初始化&quot; class=&quot;headerlink&quot; title=&quot;初始化&quot;&gt;&lt;/a&gt;初始化&lt;/h3&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div </summary>
+      
+    
+    
+    
+    
+    <category term="vue3" scheme="http://yoursite.com/tags/vue3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>nginx常用命令</title>
+    <link href="http://yoursite.com/2021/07/09/nginx%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://yoursite.com/2021/07/09/nginx%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
+    <published>2021-07-09T01:58:30.000Z</published>
+    <updated>2021-07-09T02:01:12.073Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="1、杀死-nginx-进程"><a href="#1、杀死-nginx-进程" class="headerlink" title="1、杀死 nginx 进程"></a>1、杀死 nginx 进程</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">taskkill /fi &quot;imagename eq nginx.EXE&quot; /f</div></pre></td></tr></table></figure><h4 id="2、启动"><a href="#2、启动" class="headerlink" title="2、启动"></a>2、启动</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">start nginx.exe</div></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;1、杀死-nginx-进程&quot;&gt;&lt;a href=&quot;#1、杀死-nginx-进程&quot; class=&quot;headerlink&quot; title=&quot;1、杀死 nginx 进程&quot;&gt;&lt;/a&gt;1、杀死 nginx 进程&lt;/h4&gt;&lt;figure class=&quot;highlight plai</summary>
+      
+    
+    
+    
+    
+    <category term="nginx" scheme="http://yoursite.com/tags/nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue路由模式</title>
+    <link href="http://yoursite.com/2021/07/07/vue%E8%B7%AF%E7%94%B1%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://yoursite.com/2021/07/07/vue%E8%B7%AF%E7%94%B1%E6%A8%A1%E5%BC%8F/</id>
+    <published>2021-07-07T00:57:13.000Z</published>
+    <updated>2021-07-07T10:42:06.455Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="路由模式"><a href="#路由模式" class="headerlink" title="路由模式"></a>路由模式</h3><p>前端路由的核心，就在于 —— <strong>改变视图的同时不会向后端发出请求</strong></p><ol><li><p>hash</p><p>带 # 号</p><p>hash 虽然出现在 URL 中，但不会被包括在 HTTP 请求中，对后端完全没有影响，因此改变 hash 不会重新加载页面。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">hash原理其实是浏览器监听了一个onhashchange的方法来改变页面的跳转的</div><div class="line">window.onhashchange = function(event)&#123;</div><div class="line">    console.log(event.oldURL, event.newURL);</div><div class="line">    let hash = location.hash.slice(1);</div><div class="line">    document.body.style.color = hash;</div><div class="line">&#125;</div></pre></td></tr></table></figure><p> 缺点：只能改变#后面的来实现路由跳转</p></li><li><p>history</p><p>① 利用了 HTML5 History Interface 中新增的 pushState() 和 replaceState() 方法。（需要特定浏览器支</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">调用 history.pushState() 相比于直接修改 hash，存在以下优势：</div><div class="line"></div><div class="line">pushState() 设置的新 URL 可以是与当前 URL 同源的任意 URL；而 hash 只可修改 #后面的部分，因此只能设置与当前 URL 同文档的 URL；</div><div class="line">pushState() 设置的新 URL 可以与当前 URL 一模一样，这样也会把记录添加到栈中；而 hash设置的新值必须与原来不一样才会触发动作将记录添加到栈中；</div><div class="line">pushState() 通过 stateObject 参数可以添加任意类型的数据到记录中；而 hash 只可添加短字符串；</div><div class="line">pushState() 可额外设置 title 属性供后续使用。</div></pre></td></tr></table></figure></li></ol><p>   ② 这种模式充分利用 history.pushState API 来完成URL 跳转而无须重新加载页面</p><p>   ③ 这两个方法应用于浏览器的<strong>历史记录栈</strong>，在当前已有的 <code>back</code>、<code>forward</code>、<code>go</code> 的基础之上，它们提供了对历史记录进行修改的功能。只是当它们执行修改时，虽然改变了当前的 URL，但浏览器不会立即向后端发送请求</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;路由模式&quot;&gt;&lt;a href=&quot;#路由模式&quot; class=&quot;headerlink&quot; title=&quot;路由模式&quot;&gt;&lt;/a&gt;路由模式&lt;/h3&gt;&lt;p&gt;前端路由的核心，就在于 —— &lt;strong&gt;改变视图的同时不会向后端发出请求&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jtest</title>
+    <link href="http://yoursite.com/2021/05/27/Jest/"/>
+    <id>http://yoursite.com/2021/05/27/Jest/</id>
+    <published>2021-05-27T12:25:37.000Z</published>
+    <updated>2021-05-27T13:08:41.177Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="jest-是react自动集成的"><a href="#jest-是react自动集成的" class="headerlink" title="jest 是react自动集成的"></a>jest 是react自动集成的</h3><p>jest 会自动检测 ：</p><p>1.<code>_tests_</code>文件夹下的js(ts)文件</p><p>2.以 .test.js 结尾的文件</p><p>3.以 .spec.js 结尾的文件</p><p>ps:eslint 检测</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attr">env:</span></div><div class="line"><span class="attr">  "jest":</span> <span class="literal">true</span></div></pre></td></tr></table></figure><h3 id="使用react-中的-testing-library库-内置jest测试模板"><a href="#使用react-中的-testing-library库-内置jest测试模板" class="headerlink" title="使用react 中的 testing-library库(内置jest测试模板)"></a>使用react 中的 testing-library库(内置jest测试模板)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">import React  from &quot;react&quot;;</div><div class="line">import &#123;render&#125; from &quot;@testing-library/react&quot;;</div><div class="line">import Button from &quot;./Button&quot;;</div><div class="line"></div><div class="line">test(&apos;first react test&apos;, () =&gt; &#123;</div><div class="line">    const wrapper = render(&lt;Button&gt;Goooooooood&lt;/Button&gt;)</div><div class="line">    const element = wrapper.queryByText(&apos;Goooooooood&apos;)</div><div class="line">    expect(element).toBeTruthy()</div><div class="line">&#125;)</div></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;jest-是react自动集成的&quot;&gt;&lt;a href=&quot;#jest-是react自动集成的&quot; class=&quot;headerlink&quot; title=&quot;jest 是react自动集成的&quot;&gt;&lt;/a&gt;jest 是react自动集成的&lt;/h3&gt;&lt;p&gt;jest 会自动检测 ：&lt;/</summary>
+      
+    
+    
+    
+    
+    <category term="Jest" scheme="http://yoursite.com/tags/Jest/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>react_ClassNames</title>
+    <link href="http://yoursite.com/2021/05/27/react/react-ClassNames/"/>
+    <id>http://yoursite.com/2021/05/27/react/react-ClassNames/</id>
+    <published>2021-05-27T11:43:06.000Z</published>
+    <updated>2021-05-27T11:57:55.490Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="classNames-插件"><a href="#classNames-插件" class="headerlink" title="classNames 插件"></a>classNames 插件</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm install classnames --save</div><div class="line"></div><div class="line"><span class="keyword">import</span> classnames <span class="keyword">from</span> <span class="string">'classnames'</span></div></pre></td></tr></table></figure><figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//可接受多个参数</span></div><div class="line"></div><div class="line">classNames(<span class="string">'foo'</span>, <span class="string">'bar'</span>); <span class="comment">// =&gt; 'foo bar'</span></div><div class="line">classNames(<span class="string">'foo'</span>, &#123; <span class="attr">bar</span>: <span class="literal">true</span> &#125;); <span class="comment">// =&gt; 'foo bar'</span></div><div class="line">classNames(&#123; <span class="string">'foo-bar'</span>: <span class="literal">true</span> &#125;); <span class="comment">// =&gt; 'foo-bar'</span></div><div class="line">classNames(&#123; <span class="string">'foo-bar'</span>: <span class="literal">false</span> &#125;); <span class="comment">// =&gt; ''</span></div><div class="line">classNames(&#123; <span class="attr">foo</span>: <span class="literal">true</span> &#125;, &#123; <span class="attr">bar</span>: <span class="literal">true</span> &#125;); <span class="comment">// =&gt; 'foo bar'</span></div><div class="line">classNames(&#123; <span class="attr">foo</span>: <span class="literal">true</span>, <span class="attr">bar</span>: <span class="literal">true</span> &#125;); <span class="comment">// =&gt; 'foo bar'</span></div><div class="line"></div><div class="line"><span class="comment">// lots of arguments of various types</span></div><div class="line">classNames(<span class="string">'foo'</span>, &#123; <span class="attr">bar</span>: <span class="literal">true</span>, <span class="attr">duck</span>: <span class="literal">false</span> &#125;, <span class="string">'baz'</span>, &#123; <span class="attr">quux</span>: <span class="literal">true</span> &#125;); <span class="comment">// =&gt; 'foo bar baz quux'</span></div><div class="line"></div><div class="line"><span class="comment">// other falsy values are just ignored</span></div><div class="line">classNames(<span class="literal">null</span>, <span class="literal">false</span>, <span class="string">'bar'</span>, <span class="literal">undefined</span>, <span class="number">0</span>, <span class="number">1</span>, &#123; <span class="attr">baz</span>: <span class="literal">null</span> &#125;, <span class="string">''</span>); <span class="comment">// =&gt; 'bar 1'</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> arr = [<span class="string">'b'</span>, &#123; <span class="attr">c</span>: <span class="literal">true</span>, <span class="attr">d</span>: <span class="literal">false</span> &#125;];</div><div class="line">classNames(<span class="string">'a'</span>, arr); <span class="comment">// =&gt; 'a b c'</span></div></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;classNames-插件&quot;&gt;&lt;a href=&quot;#classNames-插件&quot; class=&quot;headerlink&quot; title=&quot;classNames 插件&quot;&gt;&lt;/a&gt;classNames 插件&lt;/h3&gt;&lt;figure class=&quot;highlight js&quot;&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="react" scheme="http://yoursite.com/tags/react/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>es6字符串</title>
+    <link href="http://yoursite.com/2021/05/27/es6%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <id>http://yoursite.com/2021/05/27/es6%E5%AD%97%E7%AC%A6%E4%B8%B2/</id>
+    <published>2021-05-27T09:27:31.000Z</published>
+    <updated>2021-05-27T11:10:13.062Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="新增的字符串方法"><a href="#新增的字符串方法" class="headerlink" title="新增的字符串方法"></a>新增的字符串方法</h3><p>1、charAt</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//index必需。表示字符串中某个位置的数字，即字符在字符串中的下标。</span></div><div class="line"><span class="comment">//字符串中第一个字符的下标是 0。如果参数 index 不在 0 与 string.length 之间，该方法将返回一个空字符串。</span></div><div class="line">stringObject.charAt(index)</div></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;新增的字符串方法&quot;&gt;&lt;a href=&quot;#新增的字符串方法&quot; class=&quot;headerlink&quot; title=&quot;新增的字符串方法&quot;&gt;&lt;/a&gt;新增的字符串方法&lt;/h3&gt;&lt;p&gt;1、charAt&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;tab</summary>
+      
+    
+    
+    
+    
+    <category term="es6" scheme="http://yoursite.com/tags/es6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git操作</title>
+    <link href="http://yoursite.com/2021/05/25/git%E6%93%8D%E4%BD%9C/"/>
+    <id>http://yoursite.com/2021/05/25/git%E6%93%8D%E4%BD%9C/</id>
+    <published>2021-05-25T09:29:02.000Z</published>
+    <updated>2021-05-25T09:33:46.672Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git init</div></pre></td></tr></table></figure><h3 id="添加到本地仓库"><a href="#添加到本地仓库" class="headerlink" title="添加到本地仓库"></a>添加到本地仓库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git add .</div></pre></td></tr></table></figure><h2 id="添加说明"><a href="#添加说明" class="headerlink" title="添加说明"></a>添加说明</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git commit -m &quot;first commit&quot;</div></pre></td></tr></table></figure><h2 id="连接到guthub仓库"><a href="#连接到guthub仓库" class="headerlink" title="连接到guthub仓库"></a>连接到guthub仓库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git remote add origin https://github.com/*******/********.git</div></pre></td></tr></table></figure><h2 id="将本地库的内容推送到远程"><a href="#将本地库的内容推送到远程" class="headerlink" title="将本地库的内容推送到远程"></a>将本地库的内容推送到远程</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push -u origin master</div></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;初始化&quot;&gt;&lt;a href=&quot;#初始化&quot; class=&quot;headerlink&quot; title=&quot;初始化&quot;&gt;&lt;/a&gt;初始化&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;d</summary>
+      
+    
+    
+    
+    
+    <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>html</title>
+    <link href="http://yoursite.com/2021/05/25/html/html%E8%B8%A9%E5%9D%91/"/>
+    <id>http://yoursite.com/2021/05/25/html/html%E8%B8%A9%E5%9D%91/</id>
+    <published>2021-05-25T08:31:47.000Z</published>
+    <updated>2021-05-25T09:07:23.722Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h3><p>公司需求做一个纯 html 加 jq 页面，由于是中期接手不知道需要兼容到 ie10，所以出现许多兼容性问题</p><p>1、不加前缀的 grid 布局不兼容 ie，加了也可能会有各种问题。。直接放弃</p><p>2、flex 从 ie10开始兼容，且无需前缀（实测）</p><p>3、不支持 css 的 unset 属性，需要手动覆盖继承的属性</p><p>​    背景色可用：transparent  </p><p>​        ps: transparent属性用来指定全透明色彩;在CSS3中，transparent被延伸到任何一个有color值的            属性上。</p><p>4.<strong><em>不支持es6的写法</em></strong>，坑了个大爹！</p><p>解决方案：</p><p>1、将js单独使用 babel 转一下，我这是纯html写法，并不推荐，因为后面别人接收或者自己改，都回非常的麻烦，且容易出错。</p><p>我有一个公共js是单独创建一个babel工程，转出来的，但还是不推荐</p><p>2、看这篇 <a href="https://www.jianshu.com/p/13444c467ce2" target="_blank" rel="external">https://www.jianshu.com/p/13444c467ce2</a></p><p>可能是我下载的 browser.js 有问题，在ie11上可以用，ie10上不可以，会报错，而且是压缩后的代码，看都不想看，只能放弃</p><p>3、老老实实重写！</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;兼容性&quot;&gt;&lt;a href=&quot;#兼容性&quot; class=&quot;headerlink&quot; title=&quot;兼容性&quot;&gt;&lt;/a&gt;兼容性&lt;/h3&gt;&lt;p&gt;公司需求做一个纯 html 加 jq 页面，由于是中期接手不知道需要兼容到 ie10，所以出现许多兼容性问题&lt;/p&gt;
+&lt;p&gt;1、不加</summary>
+      
+    
+    
+    
+    
+    <category term="html jq" scheme="http://yoursite.com/tags/html-jq/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>react-ts-ui</title>
+    <link href="http://yoursite.com/2021/05/23/react/react-ts-ui/"/>
+    <id>http://yoursite.com/2021/05/23/react/react-ts-ui/</id>
+    <published>2021-05-23T07:10:23.000Z</published>
+    <updated>2021-05-23T07:46:20.767Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="新项目创建"><a href="#新项目创建" class="headerlink" title="新项目创建"></a>新项目创建</h3><p>1、npm i -g create-react-app</p><p>2、创建初始携带ts的react项目：npx create-react-app my-app –template typescript</p><p>实测：npx create-react-app my-app –typescript 初始文件非ts</p><p>踩坑：</p><p>使用ts会对项目进行语法检查</p><p>如果使用类方式定义组件，需要先定义props的类型</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">import React, &#123;Component&#125; from &apos;react&apos;;</div><div class="line"></div><div class="line">type Props = &#123;</div><div class="line">    message: string</div><div class="line">&#125;;</div><div class="line"></div><div class="line"></div><div class="line">class Hello extends Component&lt;Props&gt; &#123;</div><div class="line">    render() &#123;</div><div class="line">        const &#123;message&#125; = this.props</div><div class="line">        return (</div><div class="line">            &lt;div&gt;</div><div class="line">                &lt;h2&gt;&#123;message&#125;&lt;/h2&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">        );</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">export default Hello;</div></pre></td></tr></table></figure><p>ps:type 是ts的一种类型</p><p><a href="https://www.cnblogs.com/EnSnail/p/11233592.html" target="_blank" rel="external">https://www.cnblogs.com/EnSnail/p/11233592.html</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;新项目创建&quot;&gt;&lt;a href=&quot;#新项目创建&quot; class=&quot;headerlink&quot; title=&quot;新项目创建&quot;&gt;&lt;/a&gt;新项目创建&lt;/h3&gt;&lt;p&gt;1、npm i -g create-react-app&lt;/p&gt;
+&lt;p&gt;2、创建初始携带ts的react项目：npx </summary>
+      
+    
+    
+    
+    
+    <category term="react" scheme="http://yoursite.com/tags/react/"/>
+    
+  </entry>
   
   <entry>
     <title>react拓展</title>
@@ -206,255 +454,6 @@
     
     
     <category term="js" scheme="http://yoursite.com/tags/js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>scss中deep</title>
-    <link href="http://yoursite.com/2021/04/20/css/scss%E4%B8%ADdeep/"/>
-    <id>http://yoursite.com/2021/04/20/css/scss%E4%B8%ADdeep/</id>
-    <published>2021-04-20T02:29:18.000Z</published>
-    <updated>2021-04-20T02:44:20.362Z</updated>
-    
-    <content type="html"><![CDATA[<p>vue中有的组件是挂载到全局，查看时与app同级，这时的组件样式更改不能在vue文件中的scope中更改，因为无法读取到。</p><p>同时使用deep有三种运算符</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; =&gt; 如果你希望 scoped 样式中的一个选择器能够作用得“更深”，例如影响子组件，你可以使用 &gt;&gt;&gt; 操作符：</div><div class="line">        有些像 Sass 之类的预处理器无法正确解析 &gt;&gt;&gt;。这种情况下你可以使用 /deep/ 或 ::v-deep 操作符取而代之——两者都是 &gt;&gt;&gt; 的别名，同样可以正常工作</div><div class="line"></div><div class="line">/deep/ =&gt; 在scss中有时不能正确编译</div><div class="line"></div><div class="line">::v-deep =&gt; 与/deep/用法一致，听说比/deep/快</div><div class="line">::v-deep .MySteps &#123;</div><div class="line">        width: 50% !important;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;vue中有的组件是挂载到全局，查看时与app同级，这时的组件样式更改不能在vue文件中的scope中更改，因为无法读取到。&lt;/p&gt;
-&lt;p&gt;同时使用deep有三种运算符&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td cl</summary>
-      
-    
-    
-    
-    
-    <category term="scss" scheme="http://yoursite.com/tags/scss/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue3踩坑记录</title>
-    <link href="http://yoursite.com/2021/04/19/vue3/vue3%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/"/>
-    <id>http://yoursite.com/2021/04/19/vue3/vue3%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</id>
-    <published>2021-04-19T11:03:16.000Z</published>
-    <updated>2021-04-20T03:51:02.436Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="报错：Error-vue-composition-api-must-call-Vue-use-VueCompositionAPI-before-using-any-function"><a href="#报错：Error-vue-composition-api-must-call-Vue-use-VueCompositionAPI-before-using-any-function" class="headerlink" title="报错：Error: [vue-composition-api] must call Vue.use(VueCompositionAPI) before using any function."></a>报错：Error: [vue-composition-api] must call Vue.use(VueCompositionAPI) before using any function.</h2><h3 id="原因：composition-api-需要安装并引入使用"><a href="#原因：composition-api-需要安装并引入使用" class="headerlink" title="原因：composition-api 需要安装并引入使用"></a>原因：composition-api 需要安装并引入使用</h3><h3 id="解决："><a href="#解决：" class="headerlink" title="解决："></a>解决：</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm install @vue/composition-api --save</div><div class="line"><span class="keyword">import</span> VueCompositionApi <span class="keyword">from</span> <span class="string">'@vue/composition-api'</span></div><div class="line">Vue.use(VueCompositionApi)</div></pre></td></tr></table></figure><h2 id="报错：TypeError-Cannot-read-property-‘util’-of-undefined"><a href="#报错：TypeError-Cannot-read-property-‘util’-of-undefined" class="headerlink" title="报错：TypeError: Cannot read property ‘util’ of undefined"></a>报错：TypeError: Cannot read property ‘util’ of undefined</h2><h3 id="原因：import-defineComponent-from-‘-vue-composition-api’，-这是2-0-3-0的过度版本的脚手架创建的"><a href="#原因：import-defineComponent-from-‘-vue-composition-api’，-这是2-0-3-0的过度版本的脚手架创建的" class="headerlink" title="原因：import { defineComponent } from ‘@vue/composition-api’， 这是2.0-3.0的过度版本的脚手架创建的"></a>原因：import { defineComponent } from ‘@vue/composition-api’， 这是2.0-3.0的过度版本的脚手架创建的</h3><h3 id="解决：升级vue-cli至最新版本"><a href="#解决：升级vue-cli至最新版本" class="headerlink" title="解决：升级vue-cli至最新版本"></a>解决：升级vue-cli至最新版本</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm uninstall vue-cli -g</div><div class="line">npm i @vue/cli -g</div><div class="line">vue --version</div></pre></td></tr></table></figure><h2 id="获取-ctx-（vue2中的this对象-）"><a href="#获取-ctx-（vue2中的this对象-）" class="headerlink" title="获取 ctx （vue2中的this对象 ）"></a>获取 ctx （vue2中的this对象 ）</h2><figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; getCurrentInstance&#125; <span class="keyword">from</span> <span class="string">'vue'</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> &#123; ctx &#125;:<span class="built_in">any</span> = getCurrentInstance()</div></pre></td></tr></table></figure><h4 id="此时会报错-Property-‘ctx’-does-not-exist-on-type-‘ComponentInternalInstance’"><a href="#此时会报错-Property-‘ctx’-does-not-exist-on-type-‘ComponentInternalInstance’" class="headerlink" title="此时会报错   Property ‘ctx’ does not exist on type ‘ComponentInternalInstance’."></a>此时会报错   Property ‘ctx’ does not exist on type ‘ComponentInternalInstance’.</h4><p>此时使用：</p><figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// @ts-ignore</span></div><div class="line"><span class="keyword">const</span> &#123; ctx &#125;:<span class="built_in">any</span> = getCurrentInstance()</div><div class="line"></div><div class="line"><span class="comment">//并关闭ts严格模式</span></div><div class="line"><span class="string">"strict"</span>: <span class="literal">false</span>,</div></pre></td></tr></table></figure><h4 id="会报错：Do-not-use-“-ts-ignore”-because-it-alters-compilation-errors-typescript-eslint-ban-ts-comment"><a href="#会报错：Do-not-use-“-ts-ignore”-because-it-alters-compilation-errors-typescript-eslint-ban-ts-comment" class="headerlink" title="会报错：Do not use “@ts-ignore” because it alters compilation errors  @typescript-eslint/ban-ts-comment"></a>会报错：Do not use “@ts-ignore” because it alters compilation errors  @typescript-eslint/ban-ts-comment</h4><figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//这是eslint语法检查报错</span></div><div class="line"><span class="comment">//可以将 vue.config.js 中的  lintOnSave: false 注释掉</span></div><div class="line"><span class="comment">//lintOnSave: false,</span></div></pre></td></tr></table></figure><h4 id="终极方案-anyScript"><a href="#终极方案-anyScript" class="headerlink" title="终极方案:anyScript"></a>终极方案:anyScript</h4><figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> &#123; ctx &#125;:<span class="built_in">any</span> = getCurrentInstance()</div><div class="line"></div><div class="line"><span class="comment">//注意 以下是不行的,因为eslint语法会覆盖ts语法,以下为eslint重命名语法</span></div><div class="line"><span class="keyword">const</span> &#123; ctx:<span class="built_in">any</span>  &#125;= getCurrentInstance()</div></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;报错：Error-vue-composition-api-must-call-Vue-use-VueCompositionAPI-before-using-any-function&quot;&gt;&lt;a href=&quot;#报错：Error-vue-composition-api-m</summary>
-      
-    
-    
-    
-    
-    <category term="vue3" scheme="http://yoursite.com/tags/vue3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue3路由</title>
-    <link href="http://yoursite.com/2021/04/17/vue3/vue3%E8%B7%AF%E7%94%B1/"/>
-    <id>http://yoursite.com/2021/04/17/vue3/vue3%E8%B7%AF%E7%94%B1/</id>
-    <published>2021-04-17T09:45:39.000Z</published>
-    <updated>2021-04-17T12:40:14.058Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="路由配置"><a href="#路由配置" class="headerlink" title="路由配置"></a>路由配置</h3><p>跟着公司大佬学习3.0前端路由配置</p><p><em>在定义文件时不要使用router后缀否则会无法加载router-view</em></p><h4 id="入口文件-index-ts"><a href="#入口文件-index-ts" class="headerlink" title="入口文件  index.ts"></a>入口文件  index.ts</h4><figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//</span></div><div class="line"><span class="keyword">import</span> &#123; createRouter, createWebHistory, RouteRecordRaw &#125; <span class="keyword">from</span> <span class="string">'vue-router'</span></div><div class="line"><span class="keyword">import</span> &#123; staticRouters &#125; <span class="keyword">from</span> <span class="string">'./staticRouters'</span>;</div><div class="line"><span class="keyword">import</span> defaultRouters <span class="keyword">from</span> <span class="string">'./defaultRouters'</span>;</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">const</span> routes: <span class="built_in">any</span> = staticRouters.concat(defaultRouters);</div><div class="line"></div><div class="line"><span class="keyword">const</span> router = createRouter(&#123;</div><div class="line">    history: createWebHistory(process.env.BASE_URL),</div><div class="line">    routes</div><div class="line">&#125;)</div><div class="line"></div><div class="line">router.beforeEach(<span class="function">(<span class="params">to, <span class="keyword">from</span>, next</span>) =&gt;</span> &#123;</div><div class="line">    <span class="comment">// let userInfo = localStorage.getItem('user');</span></div><div class="line">    <span class="keyword">const</span> userInfo = <span class="string">"xxxxxxx"</span>;</div><div class="line">    <span class="keyword">if</span> (to.path === <span class="string">"/login"</span>) &#123;</div><div class="line">        next();</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">if</span> (userInfo) &#123;</div><div class="line">            next();</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            next(&#123;</div><div class="line">                path: <span class="string">'/login'</span></div><div class="line">            &#125;);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> router</div></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;路由配置&quot;&gt;&lt;a href=&quot;#路由配置&quot; class=&quot;headerlink&quot; title=&quot;路由配置&quot;&gt;&lt;/a&gt;路由配置&lt;/h3&gt;&lt;p&gt;跟着公司大佬学习3.0前端路由配置&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;在定义文件时不要使用router后缀否则会无法加载router-v</summary>
-      
-    
-    
-    
-    
-    <category term="vue3" scheme="http://yoursite.com/tags/vue3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue-el限制输入</title>
-    <link href="http://yoursite.com/2021/04/13/elementUI/vue-el%E9%99%90%E5%88%B6%E8%BE%93%E5%85%A5/"/>
-    <id>http://yoursite.com/2021/04/13/elementUI/vue-el%E9%99%90%E5%88%B6%E8%BE%93%E5%85%A5/</id>
-    <published>2021-04-13T06:26:35.000Z</published>
-    <updated>2021-04-13T06:29:53.212Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="oninput限制输入"><a href="#oninput限制输入" class="headerlink" title="oninput限制输入"></a>oninput限制输入</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;el-input v-model='num'</div><div class="line">oninput="if(/^[0-9]*$/.test(value) == false) &#123; value = null &#125;</div><div class="line">                   if(value &lt; 0)&#123;value=0&#125;</div><div class="line">                   if(value &gt; 100)&#123;value=100&#125;</div><div class="line">                   if(value&gt; 0 &amp;&amp; value &lt; 100) &#123;value=value.replace(/[^\d]/g,'')&#125;" &gt;&lt;/el-input&gt;</div></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;oninput限制输入&quot;&gt;&lt;a href=&quot;#oninput限制输入&quot; class=&quot;headerlink&quot; title=&quot;oninput限制输入&quot;&gt;&lt;/a&gt;oninput限制输入&lt;/h3&gt;&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;</summary>
-      
-    
-    
-    
-    
-    <category term="vue-el踩坑" scheme="http://yoursite.com/tags/vue-el踩坑/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue路由模式</title>
-    <link href="http://yoursite.com/2021/04/08/elementUI/vue%E8%B7%AF%E7%94%B1%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://yoursite.com/2021/04/08/elementUI/vue%E8%B7%AF%E7%94%B1%E6%A8%A1%E5%BC%8F/</id>
-    <published>2021-04-08T09:39:47.000Z</published>
-    <updated>2021-04-08T10:12:39.977Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="路由模式"><a href="#路由模式" class="headerlink" title="路由模式"></a>路由模式</h3><p>今天使用路由跳转时始终访问不到指定页面</p><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">const href = `/informationAudit/intoInfoAudit?id=` + id;</div><div class="line">window.open(href, "_blank");</div><div class="line"></div><div class="line">//点击后路由跳转</div><div class="line">/informationAudit/intoInfoAudit?id=undefined#/dashboard</div></pre></td></tr></table></figure><p>后来发现路由模式不对</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> createRouter = <span class="function"><span class="params">()</span> =&gt;</span></div><div class="line">  <span class="keyword">new</span> Router(&#123;</div><div class="line">    <span class="comment">//不应该注释</span></div><div class="line">    <span class="comment">//mode: 'history', // 路由模式</span></div><div class="line">    scrollBehavior: <span class="function"><span class="params">()</span> =&gt;</span> (&#123; <span class="attr">y</span>: <span class="number">0</span> &#125;),</div><div class="line">    <span class="attr">isAdd</span>: <span class="literal">false</span>, <span class="comment">//是否已经添加动态(菜单)路由</span></div><div class="line">    routes: constantRoutes,</div><div class="line">    <span class="attr">base</span>: <span class="string">'/icostviews/'</span></div><div class="line">  &#125;);</div></pre></td></tr></table></figure><p>vue-router有两种模式：</p><p>hash（默认）：</p><p>1、使用 URL 的 hash 来模拟一个完整的 URL，于是当 URL 改变时，页面不会重新加载</p><p>2、url带有<em>#</em></p><p>3、前端路由修改的是#中的信息</p><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//如果直接输入页面会跳转</div><div class="line">/informationAudit/intoInfoAudit?id=undefined#/supplierManagement/informationAudit</div></pre></td></tr></table></figure><p>history：</p><p>1、这种模式充分利用 <code>history.pushState</code> API 来完成 URL 跳转而无须重新加载页面。</p><p>2、使用history 模式时，URL 就像正常的 url</p><p>3、需要后台配置支持，刷新会请求服务器</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;路由模式&quot;&gt;&lt;a href=&quot;#路由模式&quot; class=&quot;headerlink&quot; title=&quot;路由模式&quot;&gt;&lt;/a&gt;路由模式&lt;/h3&gt;&lt;p&gt;今天使用路由跳转时始终访问不到指定页面&lt;/p&gt;
-&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;</summary>
-      
-    
-    
-    
-    
-    <category term="vue-Router" scheme="http://yoursite.com/tags/vue-Router/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>js正则</title>
-    <link href="http://yoursite.com/2021/04/07/js/js%E6%AD%A3%E5%88%99/"/>
-    <id>http://yoursite.com/2021/04/07/js/js%E6%AD%A3%E5%88%99/</id>
-    <published>2021-04-07T08:00:57.000Z</published>
-    <updated>2021-04-07T08:07:54.509Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="正则"><a href="#正则" class="headerlink" title="正则"></a>正则</h3><h4 id="常用元字符串"><a href="#常用元字符串" class="headerlink" title="常用元字符串"></a>常用元字符串</h4><table><thead><tr><th>元字符</th><th>说明</th></tr></thead><tbody><tr><td>\d</td><td>匹配数字</td></tr><tr><td>\D</td><td>匹配任意非数字的字符</td></tr><tr><td>\w</td><td>匹配字母或数字或下划线</td></tr><tr><td>\W</td><td>匹配任意不是字母，数字，下划线</td></tr><tr><td>\s</td><td>匹配任意的空白符</td></tr><tr><td>\S</td><td>匹配任意不是空白符的字符</td></tr><tr><td>.</td><td>匹配除换行符以外的任意单个字符</td></tr><tr><td>^</td><td>表示匹配行首的文本(以谁开始)</td></tr><tr><td>$</td><td>表示匹配行尾的文本(以谁结束)</td></tr></tbody></table><h4 id="限定符"><a href="#限定符" class="headerlink" title="限定符"></a>限定符</h4><table><thead><tr><th>限定符</th><th>说明</th></tr></thead><tbody><tr><td>*</td><td>重复零次或更多次</td></tr><tr><td>+</td><td>重复一次或更多次</td></tr><tr><td>?</td><td>重复零次或一次</td></tr><tr><td>{n}</td><td>重复n次</td></tr><tr><td>{n,}</td><td>重复n次或更多次</td></tr><tr><td>{n,m}</td><td>重复n到m次</td></tr></tbody></table><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[] 字符串用中括号括起来，表示匹配其中的任一字符，相当于或的意思</div><div class="line">[^]  匹配除中括号以内的内容</div><div class="line">\ 转义符</div><div class="line">| 或者，选择两者中的一个。注意|将左右两边分为两部分，而不管左右两边有多长多乱</div><div class="line">() 从两个直接量中选择一个，分组</div><div class="line">   eg：gr(a|e)y匹配gray和grey</div><div class="line">[\u4e00-\u9fa5]  匹配汉字</div></pre></td></tr></table></figure><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//提取邮件中的每一部分</span></div><div class="line"><span class="keyword">var</span> str = <span class="string">'xxxx@itcast.com'</span>;</div><div class="line"><span class="keyword">var</span> reg = <span class="regexp">/(\w+)@(\w+)\.(\w+)/</span>;</div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">RegExp</span>); <span class="comment">//RegExp() &#123; [native code] &#125;</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">RegExp</span>.$<span class="number">1</span>); <span class="comment">//xxxx</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">RegExp</span>.$<span class="number">2</span>); <span class="comment">//itcast</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">RegExp</span>.$<span class="number">3</span>); <span class="comment">//com</span></div><div class="line"></div><div class="line"><span class="comment">//为什么  RegExp.$1 有值</span></div><div class="line"><span class="comment">//参考：https://blog.csdn.net/qq_42423964/article/details/102385983</span></div><div class="line"></div><div class="line"><span class="built_in">RegExp</span> 是javascript中的一个内置对象。为正则表达式。</div><div class="line"></div><div class="line"><span class="built_in">RegExp</span>.$<span class="number">1</span>是<span class="built_in">RegExp</span>的一个属性,指的是与正则表达式匹配的第一个 子匹配(以括号为标志)字符串，以此类推，<span class="built_in">RegExp</span>.$<span class="number">2</span>，<span class="built_in">RegExp</span>.$<span class="number">3</span>，..RegExp.$<span class="number">99</span>总共可以有<span class="number">99</span>个匹配</div><div class="line"></div><div class="line">如果你直接在控制台打印<span class="built_in">RegExp</span>, 出现的一定是一个空字符串: <span class="string">""</span>。那么, 我们在什么时候可以使用<span class="built_in">RegExp</span>.$<span class="number">1</span>呢?</div><div class="line"></div><div class="line"><span class="comment">//其实RegExp这个对象会在我们调用了正则表达式的方法后, 自动将最近一次的结果保存在里面, 所以如果我们在使用正则表达式时, 有用到分组, 那么就可以直接在调用完以后直接使用RegExp.$xx来使用捕获到的分组内容</span></div></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;正则&quot;&gt;&lt;a href=&quot;#正则&quot; class=&quot;headerlink&quot; title=&quot;正则&quot;&gt;&lt;/a&gt;正则&lt;/h3&gt;&lt;h4 id=&quot;常用元字符串&quot;&gt;&lt;a href=&quot;#常用元字符串&quot; class=&quot;headerlink&quot; title=&quot;常用元字符串&quot;&gt;&lt;/a&gt;常</summary>
-      
-    
-    
-    
-    
-    <category term="js" scheme="http://yoursite.com/tags/js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>js对象方法</title>
-    <link href="http://yoursite.com/2021/04/07/js/js%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95/"/>
-    <id>http://yoursite.com/2021/04/07/js/js%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95/</id>
-    <published>2021-04-07T07:41:27.000Z</published>
-    <updated>2021-04-07T07:42:00.717Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="对象深拷贝"><a href="#对象深拷贝" class="headerlink" title="对象深拷贝"></a>对象深拷贝</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 深拷贝  把o1的成员拷贝给o2</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">deepCopy</span>(<span class="params">o1, o2</span>) </span>&#123;</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> o1) &#123;</div><div class="line">    <span class="comment">// 获取key属性对应的值</span></div><div class="line">    <span class="keyword">var</span> item = o1[key];</div><div class="line"></div><div class="line">    <span class="comment">// 如果item 是对象？</span></div><div class="line">    <span class="comment">// var o = &#123;&#125;</span></div><div class="line">    <span class="keyword">if</span> (item <span class="keyword">instanceof</span> <span class="built_in">Object</span>) &#123;</div><div class="line">      <span class="comment">// var o = &#123;&#125;;</span></div><div class="line">      o2[key] = &#123;&#125;; </div><div class="line">      deepCopy(item, o2[key]);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (item <span class="keyword">instanceof</span> <span class="built_in">Array</span>) &#123;</div><div class="line">      <span class="comment">// 如果item 是数组呢？</span></div><div class="line">      <span class="comment">// var arr = [];</span></div><div class="line">      o2[key] = [];</div><div class="line">      deepCopy(item, o2[key]);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="comment">// 如果是简单类型</span></div><div class="line">      o2[key] = o1[key];</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;对象深拷贝&quot;&gt;&lt;a href=&quot;#对象深拷贝&quot; class=&quot;headerlink&quot; title=&quot;对象深拷贝&quot;&gt;&lt;/a&gt;对象深拷贝&lt;/h3&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;p</summary>
-      
-    
-    
-    
-    
-    <category term="js" scheme="http://yoursite.com/tags/js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>el-table自定义排序</title>
-    <link href="http://yoursite.com/2021/04/06/elementUI/el-table%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%92%E5%BA%8F/"/>
-    <id>http://yoursite.com/2021/04/06/elementUI/el-table%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%92%E5%BA%8F/</id>
-    <published>2021-04-06T02:38:57.000Z</published>
-    <updated>2021-04-06T03:12:24.493Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="表格自定义排序"><a href="#表格自定义排序" class="headerlink" title="表格自定义排序"></a>表格自定义排序</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">el-table</span></span></div><div class="line"><span class="attr">ref</span>=<span class="string">"tableCot"</span></div><div class="line"><span class="attr">:data</span>=<span class="string">"tableData"</span></div><div class="line"><span class="attr">:default-sort</span> = <span class="string">"&#123;prop: 'projectNo', order: 'descending'&#125;"</span>&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">el-table-column</span></span></div><div class="line">     <span class="attr">align</span>=<span class="string">"center"</span></div><div class="line">     <span class="attr">:show-overflow-tooltip</span>=<span class="string">"true"</span></div><div class="line">     <span class="attr">prop</span>=<span class="string">"projectNo"</span></div><div class="line">     <span class="attr">label</span>=<span class="string">"项目编号"</span></div><div class="line">     <span class="attr">:sortable</span>=<span class="string">"true"</span></div><div class="line">     <span class="attr">:sort-method</span>=<span class="string">"sortby"</span>&gt;</div><div class="line">    <span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span>             </div><div class="line"><span class="tag">&lt;/<span class="name">el-table</span>&gt;</span></div></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//可以先看看a，b的内容</span></div><div class="line">sortby(a, b) &#123;</div><div class="line">    <span class="keyword">let</span> x = <span class="built_in">parseInt</span>(a.projectNo.substring(<span class="number">19</span>))</div><div class="line">    <span class="keyword">let</span> y = <span class="built_in">parseInt</span>(b.projectNo.substring(<span class="number">19</span>))</div><div class="line">    <span class="keyword">return</span> x &gt; y ? <span class="number">-1</span> : <span class="number">1</span></div><div class="line">&#125;,</div></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;表格自定义排序&quot;&gt;&lt;a href=&quot;#表格自定义排序&quot; class=&quot;headerlink&quot; title=&quot;表格自定义排序&quot;&gt;&lt;/a&gt;表格自定义排序&lt;/h3&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;</summary>
-      
-    
-    
-    
-    
-    <category term="Element UI" scheme="http://yoursite.com/tags/Element-UI/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue3新特性-使用</title>
-    <link href="http://yoursite.com/2021/03/31/vue3/vue3%E6%96%B0%E7%89%B9%E6%80%A7-%E4%BD%BF%E7%94%A8/"/>
-    <id>http://yoursite.com/2021/03/31/vue3/vue3%E6%96%B0%E7%89%B9%E6%80%A7-%E4%BD%BF%E7%94%A8/</id>
-    <published>2021-03-31T09:32:34.000Z</published>
-    <updated>2021-04-01T14:25:12.871Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="setup"><a href="#setup" class="headerlink" title="setup"></a>setup</h3><ul><li>新的option, 所有的组合API函数都在此使用, 只在初始化时执行一次</li><li>函数如果返回对象, 对象中的属性或方法, 模板中可以直接使用</li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//理解：将2.0中data 和 methods 统一,必须通过 return 返回才可以使用</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> &#123;defineComponent&#125; <span class="keyword">from</span> <span class="string">'vue'</span>;</div><div class="line"><span class="comment">//暴露一个定义好的组件</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> defineComponent(&#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'App'</span>,</div><div class="line">    setup() &#123;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            </div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure><h3 id="ref"><a href="#ref" class="headerlink" title="ref"></a>ref</h3><ul><li>作用: 定义一个数据的响应式</li><li>语法: const xxx = ref(initValue):<ul><li>创建一个包含响应式数据的引用(reference)对象</li><li>js中操作数据: xxx.value</li><li>模板中操作数据: 不需要.value</li></ul></li><li>一般用来定义一个基本类型的响应式数据</li></ul><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>&#123;&#123; count &#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"updateCount"</span>&gt;</span>更新数据<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;defineComponent, ref&#125; <span class="keyword">from</span> <span class="string">'vue'</span>;</div><div class="line">setup()&#123;</div><div class="line">  <span class="comment">// console.log('第一次')</span></div><div class="line">  <span class="comment">// 变量</span></div><div class="line">  <span class="comment">// let count = 0 // 此时的数据并不是响应式的数据(响应式数据:数据变化,页面跟着渲染变化)</span></div><div class="line">  <span class="comment">// ref是一个函数,作用:定义一个响应式的数据,返回的是一个Ref对象,对象中有一个value属性,如果需要对数据进行操作,需要使用该Ref对象调用value属性的方式进行数据的操作</span></div><div class="line">  <span class="comment">// html模版中是不需要使用.value属性的写法</span></div><div class="line">  <span class="comment">// 一般用来定义一个基本类型的响应式数据</span></div><div class="line">  <span class="comment">// count 的类型 Ref类型</span></div><div class="line">    <span class="comment">//count.value = 0</span></div><div class="line">  <span class="keyword">const</span> count = ref(<span class="number">0</span>)</div><div class="line">  <span class="built_in">console</span>.log(count)</div><div class="line">  <span class="comment">// 方法</span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">updateCount</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'====='</span>)</div><div class="line">    <span class="comment">// 报错的原因:count是一个Ref对象,对象是不能进行++的操作</span></div><div class="line">    <span class="comment">// count++</span></div><div class="line">    count.value++</div><div class="line">  &#125;</div><div class="line">  <span class="comment">// 返回的是一个对象</span></div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    <span class="comment">// 属性</span></div><div class="line">    count,</div><div class="line">    <span class="comment">// 方法</span></div><div class="line">    updateCount</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><h3 id="reactive"><a href="#reactive" class="headerlink" title="reactive"></a>reactive</h3><ul><li>作用: 定义多个数据的响应式</li><li>const proxy = reactive(obj): 接收一个普通对象然后返回该普通对象的响应式代理器对象</li><li>响应式转换是“深层的”：会影响对象内部所有嵌套的属性</li><li>内部基于 ES6 的 Proxy 实现，通过代理对象操作源对象内部数据都是响应式的</li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//目标对象</span></div><div class="line"><span class="keyword">const</span> obj = &#123;</div><div class="line">      <span class="attr">name</span>: <span class="string">'小明'</span>,</div><div class="line">      <span class="attr">age</span>: <span class="number">20</span>,</div><div class="line">      <span class="attr">wife</span>: &#123;</div><div class="line">        <span class="attr">name</span>: <span class="string">'小甜甜'</span>,</div><div class="line">        <span class="attr">age</span>: <span class="number">18</span>,</div><div class="line">        <span class="attr">cars</span>: [<span class="string">'奔驰'</span>, <span class="string">'宝马'</span>, <span class="string">'奥迪'</span>],</div><div class="line">      &#125;,</div><div class="line">    &#125;</div><div class="line"><span class="comment">//代理对象</span></div><div class="line"><span class="keyword">const</span> user = reactive&lt;any&gt;(obj)</div><div class="line"><span class="keyword">const</span> updateUser = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">      <span class="comment">// 直接使用目标对象的方式来更新目标对象中的成员的值,是不可能的,只能使用代理对象的方式来更新数据(响应式数据)</span></div><div class="line">      <span class="comment">// obj.name += '==='</span></div><div class="line">      <span class="comment">// 通过当前的代理对象把目标对象中的某个数组属性添加一个新的属性</span></div><div class="line">      user.name += <span class="string">'==='</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 总结: 如果操作代理对象,目标对象中的数据也会随之变化,同时如果想要在操作数据的时候,界面也要跟着重新更新渲染,那么也是操作代理对象</span></div><div class="line"><span class="comment">//操作目标对象,目标对象中的数据会随之变化,但不会重新渲染</span></div></pre></td></tr></table></figure><h3 id="computed-和-watch"><a href="#computed-和-watch" class="headerlink" title="computed  和  watch"></a>computed  和  watch</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//computed 和 watch 也放入setup之中</span></div><div class="line"><span class="keyword">import</span> &#123;</div><div class="line">  defineComponent,</div><div class="line">  reactive,</div><div class="line">  computed,</div><div class="line">  watch,</div><div class="line">  ref,</div><div class="line">  watchEffect,</div><div class="line">&#125; <span class="keyword">from</span> <span class="string">'vue'</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> defineComponent(&#123;</div><div class="line">  <span class="attr">name</span>: <span class="string">'App'</span>,</div><div class="line">  setup() &#123;</div><div class="line">    <span class="comment">// 定义一个响应式对象</span></div><div class="line">    <span class="keyword">const</span> user = reactive(&#123;</div><div class="line">      <span class="comment">// 姓氏</span></div><div class="line">      firstName: <span class="string">'东方'</span>,</div><div class="line">      <span class="comment">// 名字</span></div><div class="line">      lastName: <span class="string">'不败'</span>,</div><div class="line">    &#125;)</div><div class="line">    <span class="comment">// 通过计算属性的方式,实现第一个姓名的显示</span></div><div class="line">    <span class="comment">// vue3中的计算属性</span></div><div class="line">    <span class="comment">// 计算属性的函数中如果只传入一个回调函数,表示的是get</span></div><div class="line"></div><div class="line">    <span class="comment">// 第一个姓名:</span></div><div class="line">    <span class="comment">// 返回的是一个Ref类型的对象</span></div><div class="line">    <span class="keyword">const</span> fullName1 = computed(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">      <span class="keyword">return</span> user.firstName + <span class="string">'_'</span> + user.lastName</div><div class="line">    &#125;)</div><div class="line">    <span class="comment">// 第二个姓名:</span></div><div class="line">    <span class="keyword">const</span> fullName2 = computed(&#123;</div><div class="line">      get() &#123;</div><div class="line">        <span class="keyword">return</span> user.firstName + <span class="string">'_'</span> + user.lastName</div><div class="line">      &#125;,</div><div class="line">      set(val: string) &#123;</div><div class="line">        <span class="comment">// console.log('=====',val)</span></div><div class="line">        <span class="keyword">const</span> names = val.split(<span class="string">'_'</span>)</div><div class="line">        user.firstName = names[<span class="number">0</span>]</div><div class="line">        user.lastName = names[<span class="number">1</span>]</div><div class="line">      &#125;,</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    <span class="comment">// 第三个姓名:</span></div><div class="line">    <span class="keyword">const</span> fullName3 = ref(<span class="string">''</span>)</div><div class="line">    <span class="comment">// 监视----监视指定的数据</span></div><div class="line">    watch(</div><div class="line">      user,</div><div class="line">      (&#123; firstName, lastName &#125;) =&gt; &#123;</div><div class="line">        fullName3.value = firstName + <span class="string">'_'</span> + lastName</div><div class="line">      &#125;,</div><div class="line">      &#123; <span class="attr">immediate</span>: <span class="literal">true</span>, <span class="attr">deep</span>: <span class="literal">true</span> &#125;</div><div class="line">    )</div><div class="line">    <span class="comment">// immediate 默认会执行一次watch,deep 深度监视</span></div><div class="line"></div><div class="line">    <span class="comment">// 监视,不需要配置immediate,本身默认就会进行监视,(默认执行一次)</span></div><div class="line">    <span class="comment">// watchEffect(() =&gt; &#123;</span></div><div class="line">    <span class="comment">//   fullName3.value = user.firstName + '_' + user.lastName</span></div><div class="line">    <span class="comment">// &#125;)</span></div><div class="line"></div><div class="line">    <span class="comment">// 监视fullName3的数据,改变firstName和lastName</span></div><div class="line">    watchEffect(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">      <span class="keyword">const</span> names = fullName3.value.split(<span class="string">'_'</span>)</div><div class="line">      user.firstName = names[<span class="number">0</span>]</div><div class="line">      user.lastName = names[<span class="number">1</span>]</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    <span class="comment">// watch---可以监视多个数据的</span></div><div class="line">    <span class="comment">// watch([user.firstName,user.lastName,fullName3],()=&gt;&#123;</span></div><div class="line">    <span class="comment">//   // 这里的代码就没有执行,fullName3是响应式的数据,但是,user.firstName,user.lastName不是响应式的数据</span></div><div class="line">    <span class="comment">//   console.log('====')</span></div><div class="line">    <span class="comment">// &#125;)</span></div><div class="line">    <span class="comment">// 当我们使用watch监视非响应式的数据的时候,代码需要改一下</span></div><div class="line">    watch([<span class="function"><span class="params">()</span>=&gt;</span>user.firstName, ()=&gt;user.lastName,fullName3], () =&gt; &#123;</div><div class="line">      <span class="comment">// 这里的代码就没有执行,fullName3是响应式的数据,但是,user.firstName,user.lastName不是响应式的数据</span></div><div class="line">      <span class="built_in">console</span>.log(<span class="string">'===='</span>)</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      user,</div><div class="line">      fullName1,</div><div class="line">      fullName2,</div><div class="line">      fullName3,</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">&#125;)</div></pre></td></tr></table></figure><h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h3><p>3.0中的生命周期都变成了组合api</p><p>3.0中的执行都比2.0中的快</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">beforeCreate -&gt; 使用 setup()</div><div class="line">created -&gt; 使用 setup()</div><div class="line">beforeMount -&gt; onBeforeMount</div><div class="line">mounted -&gt; onMounted</div><div class="line">beforeUpdate -&gt; onBeforeUpdate</div><div class="line">updated -&gt; onUpdated</div><div class="line">beforeDestroy -&gt; onBeforeUnmount</div><div class="line">destroyed -&gt; onUnmounted</div><div class="line">errorCaptured -&gt; onErrorCaptured</div></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;setup&quot;&gt;&lt;a href=&quot;#setup&quot; class=&quot;headerlink&quot; title=&quot;setup&quot;&gt;&lt;/a&gt;setup&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;新的option, 所有的组合API函数都在此使用, 只在初始化时执行一次&lt;/li&gt;
-&lt;li&gt;函数如果返</summary>
-      
-    
-    
-    
-    
-    <category term="Vue3" scheme="http://yoursite.com/tags/Vue3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue3项目创建</title>
-    <link href="http://yoursite.com/2021/03/30/vue3/vue3%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/"/>
-    <id>http://yoursite.com/2021/03/30/vue3/vue3%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/</id>
-    <published>2021-03-30T06:00:49.000Z</published>
-    <updated>2021-03-30T06:06:45.652Z</updated>
-    
-    <content type="html"><![CDATA[<p>参考：<a href="https://24kcs.github.io/vue3_study/chapter3/02_%E5%88%9B%E5%BB%BAvue3%E9%A1%B9%E7%9B%AE.html#_1-%E4%BD%BF%E7%94%A8-vue-cli-%E5%88%9B%E5%BB%BA" target="_blank" rel="external">https://24kcs.github.io/vue3_study/chapter3/02_%E5%88%9B%E5%BB%BAvue3%E9%A1%B9%E7%9B%AE.html#_1-%E4%BD%BF%E7%94%A8-vue-cli-%E5%88%9B%E5%BB%BA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;参考：&lt;a href=&quot;https://24kcs.github.io/vue3_study/chapter3/02_%E5%88%9B%E5%BB%BAvue3%E9%A1%B9%E7%9B%AE.html#_1-%E4%BD%BF%E7%94%A8-vue-cli-%E</summary>
-      
-    
-    
-    
-    
-    <category term="Vue3" scheme="http://yoursite.com/tags/Vue3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ts声明文件和内置对象</title>
-    <link href="http://yoursite.com/2021/03/30/TypeScript/ts%E5%A3%B0%E6%98%8E%E6%96%87%E4%BB%B6%E5%92%8C%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/"/>
-    <id>http://yoursite.com/2021/03/30/TypeScript/ts%E5%A3%B0%E6%98%8E%E6%96%87%E4%BB%B6%E5%92%8C%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/</id>
-    <published>2021-03-30T01:51:51.000Z</published>
-    <updated>2021-03-30T06:00:04.960Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="声明文件"><a href="#声明文件" class="headerlink" title="声明文件"></a>声明文件</h3><p>当使用第三方库时，我们需要引用它的声明文件，才能获得对应的代码补全、接口提示等功能</p><figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* </span></div><div class="line">当使用第三方库时，我们需要引用它的声明文件，才能获得对应的代码补全、接口提示等功能。</div><div class="line">声明语句: 如果需要ts对新的语法进行检查, 需要要加载了对应的类型说明代码</div><div class="line">  declare var jQuery: (selector: string) =&gt; any;</div><div class="line">声明文件: 把声明语句放到一个单独的文件（jQuery.d.ts）中, ts会自动解析到项目中所有声明文件</div><div class="line">下载声明文件: npm install @types/jquery --save-dev 直接安装声明文件</div><div class="line">*/</div><div class="line"></div><div class="line">jQuery(<span class="string">'#foo'</span>);</div><div class="line"><span class="comment">// ERROR: Cannot find name 'jQuery'.</span></div></pre></td></tr></table></figure><p>一般声明文件都会单独写成一个 <code>xxx.d.ts</code> 文件， TS编译器会扫描并加载项目中所有的TS声明文件</p><p>很多的第三方库都定义了对应的声明文件库, 库文件名一般为 <code>@types/xxx</code>, 可以在 <code>https://www.npmjs.com/package/package</code> 进行搜索，<strong>下载完后可不用手动声明</strong></p><h3 id="内置对象"><a href="#内置对象" class="headerlink" title="内置对象"></a>内置对象</h3><p>JavaScript 中有很多内置对象，它们可以直接在 TypeScript 中当做定义好了的类型。</p><p>内置对象是指根据标准在全局作用域（Global）上存在的对象。这里的标准是指 ECMAScript 和其他环境（比如 DOM）的标准。</p><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//ECMAScript 的内置对象</span></div><div class="line"><span class="comment">/* 1. ECMAScript 的内置对象 */</span></div><div class="line"><span class="keyword">let</span> b: <span class="built_in">Boolean</span> = <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="number">1</span>)</div><div class="line"><span class="keyword">let</span> n: <span class="built_in">Number</span> = <span class="keyword">new</span> <span class="built_in">Number</span>(<span class="literal">true</span>)</div><div class="line"><span class="keyword">let</span> s: <span class="built_in">String</span> = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">'abc'</span>)</div><div class="line"><span class="keyword">let</span> d: <span class="built_in">Date</span> = <span class="keyword">new</span> <span class="built_in">Date</span>()</div><div class="line"><span class="keyword">let</span> r: <span class="built_in">RegExp</span> = <span class="regexp">/^1/</span></div><div class="line"><span class="keyword">let</span> e: <span class="built_in">Error</span> = <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'error message'</span>)</div><div class="line">b = <span class="literal">true</span></div><div class="line"><span class="comment">// let bb: boolean = new Boolean(2)  // error</span></div><div class="line"></div><div class="line"><span class="comment">//BOM 和 DOM 的内置对象</span></div><div class="line"><span class="keyword">const</span> div: HTMLElement = <span class="built_in">document</span>.getElementById(<span class="string">'test'</span>)</div><div class="line"><span class="keyword">const</span> divs: NodeList = <span class="built_in">document</span>.querySelectorAll(<span class="string">'div'</span>)</div><div class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'click'</span>, <span class="function">(<span class="params">event: MouseEvent</span>) =&gt;</span> &#123;</div><div class="line">  <span class="built_in">console</span>.dir(event.target)</div><div class="line">&#125;)</div><div class="line"><span class="keyword">const</span> fragment: DocumentFragment = <span class="built_in">document</span>.createDocumentFragment()</div></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;声明文件&quot;&gt;&lt;a href=&quot;#声明文件&quot; class=&quot;headerlink&quot; title=&quot;声明文件&quot;&gt;&lt;/a&gt;声明文件&lt;/h3&gt;&lt;p&gt;当使用第三方库时，我们需要引用它的声明文件，才能获得对应的代码补全、接口提示等功能&lt;/p&gt;
-&lt;figure class=&quot;h</summary>
-      
-    
-    
-    
-    
-    <category term="Ty" scheme="http://yoursite.com/tags/Ty/"/>
     
   </entry>
   

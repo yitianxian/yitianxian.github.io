@@ -3,20 +3,26 @@
 <head>
   <meta charset="utf-8">
   
-  <title>react拓展 | 记录 | 千里之行，始于足下</title>
+  <title>react_ClassNames | 记录 | 千里之行，始于足下</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="theme-color" content="#3F51B5">
   
   
   <meta name="keywords" content="react">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="react拓展">
-<meta property="og:url" content="http://yoursite.com/2021/05/19/react拓展/index.html">
+  <meta name="description" content="classNames 插件123npm install classnames --saveimport classnames from &apos;classnames&apos;
+1234567891011121314151617//可接受多个参数classNames(&apos;foo&apos;, &apos;bar&apos;); // =&amp;gt; &apos;foo bar&apos;classNames(&apos;foo&apos;, &amp;#123; bar: true &amp;#125;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react_ClassNames">
+<meta property="og:url" content="http://yoursite.com/2021/05/27/react/react-ClassNames/index.html">
 <meta property="og:site_name" content="记录">
-<meta property="og:updated_time" content="2021-05-19T12:20:04.514Z">
+<meta property="og:description" content="classNames 插件123npm install classnames --saveimport classnames from &apos;classnames&apos;
+1234567891011121314151617//可接受多个参数classNames(&apos;foo&apos;, &apos;bar&apos;); // =&amp;gt; &apos;foo bar&apos;classNames(&apos;foo&apos;, &amp;#123; bar: true &amp;#125;">
+<meta property="og:updated_time" content="2021-05-27T11:57:55.490Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="react拓展">
+<meta name="twitter:title" content="react_ClassNames">
+<meta name="twitter:description" content="classNames 插件123npm install classnames --saveimport classnames from &apos;classnames&apos;
+1234567891011121314151617//可接受多个参数classNames(&apos;foo&apos;, &apos;bar&apos;); // =&amp;gt; &apos;foo bar&apos;classNames(&apos;foo&apos;, &amp;#123; bar: true &amp;#125;">
   
     <link rel="alternative" href="/atom.xml" title="记录" type="application/atom+xml">
   
@@ -93,7 +99,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">react拓展</div>
+        <div class="flex-col header-title ellipsis">react_ClassNames</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -114,11 +120,11 @@
 </header>
 <header class="content-header">
   <div class="container">
-    <h1 class="author">react拓展</h1>
+    <h1 class="author">react_ClassNames</h1>
     <h5 class="subtitle">
         
-            <time datetime="2021-05-19T12:19:38.000Z" itemprop="datePublished" class="page-time">
-  2021-05-19
+            <time datetime="2021-05-27T11:43:06.000Z" itemprop="datePublished" class="page-time">
+  2021-05-27
 </time>
 
 
@@ -128,7 +134,7 @@
 </header>
 
     <div class="container body-wrap">
-      <article id="post-react拓展" 
+      <article id="post-react/react-ClassNames" 
   class="article article-type-post" itemprop="blogPost">
     <div class="post-meta flex-row">
         
@@ -179,7 +185,7 @@
 
             
             <nav class="post-toc-wrap" id="post-toc">
-            
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#classNames-插件"><span class="post-toc-number">1.</span> <span class="post-toc-text">classNames 插件</span></a></li></ol>
             </nav>
             
         </aside>
@@ -187,14 +193,15 @@
         <div class="post-main">
 
             <div class="post-content" id="post-content" itemprop="postContent">
-            
+            <h3 id="classNames-插件"><a href="#classNames-插件" class="headerlink" title="classNames 插件"></a>classNames 插件</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm install classnames --save</div><div class="line"></div><div class="line"><span class="keyword">import</span> classnames <span class="keyword">from</span> <span class="string">'classnames'</span></div></pre></td></tr></table></figure>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//可接受多个参数</span></div><div class="line"></div><div class="line">classNames(<span class="string">'foo'</span>, <span class="string">'bar'</span>); <span class="comment">// =&gt; 'foo bar'</span></div><div class="line">classNames(<span class="string">'foo'</span>, &#123; <span class="attr">bar</span>: <span class="literal">true</span> &#125;); <span class="comment">// =&gt; 'foo bar'</span></div><div class="line">classNames(&#123; <span class="string">'foo-bar'</span>: <span class="literal">true</span> &#125;); <span class="comment">// =&gt; 'foo-bar'</span></div><div class="line">classNames(&#123; <span class="string">'foo-bar'</span>: <span class="literal">false</span> &#125;); <span class="comment">// =&gt; ''</span></div><div class="line">classNames(&#123; <span class="attr">foo</span>: <span class="literal">true</span> &#125;, &#123; <span class="attr">bar</span>: <span class="literal">true</span> &#125;); <span class="comment">// =&gt; 'foo bar'</span></div><div class="line">classNames(&#123; <span class="attr">foo</span>: <span class="literal">true</span>, <span class="attr">bar</span>: <span class="literal">true</span> &#125;); <span class="comment">// =&gt; 'foo bar'</span></div><div class="line"></div><div class="line"><span class="comment">// lots of arguments of various types</span></div><div class="line">classNames(<span class="string">'foo'</span>, &#123; <span class="attr">bar</span>: <span class="literal">true</span>, <span class="attr">duck</span>: <span class="literal">false</span> &#125;, <span class="string">'baz'</span>, &#123; <span class="attr">quux</span>: <span class="literal">true</span> &#125;); <span class="comment">// =&gt; 'foo bar baz quux'</span></div><div class="line"></div><div class="line"><span class="comment">// other falsy values are just ignored</span></div><div class="line">classNames(<span class="literal">null</span>, <span class="literal">false</span>, <span class="string">'bar'</span>, <span class="literal">undefined</span>, <span class="number">0</span>, <span class="number">1</span>, &#123; <span class="attr">baz</span>: <span class="literal">null</span> &#125;, <span class="string">''</span>); <span class="comment">// =&gt; 'bar 1'</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> arr = [<span class="string">'b'</span>, &#123; <span class="attr">c</span>: <span class="literal">true</span>, <span class="attr">d</span>: <span class="literal">false</span> &#125;];</div><div class="line">classNames(<span class="string">'a'</span>, arr); <span class="comment">// =&gt; 'a b c'</span></div></pre></td></tr></table></figure>
 
             
             
             <blockquote>
                 <p>
                 本文地址：
-                <a href="http://yoursite.com/2021/05/19/react拓展/" target="_blank" rel="external">http://yoursite.com/2021/05/19/react拓展/</a>
+                <a href="http://yoursite.com/2021/05/27/react/react-ClassNames/" target="_blank" rel="external">http://yoursite.com/2021/05/27/react/react-ClassNames/</a>
                 </p>
                 <footer><cite><a href="http://yoursite.com">@记录</a></cite></footer>
             </blockquote>
@@ -203,18 +210,18 @@
 <nav class="post-nav">
   
     <div class="waves-block waves-effect prev fl">
-      <a href="/2021/05/23/react/react-ts-ui/" id="post-prev" class="post-nav-link">
+      <a href="/2021/05/27/Jest/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">react-ts-ui</h4>
+        <h4 class="title">jtest</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next fr">
-      <a href="/2021/05/10/react/redux/" id="post-next" class="post-nav-link">
+      <a href="/2021/05/27/es6字符串/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">redux</h4>
+        <h4 class="title">es6字符串</h4>
       </a>
     </div>
   
@@ -225,7 +232,7 @@
             
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="react拓展" data-title="react拓展" data-url="http://yoursite.com/2021/05/19/react拓展/index.html"></div>
+	<div class="ds-thread" data-thread-key="react/react-ClassNames" data-title="react_ClassNames" data-url="http://yoursite.com/2021/05/27/react/react-ClassNames/index.html"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -257,10 +264,10 @@
 
 <script>
 var BLOG_SHARE = {
-    title: "react拓展",
+    title: "react_ClassNames",
     pic: "/img/logo.png",
     summary: document.getElementsByName('summary')[0].content,
-    url: "http://yoursite.com/2021/05/19/react拓展/index.html"
+    url: "http://yoursite.com/2021/05/27/react/react-ClassNames/index.html"
 };
 </script>
 <div class="global-share" id="global-share">

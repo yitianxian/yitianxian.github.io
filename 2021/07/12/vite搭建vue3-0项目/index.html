@@ -3,20 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>react拓展 | 记录 | 千里之行，始于足下</title>
+  <title>vite搭建vue3.0项目 | 记录 | 千里之行，始于足下</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="theme-color" content="#3F51B5">
   
   
-  <meta name="keywords" content="react">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="react拓展">
-<meta property="og:url" content="http://yoursite.com/2021/05/19/react拓展/index.html">
+  <meta name="keywords" content="vue3">
+  <meta name="description" content="初始化123456789101112131415161718192021222324252627282930313233343536373839404142434445464748//npm init vite-app &amp;lt;project-name&amp;gt;  或 npm init @vitejs/appnpm init @vitejs/app my-vue-app --template vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vite搭建vue3.0项目">
+<meta property="og:url" content="http://yoursite.com/2021/07/12/vite搭建vue3-0项目/index.html">
 <meta property="og:site_name" content="记录">
-<meta property="og:updated_time" content="2021-05-19T12:20:04.514Z">
+<meta property="og:description" content="初始化123456789101112131415161718192021222324252627282930313233343536373839404142434445464748//npm init vite-app &amp;lt;project-name&amp;gt;  或 npm init @vitejs/appnpm init @vitejs/app my-vue-app --template vue">
+<meta property="og:updated_time" content="2021-08-02T11:40:32.481Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="react拓展">
+<meta name="twitter:title" content="vite搭建vue3.0项目">
+<meta name="twitter:description" content="初始化123456789101112131415161718192021222324252627282930313233343536373839404142434445464748//npm init vite-app &amp;lt;project-name&amp;gt;  或 npm init @vitejs/appnpm init @vitejs/app my-vue-app --template vue">
   
     <link rel="alternative" href="/atom.xml" title="记录" type="application/atom+xml">
   
@@ -93,7 +96,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">react拓展</div>
+        <div class="flex-col header-title ellipsis">vite搭建vue3.0项目</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -114,11 +117,11 @@
 </header>
 <header class="content-header">
   <div class="container">
-    <h1 class="author">react拓展</h1>
+    <h1 class="author">vite搭建vue3.0项目</h1>
     <h5 class="subtitle">
         
-            <time datetime="2021-05-19T12:19:38.000Z" itemprop="datePublished" class="page-time">
-  2021-05-19
+            <time datetime="2021-07-12T08:35:58.000Z" itemprop="datePublished" class="page-time">
+  2021-07-12
 </time>
 
 
@@ -128,11 +131,11 @@
 </header>
 
     <div class="container body-wrap">
-      <article id="post-react拓展" 
+      <article id="post-vite搭建vue3-0项目" 
   class="article article-type-post" itemprop="blogPost">
     <div class="post-meta flex-row">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue3/">vue3</a></li></ul>
 
     </div>
     <div class="post-body">
@@ -179,7 +182,7 @@
 
             
             <nav class="post-toc-wrap" id="post-toc">
-            
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#初始化"><span class="post-toc-number">1.</span> <span class="post-toc-text">初始化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#路由配置"><span class="post-toc-number">2.</span> <span class="post-toc-text">路由配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#index-ts"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">index.ts</span></a></li></ol></li></ol>
             </nav>
             
         </aside>
@@ -187,14 +190,17 @@
         <div class="post-main">
 
             <div class="post-content" id="post-content" itemprop="postContent">
-            
+            <h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//npm init vite-app &lt;project-name&gt;  或 npm init @vitejs/app</span></div><div class="line"></div><div class="line">npm init @vitejs/app my-vue-app --template vue-ts</div><div class="line"></div><div class="line">npm install</div><div class="line"></div><div class="line">npm run dev</div><div class="line"></div><div class="line"><span class="comment">//初始化后的项目会生成一个vite.config.ts文件</span></div><div class="line">npm add @types/node -D</div><div class="line"></div><div class="line">npm add</div><div class="line"> 	@typescript-eslint/eslint-plugin</div><div class="line">    @typescript-eslint/parser</div><div class="line">    @vue/eslint-config-prettier</div><div class="line">    @vue/eslint-config-typescript</div><div class="line">    babel-eslint</div><div class="line">    eslint</div><div class="line">    eslint-plugin-prettier</div><div class="line">    eslint-plugin-vue</div><div class="line">    prettier</div><div class="line">    babel-polyfill</div><div class="line">-D</div><div class="line"></div><div class="line">npm install sass --save</div><div class="line">npm install node-sass --save</div><div class="line">npm install sass-loader --save</div><div class="line">npm add @vitejs/plugin-vue-jsx --save</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//安装elementplus</span></div><div class="line">npm install element-plus --save</div><div class="line"><span class="comment">//安装 vuex</span></div><div class="line">npm install vuex@next --save</div><div class="line"><span class="comment">//安装vue-router</span></div><div class="line">npm install vue-router@next</div><div class="line"><span class="comment">//安装axios</span></div><div class="line">npm install axios --save</div><div class="line"></div><div class="line"><span class="comment">//使用</span></div><div class="line"><span class="keyword">import</span> &#123; createApp, Vue &#125; <span class="keyword">from</span> <span class="string">'vue'</span>;</div><div class="line"><span class="keyword">import</span> ElementPlus <span class="keyword">from</span> <span class="string">'element-plus'</span>;</div><div class="line"><span class="keyword">import</span> <span class="string">'element-plus/lib/theme-chalk/index.css'</span>;</div><div class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App.vue'</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> app = createApp(App)</div><div class="line">app.use(ElementPlus)</div><div class="line">app.mount(<span class="string">'#app'</span>)</div></pre></td></tr></table></figure>
+<h3 id="路由配置"><a href="#路由配置" class="headerlink" title="路由配置"></a>路由配置</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//安装vue-router</span></div><div class="line">npm install vue-router@next</div><div class="line"><span class="comment">//安装 nprogress 进度条</span></div><div class="line">npm i --save-dev @types/nprogress</div></pre></td></tr></table></figure>
+<h4 id="index-ts"><a href="#index-ts" class="headerlink" title="index.ts"></a>index.ts</h4><figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+
 
             
             
             <blockquote>
                 <p>
                 本文地址：
-                <a href="http://yoursite.com/2021/05/19/react拓展/" target="_blank" rel="external">http://yoursite.com/2021/05/19/react拓展/</a>
+                <a href="http://yoursite.com/2021/07/12/vite搭建vue3-0项目/" target="_blank" rel="external">http://yoursite.com/2021/07/12/vite搭建vue3-0项目/</a>
                 </p>
                 <footer><cite><a href="http://yoursite.com">@记录</a></cite></footer>
             </blockquote>
@@ -203,18 +209,18 @@
 <nav class="post-nav">
   
     <div class="waves-block waves-effect prev fl">
-      <a href="/2021/05/23/react/react-ts-ui/" id="post-prev" class="post-nav-link">
+      <a href="/2021/07/13/vue3CompositionApi解析/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">react-ts-ui</h4>
+        <h4 class="title">vue3CompositionApi解析</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next fr">
-      <a href="/2021/05/10/react/redux/" id="post-next" class="post-nav-link">
+      <a href="/2021/07/09/nginx常用命令/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">redux</h4>
+        <h4 class="title">nginx常用命令</h4>
       </a>
     </div>
   
@@ -225,7 +231,7 @@
             
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="react拓展" data-title="react拓展" data-url="http://yoursite.com/2021/05/19/react拓展/index.html"></div>
+	<div class="ds-thread" data-thread-key="vite搭建vue3-0项目" data-title="vite搭建vue3.0项目" data-url="http://yoursite.com/2021/07/12/vite搭建vue3-0项目/index.html"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -257,10 +263,10 @@
 
 <script>
 var BLOG_SHARE = {
-    title: "react拓展",
+    title: "vite搭建vue3.0项目",
     pic: "/img/logo.png",
     summary: document.getElementsByName('summary')[0].content,
-    url: "http://yoursite.com/2021/05/19/react拓展/index.html"
+    url: "http://yoursite.com/2021/07/12/vite搭建vue3-0项目/index.html"
 };
 </script>
 <div class="global-share" id="global-share">
